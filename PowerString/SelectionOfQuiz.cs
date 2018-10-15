@@ -10,15 +10,22 @@ using System.Windows.Forms;
 
 namespace PowerString
 {
-    public partial class SelectionOfProblem : Form
+    public partial class SelectionOfQuiz : Form
     {
-        public SelectionOfProblem()
+        public SelectionOfQuiz()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Close();
+        }
+
+        private void MainTitleReturnButton_Click(object sender, EventArgs e)
+        {
+            MainTitle mt = new MainTitle(); //뒤로가기 버튼을 누르게 되면 최초의 화면이 나오게 됨.
+            mt.ShowDialog();
             Close();
         }
     }
