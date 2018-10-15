@@ -27,5 +27,14 @@ namespace PowerString
             SelectionOfProblem selectionOfProblem = new SelectionOfProblem();
             selectionOfProblem.ShowDialog();//model
         }
+
+        private void goToUserInfo_Click(object sender, EventArgs e)
+        {
+            // 버튼을 클릭하면 메인 타이틀 창에서 유저창으로 이동하는 코드.
+            // 띄운 유저 창을 닫을 때 까지 부모창에는 접근할 수 없음. 
+            UserInfo userInfo = new UserInfo();
+            userInfo.Show();
+            
+        }
     }
 }
