@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace PowerString
 {
-    public partial class Form1 : Form
+    public partial class SelectionOfProblem : Form
     {
-        public Form1()
+        public SelectionOfProblem()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
