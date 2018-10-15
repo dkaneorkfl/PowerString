@@ -19,13 +19,13 @@ namespace PowerString
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void PracticeProblem_Click(object sender, EventArgs e)
         {
-            SelectionOfQuiz selectionOfQuiz = new SelectionOfQuiz(); //버튼을 클릭하면 3번화면이 나오게됨.
-            selectionOfQuiz.ShowDialog();//model
+            QuizSelection quizSelection = new QuizSelection(); //버튼을 클릭하면 3번화면이 나오게됨.
+            quizSelection.Show();//model
         }
 
         private void goToUserInfo_Click(object sender, EventArgs e)
