@@ -25,7 +25,8 @@ namespace PowerString
         private void PracticeProblem_Click(object sender, EventArgs e)
         {
             SelectionOfQuiz selectionOfQuiz = new SelectionOfQuiz(); //버튼을 클릭하면 3번화면이 나오게됨.
-            selectionOfQuiz.ShowDialog();//model
+            selectionOfQuiz.Show();//model
+            this.Hide();
         }
 
         private void goToUserInfo_Click(object sender, EventArgs e)
@@ -34,7 +35,6 @@ namespace PowerString
             // 띄운 유저 창을 닫을 때 까지 부모창에는 접근할 수 없음. 
             UserInfo userInfo = new UserInfo();
             userInfo.Show();
-            
         }
     }
 }
