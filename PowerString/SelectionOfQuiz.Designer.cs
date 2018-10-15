@@ -1,6 +1,6 @@
 ﻿namespace PowerString
 {
-    partial class SelectionOfProblem
+    partial class SelectionOfQuiz
     {
         /// <summary>
         /// Required designer variable.
@@ -92,7 +92,7 @@
             this.MainTitleReturnButton.UseVisualStyleBackColor = true;
             this.MainTitleReturnButton.Click += new System.EventHandler(this.MainTitleReturnButton_Click);
             // 
-            // SelectionOfProblem
+            // SelectionOfQuiz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -103,8 +103,8 @@
             this.Controls.Add(this.MultiGameButton);
             this.Controls.Add(this.SingleGameButton);
             this.Controls.Add(this.CategorySelectionButton);
-            this.Name = "SelectionOfProblem";
-            this.Text = "SelectionOfProblem";
+            this.Name = "SelectionOfQuiz";
+            this.Text = "SelectionOfQuiz";
             this.ResumeLayout(false);
             this.PerformLayout();
 

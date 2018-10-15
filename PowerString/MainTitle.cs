@@ -24,8 +24,8 @@ namespace PowerString
 
         private void PracticeProblem_Click(object sender, EventArgs e)
         {
-            SelectionOfProblem selectionOfProblem = new SelectionOfProblem(); //버튼을 클릭하면 3번화면이 나오게됨.
-            selectionOfProblem.ShowDialog();//model
+            SelectionOfQuiz selectionOfQuiz = new SelectionOfQuiz(); //버튼을 클릭하면 3번화면이 나오게됨.
+            selectionOfQuiz.ShowDialog();//model
         }
     }
 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PowerString
 {
-    public partial class SelectionOfProblem : Form
+    public partial class SelectionOfQuiz : Form
     {
-        public SelectionOfProblem()
+        public SelectionOfQuiz()
         {
             InitializeComponent();
         }
