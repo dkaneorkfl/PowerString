@@ -33,6 +33,7 @@
             this.MultiGameButton = new System.Windows.Forms.Button();
             this.CategoryName = new System.Windows.Forms.Label();
             this.NumberOfQuestions = new System.Windows.Forms.Label();
+            this.MainTitleReturnButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // CategorySelectionButton
@@ -47,7 +48,7 @@
             // 
             // SingleGameButton
             // 
-            this.SingleGameButton.Location = new System.Drawing.Point(12, 356);
+            this.SingleGameButton.Location = new System.Drawing.Point(12, 246);
             this.SingleGameButton.Name = "SingleGameButton";
             this.SingleGameButton.Size = new System.Drawing.Size(273, 82);
             this.SingleGameButton.TabIndex = 3;
@@ -56,7 +57,7 @@
             // 
             // MultiGameButton
             // 
-            this.MultiGameButton.Location = new System.Drawing.Point(526, 356);
+            this.MultiGameButton.Location = new System.Drawing.Point(526, 245);
             this.MultiGameButton.Name = "MultiGameButton";
             this.MultiGameButton.Size = new System.Drawing.Size(262, 82);
             this.MultiGameButton.TabIndex = 4;
@@ -81,11 +82,22 @@
             this.NumberOfQuestions.TabIndex = 2;
             this.NumberOfQuestions.Text = "총 문재 갯수";
             // 
+            // MainTitleReturnButton
+            // 
+            this.MainTitleReturnButton.Location = new System.Drawing.Point(713, 415);
+            this.MainTitleReturnButton.Name = "MainTitleReturnButton";
+            this.MainTitleReturnButton.Size = new System.Drawing.Size(75, 23);
+            this.MainTitleReturnButton.TabIndex = 5;
+            this.MainTitleReturnButton.Text = "뒤로가기";
+            this.MainTitleReturnButton.UseVisualStyleBackColor = true;
+            this.MainTitleReturnButton.Click += new System.EventHandler(this.MainTitleReturnButton_Click);
+            // 
             // SelectionOfProblem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.MainTitleReturnButton);
             this.Controls.Add(this.NumberOfQuestions);
             this.Controls.Add(this.CategoryName);
             this.Controls.Add(this.MultiGameButton);
@@ -105,5 +117,6 @@
         private System.Windows.Forms.Button MultiGameButton;
         private System.Windows.Forms.Label CategoryName;
         private System.Windows.Forms.Label NumberOfQuestions;
+        private System.Windows.Forms.Button MainTitleReturnButton;
     }
 }
