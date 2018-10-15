@@ -67,6 +67,7 @@
             this.MultiGameButton.TabIndex = 4;
             this.MultiGameButton.Text = "멀티게임";
             this.MultiGameButton.UseVisualStyleBackColor = true;
+            this.MultiGameButton.Click += new System.EventHandler(this.MultiGameButton_Click);
             // 
             // CategoryName
             // 

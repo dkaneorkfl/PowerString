@@ -32,6 +32,13 @@ namespace PowerString
         {
             GamePlayScreen psg = new GamePlayScreen();
             psg.Show();
+            mt.Show();
+            this.Hide();
+        }
+
+        private void MultiGameButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
