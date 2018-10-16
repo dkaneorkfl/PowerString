@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="PowerStringModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="CategoryId" />
+          </Key>
+          <Property Name="CategoryId" Type="int" Nullable="false" />
+          <Property Name="CategoryName" Type="nvarchar" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Code">
+          <Key>
+            <PropertyRef Name="CodeId" />
+          </Key>
+          <Property Name="CodeId" Type="int" Nullable="false" />
+          <Property Name="CategoryId" Type="int" Nullable="false" />
+          <Property Name="CodeQuestion" Type="nvarchar" MaxLength="2000" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Tester">
+          <Key>
+            <PropertyRef Name="TesterId" />
+          </Key>
+          <Property Name="TesterId" Type="int" Nullable="false" />
+          <Property Name="TesterName" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="TesterPassword" Type="nvarchar" MaxLength="4" Nullable="false" />
+          <Property Name="TesterScore" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TestRecord">
+          <Key>
+            <PropertyRef Name="TestRecordId" />
+          </Key>
+          <Property Name="TestRecordId" Type="int" Nullable="false" />
+          <Property Name="TesterId" Type="int" Nullable="false" />
+          <Property Name="CodeId" Type="int" Nullable="false" />
+          <Property Name="TestRecordDate" Type="datetime" Nullable="false" />
+          <Property Name="TestRecordIsCorrect" Type="bit" Nullable="false" />
+          <Property Name="TestRecordTime" Type="decimal" Precision="8" Scale="4" />
+        </EntityType>
+        <Association Name="FK__Code__CategoryId__48CFD27E">
+          <End Role="Category" Type="Self.Category" Multiplicity="1" />
+          <End Role="Code" Type="Self.Code" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Category">
+              <PropertyRef Name="CategoryId" />
+            </Principal>
+            <Dependent Role="Code">
+              <PropertyRef Name="CategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TestRecor__CodeI__71D1E811">
+          <End Role="Code" Type="Self.Code" Multiplicity="1" />
+          <End Role="TestRecord" Type="Self.TestRecord" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Code">
+              <PropertyRef Name="CodeId" />
+            </Principal>
+            <Dependent Role="TestRecord">
+              <PropertyRef Name="CodeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TestRecor__Teste__70DDC3D8">
+          <End Role="Tester" Type="Self.Tester" Multiplicity="1" />
+          <End Role="TestRecord" Type="Self.TestRecord" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tester">
+              <PropertyRef Name="TesterId" />
+            </Principal>
+            <Dependent Role="TestRecord">
+              <PropertyRef Name="TesterId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="PowerStringModelStoreContainer">
+          <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Code" EntityType="Self.Code" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tester" EntityType="Self.Tester" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TestRecord" EntityType="Self.TestRecord" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__Code__CategoryId__48CFD27E" Association="Self.FK__Code__CategoryId__48CFD27E">
+            <End Role="Category" EntitySet="Category" />
+            <End Role="Code" EntitySet="Code" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TestRecor__CodeI__71D1E811" Association="Self.FK__TestRecor__CodeI__71D1E811">
+            <End Role="Code" EntitySet="Code" />
+            <End Role="TestRecord" EntitySet="TestRecord" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TestRecor__Teste__70DDC3D8" Association="Self.FK__TestRecor__Teste__70DDC3D8">
+            <End Role="Tester" EntitySet="Tester" />
+            <End Role="TestRecord" EntitySet="TestRecord" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PowerStringModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="CategoryId" />
+          </Key>
+          <Property Name="CategoryId" Type="Int32" Nullable="false" />
+          <Property Name="CategoryName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Codes" Relationship="Self.FK__Code__CategoryId__48CFD27E" FromRole="Category" ToRole="Code" />
+        </EntityType>
+        <EntityType Name="Code">
+          <Key>
+            <PropertyRef Name="CodeId" />
+          </Key>
+          <Property Name="CodeId" Type="Int32" Nullable="false" />
+          <Property Name="CategoryId" Type="Int32" Nullable="false" />
+          <Property Name="CodeQuestion" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Category" Relationship="Self.FK__Code__CategoryId__48CFD27E" FromRole="Code" ToRole="Category" />
+          <NavigationProperty Name="TestRecords" Relationship="Self.FK__TestRecor__CodeI__71D1E811" FromRole="Code" ToRole="TestRecord" />
+        </EntityType>
+        <EntityType Name="Tester">
+          <Key>
+            <PropertyRef Name="TesterId" />
+          </Key>
+          <Property Name="TesterId" Type="Int32" Nullable="false" />
+          <Property Name="TesterName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TesterPassword" Type="String" MaxLength="4" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TesterScore" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="TestRecords" Relationship="Self.FK__TestRecor__Teste__70DDC3D8" FromRole="Tester" ToRole="TestRecord" />
+        </EntityType>
+        <EntityType Name="TestRecord">
+          <Key>
+            <PropertyRef Name="TestRecordId" />
+          </Key>
+          <Property Name="TestRecordId" Type="Int32" Nullable="false" />
+          <Property Name="TesterId" Type="Int32" Nullable="false" />
+          <Property Name="CodeId" Type="Int32" Nullable="false" />
+          <Property Name="TestRecordDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="TestRecordIsCorrect" Type="Boolean" Nullable="false" />
+          <Property Name="TestRecordTime" Type="Decimal" Precision="8" Scale="4" />
+          <NavigationProperty Name="Code" Relationship="Self.FK__TestRecor__CodeI__71D1E811" FromRole="TestRecord" ToRole="Code" />
+          <NavigationProperty Name="Tester" Relationship="Self.FK__TestRecor__Teste__70DDC3D8" FromRole="TestRecord" ToRole="Tester" />
+        </EntityType>
+        <Association Name="FK__Code__CategoryId__48CFD27E">
+          <End Role="Category" Type="Self.Category" Multiplicity="1" />
+          <End Role="Code" Type="Self.Code" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Category">
+              <PropertyRef Name="CategoryId" />
+            </Principal>
+            <Dependent Role="Code">
+              <PropertyRef Name="CategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TestRecor__CodeI__71D1E811">
+          <End Role="Code" Type="Self.Code" Multiplicity="1" />
+          <End Role="TestRecord" Type="Self.TestRecord" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Code">
+              <PropertyRef Name="CodeId" />
+            </Principal>
+            <Dependent Role="TestRecord">
+              <PropertyRef Name="CodeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TestRecor__Teste__70DDC3D8">
+          <End Role="Tester" Type="Self.Tester" Multiplicity="1" />
+          <End Role="TestRecord" Type="Self.TestRecord" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tester">
+              <PropertyRef Name="TesterId" />
+            </Principal>
+            <Dependent Role="TestRecord">
+              <PropertyRef Name="TesterId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="PowerStringEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Categories" EntityType="Self.Category" />
+          <EntitySet Name="Codes" EntityType="Self.Code" />
+          <EntitySet Name="Testers" EntityType="Self.Tester" />
+          <EntitySet Name="TestRecords" EntityType="Self.TestRecord" />
+          <AssociationSet Name="FK__Code__CategoryId__48CFD27E" Association="Self.FK__Code__CategoryId__48CFD27E">
+            <End Role="Category" EntitySet="Categories" />
+            <End Role="Code" EntitySet="Codes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TestRecor__CodeI__71D1E811" Association="Self.FK__TestRecor__CodeI__71D1E811">
+            <End Role="Code" EntitySet="Codes" />
+            <End Role="TestRecord" EntitySet="TestRecords" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TestRecor__Teste__70DDC3D8" Association="Self.FK__TestRecor__Teste__70DDC3D8">
+            <End Role="Tester" EntitySet="Testers" />
+            <End Role="TestRecord" EntitySet="TestRecords" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PowerStringModelStoreContainer" CdmEntityContainer="PowerStringEntities">
+          <EntitySetMapping Name="Categories">
+            <EntityTypeMapping TypeName="PowerStringModel.Category">
+              <MappingFragment StoreEntitySet="Category">
+                <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+                <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Codes">
+            <EntityTypeMapping TypeName="PowerStringModel.Code">
+              <MappingFragment StoreEntitySet="Code">
+                <ScalarProperty Name="CodeId" ColumnName="CodeId" />
+                <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+                <ScalarProperty Name="CodeQuestion" ColumnName="CodeQuestion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Testers">
+            <EntityTypeMapping TypeName="PowerStringModel.Tester">
+              <MappingFragment StoreEntitySet="Tester">
+                <ScalarProperty Name="TesterId" ColumnName="TesterId" />
+                <ScalarProperty Name="TesterName" ColumnName="TesterName" />
+                <ScalarProperty Name="TesterPassword" ColumnName="TesterPassword" />
+                <ScalarProperty Name="TesterScore" ColumnName="TesterScore" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TestRecords">
+            <EntityTypeMapping TypeName="PowerStringModel.TestRecord">
+              <MappingFragment StoreEntitySet="TestRecord">
+                <ScalarProperty Name="TestRecordId" ColumnName="TestRecordId" />
+                <ScalarProperty Name="TesterId" ColumnName="TesterId" />
+                <ScalarProperty Name="CodeId" ColumnName="CodeId" />
+                <ScalarProperty Name="TestRecordDate" ColumnName="TestRecordDate" />
+                <ScalarProperty Name="TestRecordIsCorrect" ColumnName="TestRecordIsCorrect" />
+                <ScalarProperty Name="TestRecordTime" ColumnName="TestRecordTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="없음" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
