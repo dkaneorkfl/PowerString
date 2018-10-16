@@ -23,7 +23,7 @@ namespace PowerString
 
         }
 
-        private void PracticeProblem_Click(object sender, EventArgs e)
+        private void LogInBtn_Click(object sender, EventArgs e)
         {
 
             
@@ -31,7 +31,7 @@ namespace PowerString
             /*Controls.Add(selectionOfQuiz);//유저컨트롤 추가하는부분
             Controls.Remove(selectionOfQuiz);//유저컨트롤 제거하는 부분.*/
 
-            QuizSelection quizSelection = new QuizSelection(this); //버튼을 클릭하면 3번화면이 나오게됨.
+            TestSelection quizSelection = new TestSelection(this);
             quizSelection.Show();//model
             quizSelection.Location = new Point(100, 100);
             this.Hide();
@@ -40,9 +40,12 @@ namespace PowerString
 
        
 
-        private void Signbtn_Click(object sender, EventArgs e)
+        private void GoToNewAccountCreateBtn_Click(object sender, EventArgs e)
         {
-
+            NewAccountCreate newAccountCreate = new NewAccountCreate();
+            newAccountCreate.Show();//model
+            newAccountCreate.Location = new Point(100, 100);
+            this.Hide();
         }
 
 

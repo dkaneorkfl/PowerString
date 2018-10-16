@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.closeBtn = new System.Windows.Forms.Button();
+            this.CloseBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -37,19 +37,22 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.UserDeleteBtn = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // closeBtn
+            // CloseBtn
             // 
-            this.closeBtn.Location = new System.Drawing.Point(679, 396);
-            this.closeBtn.Name = "closeBtn";
-            this.closeBtn.Size = new System.Drawing.Size(109, 43);
-            this.closeBtn.TabIndex = 0;
-            this.closeBtn.Text = "닫기(&C)";
-            this.closeBtn.UseVisualStyleBackColor = true;
-            this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
+            this.CloseBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.CloseBtn.Font = new System.Drawing.Font("Gulim", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CloseBtn.Location = new System.Drawing.Point(679, 412);
+            this.CloseBtn.Name = "CloseBtn";
+            this.CloseBtn.Size = new System.Drawing.Size(109, 27);
+            this.CloseBtn.TabIndex = 0;
+            this.CloseBtn.Text = "닫기(&C)";
+            this.CloseBtn.UseVisualStyleBackColor = true;
+            this.CloseBtn.Click += new System.EventHandler(this.CloseBtn_Click);
             // 
             // label1
             // 
@@ -64,83 +67,100 @@
             this.textBox1.Location = new System.Drawing.Point(11, 12);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(363, 107);
+            this.textBox1.Size = new System.Drawing.Size(163, 107);
             this.textBox1.TabIndex = 2;
-            this.textBox1.Text = "사용자 정보란";
+            this.textBox1.Text = "내 정보";
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(431, 12);
+            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.textBox2.Location = new System.Drawing.Point(11, 210);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox2.Size = new System.Drawing.Size(357, 107);
+            this.textBox2.Size = new System.Drawing.Size(163, 229);
             this.textBox2.TabIndex = 3;
-            this.textBox2.Text = "유저 목록란";
+            this.textBox2.Text = "다른 사용자 목록";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(48, 40);
+            this.label2.Location = new System.Drawing.Point(16, 36);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 17);
+            this.label2.Size = new System.Drawing.Size(183, 20);
             this.label2.TabIndex = 4;
-            this.label2.Text = "label2";
+            this.label2.Text = "연습 기록 정렬하기";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.dataGridView1);
             this.groupBox1.Controls.Add(this.comboBox2);
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(38, 149);
+            this.groupBox1.Font = new System.Drawing.Font("Gulim", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(180, 13);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Size = new System.Drawing.Size(613, 255);
+            this.groupBox1.Size = new System.Drawing.Size(608, 392);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.groupBox1.Text = "선택한 사용자 연습 기록";
             // 
             // dataGridView1
             // 
+            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(90, 85);
+            this.dataGridView1.Location = new System.Drawing.Point(18, 87);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(378, 136);
+            this.dataGridView1.Size = new System.Drawing.Size(573, 277);
             this.dataGridView1.TabIndex = 7;
             // 
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(286, 28);
+            this.comboBox2.Location = new System.Drawing.Point(427, 33);
             this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(138, 24);
+            this.comboBox2.Size = new System.Drawing.Size(180, 28);
             this.comboBox2.TabIndex = 6;
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(123, 28);
+            this.comboBox1.Location = new System.Drawing.Point(246, 33);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(138, 24);
+            this.comboBox1.Size = new System.Drawing.Size(175, 28);
             this.comboBox1.TabIndex = 5;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // UserDeleteBtn
+            // 
+            this.UserDeleteBtn.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.UserDeleteBtn.Font = new System.Drawing.Font("Gulim", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserDeleteBtn.Location = new System.Drawing.Point(11, 125);
+            this.UserDeleteBtn.Name = "UserDeleteBtn";
+            this.UserDeleteBtn.Size = new System.Drawing.Size(163, 29);
+            this.UserDeleteBtn.TabIndex = 6;
+            this.UserDeleteBtn.Text = "사용자 계정 삭제";
+            this.UserDeleteBtn.UseVisualStyleBackColor = true;
             // 
             // UserInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 451);
+            this.Controls.Add(this.UserDeleteBtn);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.closeBtn);
+            this.Controls.Add(this.CloseBtn);
             this.Name = "UserInfo";
             this.Text = "UserInfo";
             this.groupBox1.ResumeLayout(false);
@@ -153,7 +173,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button closeBtn;
+        private System.Windows.Forms.Button CloseBtn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
@@ -162,5 +182,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button UserDeleteBtn;
     }
 }

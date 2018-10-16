@@ -10,20 +10,20 @@ using System.Windows.Forms;
 
 namespace PowerString
 {
-    public partial class QuizSelection : Form
+    public partial class TestSelection : Form
     {
         private MainTitle _mt;
         private ComboBox comboBox;
 
 
-        public QuizSelection(MainTitle mainForm)
+        public TestSelection(MainTitle mainForm)
         {
             _mt = mainForm;
             InitializeComponent();
         }
 
         
-        private void MainTitleReturnButton_Click(object sender, EventArgs e)
+        private void BackToMainTitleBtn_Click(object sender, EventArgs e)
         {
             //MainTitle mt = new MainTitle(); //뒤로가기 버튼을 누르게 되면 최초의 화면이 나오게 됨.
             this.Visible = false;
@@ -34,23 +34,23 @@ namespace PowerString
             
         }
 
-        private void SingleGameButton_Click(object sender, EventArgs e)
+        private void SingleGameBtn_Click(object sender, EventArgs e)
         {
-            TypingTestScreen psg = new TypingTestScreen();
-            psg.Show();
-            _mt.Show();
+            TypingTestScreen tts = new TypingTestScreen();
+            tts.Show();
+            //_mt.Show();
             this.Hide();
         }
 
-       
-
-
-        private void MultiGameButton_Click(object sender, EventArgs e)
+        private void MultiGameBtn_Click(object sender, EventArgs e)
         {
-
+            TypingTestScreen tts = new TypingTestScreen();
+            tts.Show();
+            //_mt.Show();
+            this.Hide();
         }
 
-        private void button1UserInfobtn_Click_1(object sender, EventArgs e)
+        private void UserInfoBtn_Click(object sender, EventArgs e)
         {
             UserInfo userInfo = new UserInfo();
             userInfo.Show();

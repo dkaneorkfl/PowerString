@@ -12,10 +12,21 @@ namespace PowerString
 {
     public partial class NewAccountCreate : Form
     {
+        private MainTitle _mt;
+
         public NewAccountCreate()
         {
+            
             InitializeComponent();
-            this.Location = new Point(100, 100);
+            //this.Location = new Point(100, 100);
+        }
+
+        private void NewAccountCreateBtn_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            _mt.Visible = true;
+            _mt.Location = new Point(100, 100);
+            this.Visible = false;
         }
     }
 }

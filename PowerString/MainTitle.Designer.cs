@@ -31,7 +31,7 @@
             this.MainTitleLabel = new System.Windows.Forms.Label();
             this.LogInBtn = new System.Windows.Forms.Button();
             this.IdInputBox = new System.Windows.Forms.TextBox();
-            this.NewAccountCreateBtn = new System.Windows.Forms.Button();
+            this.GoToNewAccountCreateBtn = new System.Windows.Forms.Button();
             this.VersionLabel = new System.Windows.Forms.Label();
             this.DeveloperLabel = new System.Windows.Forms.Label();
             this.LogOnInfoGBox = new System.Windows.Forms.GroupBox();
@@ -61,7 +61,7 @@
             this.LogInBtn.TabIndex = 2;
             this.LogInBtn.Text = "확인(&Enter)";
             this.LogInBtn.UseVisualStyleBackColor = true;
-            this.LogInBtn.Click += new System.EventHandler(this.PracticeProblem_Click);
+            this.LogInBtn.Click += new System.EventHandler(this.LogInBtn_Click);
             // 
             // IdInputBox
             // 
@@ -77,18 +77,18 @@
             this.IdInputBox.Enter += new System.EventHandler(this.IdInputBox_Enter);
             this.IdInputBox.Leave += new System.EventHandler(this.IdInputBox_Leave);
             // 
-            // NewAccountCreateBtn
+            // GoToNewAccountCreateBtn
             // 
-            this.NewAccountCreateBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.NewAccountCreateBtn.Font = new System.Drawing.Font("Gulim", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.NewAccountCreateBtn.Location = new System.Drawing.Point(257, 433);
-            this.NewAccountCreateBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.NewAccountCreateBtn.Name = "NewAccountCreateBtn";
-            this.NewAccountCreateBtn.Size = new System.Drawing.Size(332, 41);
-            this.NewAccountCreateBtn.TabIndex = 7;
-            this.NewAccountCreateBtn.Text = "새로운 사용자 등록";
-            this.NewAccountCreateBtn.UseVisualStyleBackColor = true;
-            this.NewAccountCreateBtn.Click += new System.EventHandler(this.Signbtn_Click);
+            this.GoToNewAccountCreateBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.GoToNewAccountCreateBtn.Font = new System.Drawing.Font("Gulim", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.GoToNewAccountCreateBtn.Location = new System.Drawing.Point(257, 433);
+            this.GoToNewAccountCreateBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.GoToNewAccountCreateBtn.Name = "GoToNewAccountCreateBtn";
+            this.GoToNewAccountCreateBtn.Size = new System.Drawing.Size(332, 41);
+            this.GoToNewAccountCreateBtn.TabIndex = 7;
+            this.GoToNewAccountCreateBtn.Text = "새로운 사용자 등록";
+            this.GoToNewAccountCreateBtn.UseVisualStyleBackColor = true;
+            this.GoToNewAccountCreateBtn.Click += new System.EventHandler(this.GoToNewAccountCreateBtn_Click);
             // 
             // VersionLabel
             // 
@@ -149,7 +149,7 @@
             this.Controls.Add(this.LogOnInfoGBox);
             this.Controls.Add(this.DeveloperLabel);
             this.Controls.Add(this.VersionLabel);
-            this.Controls.Add(this.NewAccountCreateBtn);
+            this.Controls.Add(this.GoToNewAccountCreateBtn);
             this.Controls.Add(this.MainTitleLabel);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "MainTitle";
@@ -166,7 +166,7 @@
         private System.Windows.Forms.Label MainTitleLabel;
         private System.Windows.Forms.Button LogInBtn;
         private System.Windows.Forms.TextBox IdInputBox;
-        private System.Windows.Forms.Button NewAccountCreateBtn;
+        private System.Windows.Forms.Button GoToNewAccountCreateBtn;
         private System.Windows.Forms.Label VersionLabel;
         private System.Windows.Forms.Label DeveloperLabel;
         private System.Windows.Forms.GroupBox LogOnInfoGBox;
