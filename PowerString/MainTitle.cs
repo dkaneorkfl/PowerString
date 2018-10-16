@@ -37,6 +37,11 @@ namespace PowerString
             /*Controls.Add(selectionOfQuiz);//유저컨트롤 추가하는부분
             Controls.Remove(selectionOfQuiz);//유저컨트롤 제거하는 부분.*/
 
+            QuizSelection quizSelection = new QuizSelection(); //버튼을 클릭하면 3번화면이 나오게됨.
+            quizSelection.Show();//model
+            SelectionOfQuiz selectionOfQuiz = new SelectionOfQuiz(); //버튼을 클릭하면 3번화면이 나오게됨.
+            selectionOfQuiz.Show();//model
+            this.Hide();
         }
 
         private void goToUserInfo_Click(object sender, EventArgs e)

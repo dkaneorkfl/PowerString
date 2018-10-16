@@ -1,6 +1,6 @@
 ﻿namespace PowerString
 {
-    partial class SelectionOfQuiz
+    partial class QuizSelection
     {
         /// <summary>
         /// Required designer variable.
@@ -38,9 +38,10 @@
             // 
             // CategorySelectionButton
             // 
-            this.CategorySelectionButton.Location = new System.Drawing.Point(243, 69);
+            this.CategorySelectionButton.Location = new System.Drawing.Point(278, 92);
+            this.CategorySelectionButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.CategorySelectionButton.Name = "CategorySelectionButton";
-            this.CategorySelectionButton.Size = new System.Drawing.Size(277, 47);
+            this.CategorySelectionButton.Size = new System.Drawing.Size(317, 63);
             this.CategorySelectionButton.TabIndex = 0;
             this.CategorySelectionButton.Text = "카테고리 선택";
             this.CategorySelectionButton.UseVisualStyleBackColor = true;
@@ -48,18 +49,21 @@
             // 
             // SingleGameButton
             // 
-            this.SingleGameButton.Location = new System.Drawing.Point(12, 246);
+            this.SingleGameButton.Location = new System.Drawing.Point(14, 328);
+            this.SingleGameButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SingleGameButton.Name = "SingleGameButton";
-            this.SingleGameButton.Size = new System.Drawing.Size(273, 82);
+            this.SingleGameButton.Size = new System.Drawing.Size(312, 109);
             this.SingleGameButton.TabIndex = 3;
             this.SingleGameButton.Text = "싱글게임";
             this.SingleGameButton.UseVisualStyleBackColor = true;
+            this.SingleGameButton.Click += new System.EventHandler(this.SingleGameButton_Click);
             // 
             // MultiGameButton
             // 
-            this.MultiGameButton.Location = new System.Drawing.Point(526, 245);
+            this.MultiGameButton.Location = new System.Drawing.Point(601, 327);
+            this.MultiGameButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MultiGameButton.Name = "MultiGameButton";
-            this.MultiGameButton.Size = new System.Drawing.Size(262, 82);
+            this.MultiGameButton.Size = new System.Drawing.Size(299, 109);
             this.MultiGameButton.TabIndex = 4;
             this.MultiGameButton.Text = "멀티게임";
             this.MultiGameButton.UseVisualStyleBackColor = true;
@@ -68,44 +72,46 @@
             // CategoryName
             // 
             this.CategoryName.AutoSize = true;
-            this.CategoryName.Location = new System.Drawing.Point(289, 185);
+            this.CategoryName.Location = new System.Drawing.Point(330, 247);
             this.CategoryName.Name = "CategoryName";
-            this.CategoryName.Size = new System.Drawing.Size(89, 12);
+            this.CategoryName.Size = new System.Drawing.Size(92, 17);
             this.CategoryName.TabIndex = 1;
             this.CategoryName.Text = "카테고리 이름: ";
             // 
             // NumberOfQuestions
             // 
             this.NumberOfQuestions.AutoSize = true;
-            this.NumberOfQuestions.Location = new System.Drawing.Point(396, 185);
+            this.NumberOfQuestions.Location = new System.Drawing.Point(453, 247);
             this.NumberOfQuestions.Name = "NumberOfQuestions";
-            this.NumberOfQuestions.Size = new System.Drawing.Size(73, 12);
+            this.NumberOfQuestions.Size = new System.Drawing.Size(76, 17);
             this.NumberOfQuestions.TabIndex = 2;
             this.NumberOfQuestions.Text = "총 문재 갯수";
             // 
             // MainTitleReturnButton
             // 
-            this.MainTitleReturnButton.Location = new System.Drawing.Point(713, 415);
+            this.MainTitleReturnButton.Location = new System.Drawing.Point(815, 553);
+            this.MainTitleReturnButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MainTitleReturnButton.Name = "MainTitleReturnButton";
-            this.MainTitleReturnButton.Size = new System.Drawing.Size(75, 23);
+            this.MainTitleReturnButton.Size = new System.Drawing.Size(86, 31);
             this.MainTitleReturnButton.TabIndex = 5;
             this.MainTitleReturnButton.Text = "뒤로가기";
             this.MainTitleReturnButton.UseVisualStyleBackColor = true;
             this.MainTitleReturnButton.Click += new System.EventHandler(this.MainTitleReturnButton_Click);
             // 
-            // SelectionOfQuiz
+            // QuizSelection
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(914, 600);
             this.Controls.Add(this.MainTitleReturnButton);
             this.Controls.Add(this.NumberOfQuestions);
             this.Controls.Add(this.CategoryName);
             this.Controls.Add(this.MultiGameButton);
             this.Controls.Add(this.SingleGameButton);
             this.Controls.Add(this.CategorySelectionButton);
-            this.Name = "SelectionOfQuiz";
-            this.Text = "SelectionOfQuiz";
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Name = "QuizSelection";
+            this.Text = "QuizSelection";
             this.ResumeLayout(false);
             this.PerformLayout();
 
