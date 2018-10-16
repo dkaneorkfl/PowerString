@@ -42,7 +42,7 @@ namespace PowerString
 
         private void GoToNewAccountCreateBtn_Click(object sender, EventArgs e)
         {
-            NewAccountCreate newAccountCreate = new NewAccountCreate();
+            NewAccountCreate newAccountCreate = new NewAccountCreate(this);
             newAccountCreate.Show();//model
             newAccountCreate.Location = new Point(100, 100);
             this.Hide();

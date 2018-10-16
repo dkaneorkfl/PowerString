@@ -126,8 +126,8 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "TestSelection";
             this.Text = "TestSelection";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.QuizSelection_FormClosed);
-            this.Load += new System.EventHandler(this.QuizSelection_Load);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.TestSelection_FormClosed);
+            this.Load += new System.EventHandler(this.TestSelection_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

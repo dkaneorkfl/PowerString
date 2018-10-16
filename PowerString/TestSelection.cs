@@ -65,16 +65,15 @@ namespace PowerString
 
         }
 
-        private void QuizSelection_Load(object sender, EventArgs e)
+        private void TestSelection_Load(object sender, EventArgs e)
         {
             
             
         }
 
-        private void QuizSelection_FormClosed(object sender, FormClosedEventArgs e)
+        private void TestSelection_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();//다른 폼이 종료하게 되면 그 메인폼도 같이 종료하게됨.
-
         }
     }
 }

@@ -14,11 +14,11 @@ namespace PowerString
     {
         private MainTitle _mt;
 
-        public NewAccountCreate()
+        public NewAccountCreate(MainTitle mainForm)
         {
-            
+            _mt = mainForm;
             InitializeComponent();
-            //this.Location = new Point(100, 100);
+            this.Location = new Point(100, 100);
         }
 
         private void NewAccountCreateBtn_Click(object sender, EventArgs e)
