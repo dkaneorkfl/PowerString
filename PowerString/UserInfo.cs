@@ -23,5 +23,10 @@ namespace PowerString
             userInfo.Close();
             Close();
         }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
