@@ -36,7 +36,7 @@ namespace PowerString
 
         private void SingleGameButton_Click(object sender, EventArgs e)
         {
-            GamePlayScreen psg = new GamePlayScreen();
+            TypingTestScreen psg = new TypingTestScreen();
             psg.Show();
             _mt.Show();
             this.Hide();

@@ -1,6 +1,6 @@
 ﻿namespace PowerString
 {
-    partial class GamePlayScreen
+    partial class TypingTestScreen
     {
         /// <summary>
         /// Required designer variable.

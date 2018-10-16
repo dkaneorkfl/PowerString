@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PowerString
 {
-    public partial class GamePlayScreen : Form
+    public partial class TypingTestScreen : Form
     {
-        public GamePlayScreen()
+        public TypingTestScreen()
         {
             InitializeComponent();
         }
