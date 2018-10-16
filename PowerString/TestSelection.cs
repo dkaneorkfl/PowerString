@@ -36,15 +36,14 @@ namespace PowerString
 
         private void SingleGameBtn_Click(object sender, EventArgs e)
         {
-            TypingTestScreen tts = new TypingTestScreen();
+            TypingTestScreen tts = new TypingTestScreen(this);
             tts.Show();
-            //_mt.Show();
             this.Hide();
         }
 
         private void MultiGameBtn_Click(object sender, EventArgs e)
         {
-            TypingTestScreen tts = new TypingTestScreen();
+            TypingTestScreen tts = new TypingTestScreen(this);
             tts.Show();
             //_mt.Show();
             this.Hide();
