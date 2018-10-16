@@ -59,6 +59,7 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="CodeData.cs" />
+    <Compile Include="DataRepository.cs" />
     <Compile Include="EntityData.cs" />
     <Compile Include="Model1.Context.cs">
       <AutoGen>True</AutoGen>
@@ -79,9 +80,11 @@
     <Compile Include="Tester.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="TesterData.cs" />
     <Compile Include="TestRecord.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="TestRecordData.cs" />
   </ItemGroup>
   <ItemGroup>
     <EntityDeploy Include="Model1.edmx">
