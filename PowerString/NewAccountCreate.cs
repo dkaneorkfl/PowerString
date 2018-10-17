@@ -28,5 +28,15 @@ namespace PowerString
             _mt.Location = new Point(100, 100);
             this.Visible = false;
         }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            textBox2.PasswordChar = '*';
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+            textBox3.PasswordChar = '*';
+        }
     }
 }
