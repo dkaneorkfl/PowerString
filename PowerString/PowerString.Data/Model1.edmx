@@ -24,21 +24,21 @@
           <Key>
             <PropertyRef Name="TesterId" />
           </Key>
-          <Property Name="TesterId" Type="int" Nullable="false" />
+          <Property Name="TesterId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="TesterName" Type="nvarchar" MaxLength="30" Nullable="false" />
           <Property Name="TesterPassword" Type="nvarchar" MaxLength="4" Nullable="false" />
-          <Property Name="TesterScore" Type="int" Nullable="false" />
+          <Property Name="TesterScore" Type="int" />
         </EntityType>
         <EntityType Name="TestRecord">
           <Key>
             <PropertyRef Name="TestRecordId" />
           </Key>
-          <Property Name="TestRecordId" Type="int" Nullable="false" />
+          <Property Name="TestRecordId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="TesterId" Type="int" Nullable="false" />
           <Property Name="CodeId" Type="int" Nullable="false" />
           <Property Name="TestRecordDate" Type="datetime" Nullable="false" />
           <Property Name="TestRecordIsCorrect" Type="bit" Nullable="false" />
-          <Property Name="TestRecordTime" Type="decimal" Precision="8" Scale="4" />
+          <Property Name="TestRecordTime" Type="decimal" Precision="18" Scale="0" />
         </EntityType>
         <Association Name="FK__Code__CategoryId__48CFD27E">
           <End Role="Category" Type="Self.Category" Multiplicity="1" />
@@ -52,7 +52,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__TestRecor__CodeI__71D1E811">
+        <Association Name="FK__TestRecor__CodeI__1F98B2C1">
           <End Role="Code" Type="Self.Code" Multiplicity="1" />
           <End Role="TestRecord" Type="Self.TestRecord" Multiplicity="*" />
           <ReferentialConstraint>
@@ -64,7 +64,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__TestRecor__Teste__70DDC3D8">
+        <Association Name="FK__TestRecor__Teste__1EA48E88">
           <End Role="Tester" Type="Self.Tester" Multiplicity="1" />
           <End Role="TestRecord" Type="Self.TestRecord" Multiplicity="*" />
           <ReferentialConstraint>
@@ -85,11 +85,11 @@
             <End Role="Category" EntitySet="Category" />
             <End Role="Code" EntitySet="Code" />
           </AssociationSet>
-          <AssociationSet Name="FK__TestRecor__CodeI__71D1E811" Association="Self.FK__TestRecor__CodeI__71D1E811">
+          <AssociationSet Name="FK__TestRecor__CodeI__1F98B2C1" Association="Self.FK__TestRecor__CodeI__1F98B2C1">
             <End Role="Code" EntitySet="Code" />
             <End Role="TestRecord" EntitySet="TestRecord" />
           </AssociationSet>
-          <AssociationSet Name="FK__TestRecor__Teste__70DDC3D8" Association="Self.FK__TestRecor__Teste__70DDC3D8">
+          <AssociationSet Name="FK__TestRecor__Teste__1EA48E88" Association="Self.FK__TestRecor__Teste__1EA48E88">
             <End Role="Tester" EntitySet="Tester" />
             <End Role="TestRecord" EntitySet="TestRecord" />
           </AssociationSet>
@@ -115,30 +115,30 @@
           <Property Name="CategoryId" Type="Int32" Nullable="false" />
           <Property Name="CodeQuestion" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Category" Relationship="Self.FK__Code__CategoryId__48CFD27E" FromRole="Code" ToRole="Category" />
-          <NavigationProperty Name="TestRecords" Relationship="Self.FK__TestRecor__CodeI__71D1E811" FromRole="Code" ToRole="TestRecord" />
+          <NavigationProperty Name="TestRecords" Relationship="Self.FK__TestRecor__CodeI__1F98B2C1" FromRole="Code" ToRole="TestRecord" />
         </EntityType>
         <EntityType Name="Tester">
           <Key>
             <PropertyRef Name="TesterId" />
           </Key>
-          <Property Name="TesterId" Type="Int32" Nullable="false" />
+          <Property Name="TesterId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="TesterName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="TesterPassword" Type="String" MaxLength="4" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="TesterScore" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="TestRecords" Relationship="Self.FK__TestRecor__Teste__70DDC3D8" FromRole="Tester" ToRole="TestRecord" />
+          <Property Name="TesterScore" Type="Int32" />
+          <NavigationProperty Name="TestRecords" Relationship="Self.FK__TestRecor__Teste__1EA48E88" FromRole="Tester" ToRole="TestRecord" />
         </EntityType>
         <EntityType Name="TestRecord">
           <Key>
             <PropertyRef Name="TestRecordId" />
           </Key>
-          <Property Name="TestRecordId" Type="Int32" Nullable="false" />
+          <Property Name="TestRecordId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="TesterId" Type="Int32" Nullable="false" />
           <Property Name="CodeId" Type="Int32" Nullable="false" />
           <Property Name="TestRecordDate" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="TestRecordIsCorrect" Type="Boolean" Nullable="false" />
-          <Property Name="TestRecordTime" Type="Decimal" Precision="8" Scale="4" />
-          <NavigationProperty Name="Code" Relationship="Self.FK__TestRecor__CodeI__71D1E811" FromRole="TestRecord" ToRole="Code" />
-          <NavigationProperty Name="Tester" Relationship="Self.FK__TestRecor__Teste__70DDC3D8" FromRole="TestRecord" ToRole="Tester" />
+          <Property Name="TestRecordTime" Type="Decimal" Precision="18" Scale="0" />
+          <NavigationProperty Name="Code" Relationship="Self.FK__TestRecor__CodeI__1F98B2C1" FromRole="TestRecord" ToRole="Code" />
+          <NavigationProperty Name="Tester" Relationship="Self.FK__TestRecor__Teste__1EA48E88" FromRole="TestRecord" ToRole="Tester" />
         </EntityType>
         <Association Name="FK__Code__CategoryId__48CFD27E">
           <End Role="Category" Type="Self.Category" Multiplicity="1" />
@@ -152,7 +152,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__TestRecor__CodeI__71D1E811">
+        <Association Name="FK__TestRecor__CodeI__1F98B2C1">
           <End Role="Code" Type="Self.Code" Multiplicity="1" />
           <End Role="TestRecord" Type="Self.TestRecord" Multiplicity="*" />
           <ReferentialConstraint>
@@ -164,7 +164,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__TestRecor__Teste__70DDC3D8">
+        <Association Name="FK__TestRecor__Teste__1EA48E88">
           <End Role="Tester" Type="Self.Tester" Multiplicity="1" />
           <End Role="TestRecord" Type="Self.TestRecord" Multiplicity="*" />
           <ReferentialConstraint>
@@ -185,11 +185,11 @@
             <End Role="Category" EntitySet="Categories" />
             <End Role="Code" EntitySet="Codes" />
           </AssociationSet>
-          <AssociationSet Name="FK__TestRecor__CodeI__71D1E811" Association="Self.FK__TestRecor__CodeI__71D1E811">
+          <AssociationSet Name="FK__TestRecor__CodeI__1F98B2C1" Association="Self.FK__TestRecor__CodeI__1F98B2C1">
             <End Role="Code" EntitySet="Codes" />
             <End Role="TestRecord" EntitySet="TestRecords" />
           </AssociationSet>
-          <AssociationSet Name="FK__TestRecor__Teste__70DDC3D8" Association="Self.FK__TestRecor__Teste__70DDC3D8">
+          <AssociationSet Name="FK__TestRecor__Teste__1EA48E88" Association="Self.FK__TestRecor__Teste__1EA48E88">
             <End Role="Tester" EntitySet="Testers" />
             <End Role="TestRecord" EntitySet="TestRecords" />
           </AssociationSet>
