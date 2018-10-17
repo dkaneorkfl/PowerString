@@ -18,7 +18,7 @@
           </Key>
           <Property Name="CodeId" Type="int" Nullable="false" />
           <Property Name="CategoryId" Type="int" Nullable="false" />
-          <Property Name="CodeQuestion" Type="nvarchar" MaxLength="2000" Nullable="false" />
+          <Property Name="CodeExample" Type="nvarchar" MaxLength="2000" Nullable="false" />
         </EntityType>
         <EntityType Name="Tester">
           <Key>
@@ -113,7 +113,7 @@
           </Key>
           <Property Name="CodeId" Type="Int32" Nullable="false" />
           <Property Name="CategoryId" Type="Int32" Nullable="false" />
-          <Property Name="CodeQuestion" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CodeExample" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Category" Relationship="Self.FK__Code__CategoryId__48CFD27E" FromRole="Code" ToRole="Category" />
           <NavigationProperty Name="TestRecords" Relationship="Self.FK__TestRecor__CodeI__1F98B2C1" FromRole="Code" ToRole="TestRecord" />
         </EntityType>
@@ -213,7 +213,7 @@
               <MappingFragment StoreEntitySet="Code">
                 <ScalarProperty Name="CodeId" ColumnName="CodeId" />
                 <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
-                <ScalarProperty Name="CodeQuestion" ColumnName="CodeQuestion" />
+                <ScalarProperty Name="CodeExample" ColumnName="CodeExample" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

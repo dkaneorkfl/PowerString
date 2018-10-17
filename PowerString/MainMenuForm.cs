@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PowerString.Data;
 
 namespace PowerString
 {
@@ -16,9 +17,9 @@ namespace PowerString
         private ComboBox comboBox;
 
 
-        public MainMenuForm(StartForm mainForm)
+        public MainMenuForm()
         {
-            _mt = mainForm;
+            //_mt = mainForm;
             InitializeComponent();
         }
 
@@ -66,7 +67,14 @@ namespace PowerString
 
         private void TestSelection_Load(object sender, EventArgs e)
         {
-            
+            var query = (from x in DataRepository.Code.Select()
+                select x.CodeExample).ToList();
+
+
+            foreach (string example in query)
+            {
+                SelectCategoryComboBox.Items.Add(example);
+            }
         }
 
         private void TestSelection_FormClosed(object sender, FormClosedEventArgs e)
