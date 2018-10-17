@@ -43,8 +43,8 @@
             // 
             this.MainTitleLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.MainTitleLabel.AutoSize = true;
-            this.MainTitleLabel.Font = new System.Drawing.Font("Gulim", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.MainTitleLabel.Location = new System.Drawing.Point(207, 42);
+            this.MainTitleLabel.Font = new System.Drawing.Font("굴림", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.MainTitleLabel.Location = new System.Drawing.Point(225, 39);
             this.MainTitleLabel.Name = "MainTitleLabel";
             this.MainTitleLabel.Size = new System.Drawing.Size(340, 144);
             this.MainTitleLabel.TabIndex = 1;
@@ -53,11 +53,11 @@
             // 
             // LogInBtn
             // 
-            this.LogInBtn.Font = new System.Drawing.Font("Gulim", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.LogInBtn.Location = new System.Drawing.Point(183, 31);
+            this.LogInBtn.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.LogInBtn.Location = new System.Drawing.Point(203, 30);
             this.LogInBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.LogInBtn.Name = "LogInBtn";
-            this.LogInBtn.Size = new System.Drawing.Size(129, 69);
+            this.LogInBtn.Size = new System.Drawing.Size(129, 65);
             this.LogInBtn.TabIndex = 2;
             this.LogInBtn.Text = "확인(&Enter)";
             this.LogInBtn.UseVisualStyleBackColor = true;
@@ -65,12 +65,12 @@
             // 
             // IdInputBox
             // 
-            this.IdInputBox.Font = new System.Drawing.Font("Gulim", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IdInputBox.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IdInputBox.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.IdInputBox.Location = new System.Drawing.Point(6, 31);
+            this.IdInputBox.Location = new System.Drawing.Point(6, 29);
             this.IdInputBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.IdInputBox.Name = "IdInputBox";
-            this.IdInputBox.Size = new System.Drawing.Size(171, 25);
+            this.IdInputBox.Size = new System.Drawing.Size(191, 25);
             this.IdInputBox.TabIndex = 3;
             this.IdInputBox.Text = "사용자명";
             this.IdInputBox.TextChanged += new System.EventHandler(this.IdInputBox_TextChanged);
@@ -80,11 +80,11 @@
             // GoToNewAccountCreateBtn
             // 
             this.GoToNewAccountCreateBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.GoToNewAccountCreateBtn.Font = new System.Drawing.Font("Gulim", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.GoToNewAccountCreateBtn.Location = new System.Drawing.Point(215, 362);
+            this.GoToNewAccountCreateBtn.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.GoToNewAccountCreateBtn.Location = new System.Drawing.Point(225, 339);
             this.GoToNewAccountCreateBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.GoToNewAccountCreateBtn.Name = "GoToNewAccountCreateBtn";
-            this.GoToNewAccountCreateBtn.Size = new System.Drawing.Size(332, 41);
+            this.GoToNewAccountCreateBtn.Size = new System.Drawing.Size(340, 38);
             this.GoToNewAccountCreateBtn.TabIndex = 7;
             this.GoToNewAccountCreateBtn.Text = "새로운 사용자 등록";
             this.GoToNewAccountCreateBtn.UseVisualStyleBackColor = true;
@@ -95,7 +95,7 @@
             this.VersionLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.VersionLabel.AutoSize = true;
             this.VersionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.VersionLabel.Location = new System.Drawing.Point(12, 426);
+            this.VersionLabel.Location = new System.Drawing.Point(12, 399);
             this.VersionLabel.Name = "VersionLabel";
             this.VersionLabel.Size = new System.Drawing.Size(82, 18);
             this.VersionLabel.TabIndex = 10;
@@ -107,7 +107,7 @@
             this.DeveloperLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.DeveloperLabel.AutoSize = true;
             this.DeveloperLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeveloperLabel.Location = new System.Drawing.Point(512, 426);
+            this.DeveloperLabel.Location = new System.Drawing.Point(535, 399);
             this.DeveloperLabel.Name = "DeveloperLabel";
             this.DeveloperLabel.Size = new System.Drawing.Size(285, 18);
             this.DeveloperLabel.TabIndex = 11;
@@ -120,22 +120,22 @@
             this.LogOnInfoGBox.Controls.Add(this.PwInputBox);
             this.LogOnInfoGBox.Controls.Add(this.IdInputBox);
             this.LogOnInfoGBox.Controls.Add(this.LogInBtn);
-            this.LogOnInfoGBox.Font = new System.Drawing.Font("Gulim", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LogOnInfoGBox.Location = new System.Drawing.Point(215, 223);
+            this.LogOnInfoGBox.Font = new System.Drawing.Font("굴림", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LogOnInfoGBox.Location = new System.Drawing.Point(225, 209);
             this.LogOnInfoGBox.Name = "LogOnInfoGBox";
-            this.LogOnInfoGBox.Size = new System.Drawing.Size(332, 121);
+            this.LogOnInfoGBox.Size = new System.Drawing.Size(340, 113);
             this.LogOnInfoGBox.TabIndex = 12;
             this.LogOnInfoGBox.TabStop = false;
             this.LogOnInfoGBox.Text = "로그인";
             // 
             // PwInputBox
             // 
-            this.PwInputBox.Font = new System.Drawing.Font("Gulim", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PwInputBox.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PwInputBox.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.PwInputBox.Location = new System.Drawing.Point(6, 75);
+            this.PwInputBox.Location = new System.Drawing.Point(6, 70);
             this.PwInputBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PwInputBox.Name = "PwInputBox";
-            this.PwInputBox.Size = new System.Drawing.Size(171, 25);
+            this.PwInputBox.Size = new System.Drawing.Size(191, 25);
             this.PwInputBox.TabIndex = 13;
             this.PwInputBox.Text = "비밀번호";
             this.PwInputBox.Enter += new System.EventHandler(this.PwInputBox_Enter);
@@ -143,9 +143,9 @@
             // 
             // StartForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(832, 453);
+            this.ClientSize = new System.Drawing.Size(832, 425);
             this.Controls.Add(this.LogOnInfoGBox);
             this.Controls.Add(this.DeveloperLabel);
             this.Controls.Add(this.VersionLabel);

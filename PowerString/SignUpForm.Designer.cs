@@ -30,11 +30,11 @@
         {
             this.NewAccountCreateLabel = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.PswInputAgainBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.PswInputBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.IdInputBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.NewAccountCreateBtn = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
@@ -44,8 +44,8 @@
             // 
             this.NewAccountCreateLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.NewAccountCreateLabel.AutoSize = true;
-            this.NewAccountCreateLabel.Font = new System.Drawing.Font("Gulim", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.NewAccountCreateLabel.Location = new System.Drawing.Point(172, 54);
+            this.NewAccountCreateLabel.Font = new System.Drawing.Font("굴림", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.NewAccountCreateLabel.Location = new System.Drawing.Point(207, 51);
             this.NewAccountCreateLabel.Name = "NewAccountCreateLabel";
             this.NewAccountCreateLabel.Size = new System.Drawing.Size(436, 48);
             this.NewAccountCreateLabel.TabIndex = 2;
@@ -55,67 +55,73 @@
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.PswInputAgainBox);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.PswInputBox);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.IdInputBox);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(180, 136);
+            this.groupBox1.Location = new System.Drawing.Point(207, 128);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(428, 203);
+            this.groupBox1.Size = new System.Drawing.Size(436, 190);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             // 
-            // textBox3
+            // PswInputAgainBox
             // 
-            this.textBox3.Font = new System.Drawing.Font("Gulim", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(250, 141);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(172, 30);
-            this.textBox3.TabIndex = 6;
+            this.PswInputAgainBox.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PswInputAgainBox.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.PswInputAgainBox.Location = new System.Drawing.Point(215, 128);
+            this.PswInputAgainBox.Name = "PswInputAgainBox";
+            this.PswInputAgainBox.Size = new System.Drawing.Size(215, 30);
+            this.PswInputAgainBox.TabIndex = 6;
+            this.PswInputAgainBox.Text = "비밀번호를 입력하세요";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Gulim", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(6, 144);
+            this.label3.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(6, 131);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(156, 20);
             this.label3.TabIndex = 6;
             this.label3.Text = "비밀번호 재확인";
             // 
-            // textBox2
+            // PswInputBox
             // 
-            this.textBox2.Font = new System.Drawing.Font("Gulim", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(250, 94);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(172, 30);
-            this.textBox2.TabIndex = 5;
+            this.PswInputBox.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PswInputBox.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.PswInputBox.Location = new System.Drawing.Point(215, 88);
+            this.PswInputBox.Name = "PswInputBox";
+            this.PswInputBox.Size = new System.Drawing.Size(215, 30);
+            this.PswInputBox.TabIndex = 5;
+            this.PswInputBox.Text = "비밀번호는 4자까지";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Gulim", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 54);
+            this.label1.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(6, 51);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(203, 20);
             this.label1.TabIndex = 4;
             this.label1.Text = "새로운 사용자명 입력";
             // 
-            // textBox1
+            // IdInputBox
             // 
-            this.textBox1.Font = new System.Drawing.Font("Gulim", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(250, 51);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(172, 30);
-            this.textBox1.TabIndex = 4;
+            this.IdInputBox.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IdInputBox.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.IdInputBox.Location = new System.Drawing.Point(215, 48);
+            this.IdInputBox.Name = "IdInputBox";
+            this.IdInputBox.Size = new System.Drawing.Size(215, 30);
+            this.IdInputBox.TabIndex = 4;
+            this.IdInputBox.Text = "사용자명은 30자까지";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Gulim", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 97);
+            this.label2.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(6, 91);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(136, 20);
             this.label2.TabIndex = 5;
@@ -124,10 +130,10 @@
             // NewAccountCreateBtn
             // 
             this.NewAccountCreateBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.NewAccountCreateBtn.Font = new System.Drawing.Font("Gulim", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NewAccountCreateBtn.Location = new System.Drawing.Point(190, 363);
+            this.NewAccountCreateBtn.Font = new System.Drawing.Font("굴림", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NewAccountCreateBtn.Location = new System.Drawing.Point(207, 340);
             this.NewAccountCreateBtn.Name = "NewAccountCreateBtn";
-            this.NewAccountCreateBtn.Size = new System.Drawing.Size(412, 41);
+            this.NewAccountCreateBtn.Size = new System.Drawing.Size(436, 38);
             this.NewAccountCreateBtn.TabIndex = 4;
             this.NewAccountCreateBtn.Text = "새로운 사용자 계정 생성";
             this.NewAccountCreateBtn.UseVisualStyleBackColor = true;
@@ -135,9 +141,9 @@
             // 
             // SignUpForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(832, 453);
+            this.ClientSize = new System.Drawing.Size(832, 425);
             this.Controls.Add(this.NewAccountCreateBtn);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.NewAccountCreateLabel);
@@ -154,11 +160,11 @@
 
         private System.Windows.Forms.Label NewAccountCreateLabel;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox PswInputAgainBox;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox PswInputBox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox IdInputBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button NewAccountCreateBtn;
     }

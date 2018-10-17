@@ -30,19 +30,19 @@
         {
             this.MoveToMainMenu = new System.Windows.Forms.Button();
             this.Close = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TesterName = new System.Windows.Forms.Label();
+            this.IncorrectPer = new System.Windows.Forms.Label();
+            this.Score = new System.Windows.Forms.Label();
+            this.TimeProgress = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
             // 
             // MoveToMainMenu
             // 
             this.MoveToMainMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.MoveToMainMenu.Font = new System.Drawing.Font("Gulim", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MoveToMainMenu.Location = new System.Drawing.Point(12, 238);
+            this.MoveToMainMenu.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MoveToMainMenu.Location = new System.Drawing.Point(12, 223);
             this.MoveToMainMenu.Name = "MoveToMainMenu";
-            this.MoveToMainMenu.Size = new System.Drawing.Size(127, 42);
+            this.MoveToMainMenu.Size = new System.Drawing.Size(127, 39);
             this.MoveToMainMenu.TabIndex = 0;
             this.MoveToMainMenu.Text = "메인메뉴로 (&M)";
             this.MoveToMainMenu.UseVisualStyleBackColor = true;
@@ -50,59 +50,60 @@
             // Close
             // 
             this.Close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.Close.Font = new System.Drawing.Font("Gulim", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Close.Location = new System.Drawing.Point(443, 238);
+            this.Close.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Close.Location = new System.Drawing.Point(443, 223);
             this.Close.Name = "Close";
-            this.Close.Size = new System.Drawing.Size(127, 42);
+            this.Close.Size = new System.Drawing.Size(127, 39);
             this.Close.TabIndex = 1;
             this.Close.Text = "닫기 (&C)";
             this.Close.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // TesterName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(237, 37);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 17);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "OOO 님";
+            this.TesterName.AutoSize = true;
+            this.TesterName.Location = new System.Drawing.Point(64, 91);
+            this.TesterName.Name = "TesterName";
+            this.TesterName.Size = new System.Drawing.Size(63, 15);
+            this.TesterName.TabIndex = 2;
+            this.TesterName.Text = "OOO 님";
             // 
-            // label2
+            // IncorrectPer
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(96, 98);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 17);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "오타율";
+            this.IncorrectPer.AutoSize = true;
+            this.IncorrectPer.Location = new System.Drawing.Point(212, 91);
+            this.IncorrectPer.Name = "IncorrectPer";
+            this.IncorrectPer.Size = new System.Drawing.Size(52, 15);
+            this.IncorrectPer.TabIndex = 3;
+            this.IncorrectPer.Text = "오타율";
             // 
-            // label3
+            // Score
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(443, 97);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(32, 17);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "점수";
+            this.Score.AutoSize = true;
+            this.Score.Location = new System.Drawing.Point(350, 91);
+            this.Score.Name = "Score";
+            this.Score.Size = new System.Drawing.Size(37, 15);
+            this.Score.TabIndex = 4;
+            this.Score.Text = "점수";
             // 
-            // textBox1
+            // TimeProgress
             // 
-            this.textBox1.Location = new System.Drawing.Point(29, 169);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(522, 45);
-            this.textBox1.TabIndex = 5;
-            this.textBox1.Text = "임시 프로그래스 바";
+            this.TimeProgress.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TimeProgress.Location = new System.Drawing.Point(12, 172);
+            this.TimeProgress.Name = "TimeProgress";
+            this.TimeProgress.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.TimeProgress.Size = new System.Drawing.Size(558, 23);
+            this.TimeProgress.TabIndex = 6;
             // 
             // ResultForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(582, 303);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(582, 284);
+            this.Controls.Add(this.TimeProgress);
+            this.Controls.Add(this.Score);
+            this.Controls.Add(this.IncorrectPer);
+            this.Controls.Add(this.TesterName);
             this.Controls.Add(this.Close);
             this.Controls.Add(this.MoveToMainMenu);
             this.Name = "ResultForm";
@@ -116,9 +117,9 @@
 
         private System.Windows.Forms.Button MoveToMainMenu;
         private System.Windows.Forms.Button Close;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label TesterName;
+        private System.Windows.Forms.Label IncorrectPer;
+        private System.Windows.Forms.Label Score;
+        private System.Windows.Forms.ProgressBar TimeProgress;
     }
 }
