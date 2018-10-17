@@ -7,7 +7,7 @@ namespace PowerString.UnitTest
     [TestClass]
     public class UnitTest1
     {
-        [TestMethod]
+        /*[TestMethod]
         public void UpdateTest()
         {
             Tester tester = new Tester();
@@ -32,6 +32,7 @@ namespace PowerString.UnitTest
 
             Assert.AreEqual(count - 1, DataRepository.Tester.Count());
         }
+*/
 
         [TestMethod]
         public void InsertTest()
