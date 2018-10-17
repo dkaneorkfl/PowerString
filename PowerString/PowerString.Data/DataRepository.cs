@@ -49,7 +49,7 @@ namespace PowerString.Data
         {
             get
             {
-                if (_testerRecord == null)
+                if (_testRecord == null)
                     _testRecord = new TestRecordData();
 
                 return _testRecord;

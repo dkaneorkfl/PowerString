@@ -21,11 +21,20 @@ namespace PowerString.Data
             Console.WriteLine(sql);
         }
 
-        public List<Category> Select()
+
+        public List<T> Select()
         {
             using (var context = CreateContext())
             {
-                return context.Categories.ToList();
+                return context.Set<T>().ToList();
+            }
+        }
+
+        public int Count()
+        {
+            using(var context = CreateContext())
+            {
+                return context.Set<T>().Count();
             }
         }
     }

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace PowerString.Data
 {
+    //R
     public class CodeData : EntityData<Code>
     {
         public Code SelectById(int codeId)

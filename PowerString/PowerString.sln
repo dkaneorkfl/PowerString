@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PowerString.Gui", "PowerStr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PowerString.Data", "PowerString.Data\PowerString.Data.csproj", "{74751951-1D2B-471C-971F-CD523C247C48}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PowerString.UnitTest", "..\PowerString.UnitTest\PowerString.UnitTest.csproj", "{180CF44B-B5CA-4B86-81F3-C1C3CF5DE19F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{74751951-1D2B-471C-971F-CD523C247C48}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{74751951-1D2B-471C-971F-CD523C247C48}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{74751951-1D2B-471C-971F-CD523C247C48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{180CF44B-B5CA-4B86-81F3-C1C3CF5DE19F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{180CF44B-B5CA-4B86-81F3-C1C3CF5DE19F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{180CF44B-B5CA-4B86-81F3-C1C3CF5DE19F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{180CF44B-B5CA-4B86-81F3-C1C3CF5DE19F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

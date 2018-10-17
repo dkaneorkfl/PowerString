@@ -2,6 +2,7 @@
 
 namespace PowerString.Data
 {
+    //R
     public class TestRecordData : EntityData<TestRecord>
     {
         public TestRecord SelectById(int testRecordId)
