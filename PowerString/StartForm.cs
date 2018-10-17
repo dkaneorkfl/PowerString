@@ -48,12 +48,6 @@ namespace PowerString
             this.Hide();
         }
 
-
-        private void IdInputBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         // 사용자명 입력 테스트 박스 힌트(Watermark)
         private void IdInputBox_Enter(object sender, EventArgs e)
         {

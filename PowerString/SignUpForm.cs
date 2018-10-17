@@ -28,10 +28,6 @@ namespace PowerString
             _mt.Location = new Point(100, 100);
             this.Visible = false;
         }
-        private void InputBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         // 사용자명 입력 테스트 박스 힌트(Watermark)
         private void IdInputBox_Enter(object sender, EventArgs e)

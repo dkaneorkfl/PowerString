@@ -33,14 +33,17 @@
             this.GoToNextTextBtn = new System.Windows.Forms.Button();
             this.TestCodeViewTxetBox = new System.Windows.Forms.TextBox();
             this.TestCodeInputTextBox = new System.Windows.Forms.TextBox();
+            this.ExampleBox = new System.Windows.Forms.GroupBox();
+            this.TimeProgress = new System.Windows.Forms.ProgressBar();
+            this.ExampleBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // BackToSelectionSelectionBtn
             // 
             this.BackToSelectionSelectionBtn.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BackToSelectionSelectionBtn.Location = new System.Drawing.Point(13, 12);
+            this.BackToSelectionSelectionBtn.Location = new System.Drawing.Point(12, 12);
             this.BackToSelectionSelectionBtn.Name = "BackToSelectionSelectionBtn";
-            this.BackToSelectionSelectionBtn.Size = new System.Drawing.Size(205, 38);
+            this.BackToSelectionSelectionBtn.Size = new System.Drawing.Size(210, 39);
             this.BackToSelectionSelectionBtn.TabIndex = 0;
             this.BackToSelectionSelectionBtn.Text = "선택창으로 돌아가기(&B)";
             this.BackToSelectionSelectionBtn.UseVisualStyleBackColor = true;
@@ -50,9 +53,9 @@
             // 
             this.PresentTestSkipBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.PresentTestSkipBtn.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PresentTestSkipBtn.Location = new System.Drawing.Point(613, 12);
+            this.PresentTestSkipBtn.Location = new System.Drawing.Point(610, 12);
             this.PresentTestSkipBtn.Name = "PresentTestSkipBtn";
-            this.PresentTestSkipBtn.Size = new System.Drawing.Size(205, 38);
+            this.PresentTestSkipBtn.Size = new System.Drawing.Size(210, 39);
             this.PresentTestSkipBtn.TabIndex = 1;
             this.PresentTestSkipBtn.Text = "현재 문제 건너뛰기(&S)";
             this.PresentTestSkipBtn.UseVisualStyleBackColor = true;
@@ -61,55 +64,75 @@
             // 
             this.GoToNextTextBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.GoToNextTextBtn.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GoToNextTextBtn.Location = new System.Drawing.Point(681, 379);
+            this.GoToNextTextBtn.Location = new System.Drawing.Point(680, 378);
             this.GoToNextTextBtn.Name = "GoToNextTextBtn";
-            this.GoToNextTextBtn.Size = new System.Drawing.Size(137, 35);
+            this.GoToNextTextBtn.Size = new System.Drawing.Size(140, 39);
             this.GoToNextTextBtn.TabIndex = 2;
             this.GoToNextTextBtn.Text = "다음 문제로(&N)";
             this.GoToNextTextBtn.UseVisualStyleBackColor = true;
             // 
             // TestCodeViewTxetBox
             // 
-            this.TestCodeViewTxetBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TestCodeViewTxetBox.Dock = System.Windows.Forms.DockStyle.Left;
             this.TestCodeViewTxetBox.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TestCodeViewTxetBox.Location = new System.Drawing.Point(13, 55);
+            this.TestCodeViewTxetBox.Location = new System.Drawing.Point(3, 21);
             this.TestCodeViewTxetBox.Multiline = true;
             this.TestCodeViewTxetBox.Name = "TestCodeViewTxetBox";
             this.TestCodeViewTxetBox.ReadOnly = true;
             this.TestCodeViewTxetBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.TestCodeViewTxetBox.Size = new System.Drawing.Size(395, 243);
+            this.TestCodeViewTxetBox.Size = new System.Drawing.Size(395, 262);
             this.TestCodeViewTxetBox.TabIndex = 3;
             // 
             // TestCodeInputTextBox
             // 
-            this.TestCodeInputTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TestCodeInputTextBox.Dock = System.Windows.Forms.DockStyle.Right;
             this.TestCodeInputTextBox.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TestCodeInputTextBox.Location = new System.Drawing.Point(425, 56);
+            this.TestCodeInputTextBox.Location = new System.Drawing.Point(410, 21);
             this.TestCodeInputTextBox.Multiline = true;
             this.TestCodeInputTextBox.Name = "TestCodeInputTextBox";
             this.TestCodeInputTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.TestCodeInputTextBox.Size = new System.Drawing.Size(395, 243);
+            this.TestCodeInputTextBox.Size = new System.Drawing.Size(395, 262);
             this.TestCodeInputTextBox.TabIndex = 4;
+            // 
+            // ExampleBox
+            // 
+            this.ExampleBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ExampleBox.Controls.Add(this.TestCodeViewTxetBox);
+            this.ExampleBox.Controls.Add(this.TestCodeInputTextBox);
+            this.ExampleBox.Location = new System.Drawing.Point(12, 57);
+            this.ExampleBox.Name = "ExampleBox";
+            this.ExampleBox.Size = new System.Drawing.Size(808, 286);
+            this.ExampleBox.TabIndex = 5;
+            this.ExampleBox.TabStop = false;
+            this.ExampleBox.Text = "문제 x/y";
+            // 
+            // TimeProgress
+            // 
+            this.TimeProgress.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TimeProgress.Location = new System.Drawing.Point(12, 349);
+            this.TimeProgress.Name = "TimeProgress";
+            this.TimeProgress.Size = new System.Drawing.Size(808, 23);
+            this.TimeProgress.TabIndex = 0;
             // 
             // TypingTestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(832, 425);
-            this.Controls.Add(this.TestCodeInputTextBox);
-            this.Controls.Add(this.TestCodeViewTxetBox);
+            this.Controls.Add(this.ExampleBox);
+            this.Controls.Add(this.TimeProgress);
             this.Controls.Add(this.GoToNextTextBtn);
             this.Controls.Add(this.PresentTestSkipBtn);
             this.Controls.Add(this.BackToSelectionSelectionBtn);
             this.Name = "TypingTestForm";
-            this.Text = "TypingTestScreen";
+            this.Text = "PowerString";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.TypingTestScreen_FormClosed);
+            this.ExampleBox.ResumeLayout(false);
+            this.ExampleBox.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -120,5 +143,7 @@
         private System.Windows.Forms.Button GoToNextTextBtn;
         private System.Windows.Forms.TextBox TestCodeViewTxetBox;
         private System.Windows.Forms.TextBox TestCodeInputTextBox;
+        private System.Windows.Forms.GroupBox ExampleBox;
+        private System.Windows.Forms.ProgressBar TimeProgress;
     }
 }

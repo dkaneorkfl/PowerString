@@ -16,5 +16,15 @@ namespace PowerString
         {
             InitializeComponent();
         }
+
+        private void ScoreLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void IncorrectPercentLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

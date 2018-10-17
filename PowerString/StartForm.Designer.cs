@@ -43,17 +43,17 @@
             // 
             this.MainTitleLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.MainTitleLabel.AutoSize = true;
-            this.MainTitleLabel.Font = new System.Drawing.Font("굴림", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.MainTitleLabel.Location = new System.Drawing.Point(225, 39);
+            this.MainTitleLabel.Font = new System.Drawing.Font("굴림", 28F);
+            this.MainTitleLabel.Location = new System.Drawing.Point(258, 39);
             this.MainTitleLabel.Name = "MainTitleLabel";
-            this.MainTitleLabel.Size = new System.Drawing.Size(340, 144);
+            this.MainTitleLabel.Size = new System.Drawing.Size(334, 141);
             this.MainTitleLabel.TabIndex = 1;
             this.MainTitleLabel.Text = "코드 타자 연습\r\n\r\nPower String\r\n";
             this.MainTitleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // LogInBtn
             // 
-            this.LogInBtn.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.LogInBtn.Font = new System.Drawing.Font("굴림", 15F);
             this.LogInBtn.Location = new System.Drawing.Point(203, 30);
             this.LogInBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.LogInBtn.Name = "LogInBtn";
@@ -73,15 +73,14 @@
             this.IdInputBox.Size = new System.Drawing.Size(191, 25);
             this.IdInputBox.TabIndex = 3;
             this.IdInputBox.Text = "사용자명";
-            this.IdInputBox.TextChanged += new System.EventHandler(this.IdInputBox_TextChanged);
             this.IdInputBox.Enter += new System.EventHandler(this.IdInputBox_Enter);
             this.IdInputBox.Leave += new System.EventHandler(this.IdInputBox_Leave);
             // 
             // GoToNewAccountCreateBtn
             // 
             this.GoToNewAccountCreateBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.GoToNewAccountCreateBtn.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.GoToNewAccountCreateBtn.Location = new System.Drawing.Point(225, 339);
+            this.GoToNewAccountCreateBtn.Font = new System.Drawing.Font("굴림", 15F);
+            this.GoToNewAccountCreateBtn.Location = new System.Drawing.Point(255, 339);
             this.GoToNewAccountCreateBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.GoToNewAccountCreateBtn.Name = "GoToNewAccountCreateBtn";
             this.GoToNewAccountCreateBtn.Size = new System.Drawing.Size(340, 38);
@@ -121,7 +120,7 @@
             this.LogOnInfoGBox.Controls.Add(this.IdInputBox);
             this.LogOnInfoGBox.Controls.Add(this.LogInBtn);
             this.LogOnInfoGBox.Font = new System.Drawing.Font("굴림", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LogOnInfoGBox.Location = new System.Drawing.Point(225, 209);
+            this.LogOnInfoGBox.Location = new System.Drawing.Point(255, 209);
             this.LogOnInfoGBox.Name = "LogOnInfoGBox";
             this.LogOnInfoGBox.Size = new System.Drawing.Size(340, 113);
             this.LogOnInfoGBox.TabIndex = 12;
@@ -153,7 +152,7 @@
             this.Controls.Add(this.MainTitleLabel);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "StartForm";
-            this.Text = "MainTitle";
+            this.Text = "PowerString";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.LogOnInfoGBox.ResumeLayout(false);
             this.LogOnInfoGBox.PerformLayout();
