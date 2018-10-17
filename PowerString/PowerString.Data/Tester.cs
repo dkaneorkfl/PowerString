@@ -23,7 +23,7 @@ namespace PowerString.Data
         public int TesterId { get; set; }
         public string TesterName { get; set; }
         public string TesterPassword { get; set; }
-        public int TesterScore { get; set; }
+        public Nullable<int> TesterScore { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TestRecord> TestRecords { get; set; }
