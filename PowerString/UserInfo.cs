@@ -17,7 +17,7 @@ namespace PowerString
             InitializeComponent();
         }
 
-        private void closeBtn_Click(object sender, EventArgs e)
+        private void CloseBtn_Click(object sender, EventArgs e)
         {
             UserInfo userInfo = new UserInfo();
             userInfo.Close();
@@ -25,6 +25,11 @@ namespace PowerString
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

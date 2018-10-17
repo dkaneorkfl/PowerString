@@ -48,11 +48,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GamePlayScreen.cs">
+    <Compile Include="NewAccountCreate.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GamePlayScreen.Designer.cs">
-      <DependentUpon>GamePlayScreen.cs</DependentUpon>
+    <Compile Include="NewAccountCreate.Designer.cs">
+      <DependentUpon>NewAccountCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TypingTestScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TypingTestScreen.Designer.cs">
+      <DependentUpon>TypingTestScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="MainTitle.cs">
       <SubType>Form</SubType>
@@ -62,11 +68,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QuizSelection.cs">
+    <Compile Include="TestSelection.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="QuizSelection.Designer.cs">
-      <DependentUpon>QuizSelection.cs</DependentUpon>
+    <Compile Include="TestSelection.Designer.cs">
+      <DependentUpon>TestSelection.cs</DependentUpon>
     </Compile>
     <Compile Include="UserInfo.cs">
       <SubType>Form</SubType>
@@ -74,8 +80,11 @@
     <Compile Include="UserInfo.Designer.cs">
       <DependentUpon>UserInfo.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="GamePlayScreen.resx">
-      <DependentUpon>GamePlayScreen.cs</DependentUpon>
+    <EmbeddedResource Include="NewAccountCreate.resx">
+      <DependentUpon>NewAccountCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TypingTestScreen.resx">
+      <DependentUpon>TypingTestScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainTitle.resx">
       <DependentUpon>MainTitle.cs</DependentUpon>
@@ -89,8 +98,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="QuizSelection.resx">
-      <DependentUpon>QuizSelection.cs</DependentUpon>
+    <EmbeddedResource Include="TestSelection.resx">
+      <DependentUpon>TestSelection.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserInfo.resx">
       <DependentUpon>UserInfo.cs</DependentUpon>
