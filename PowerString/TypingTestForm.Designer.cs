@@ -1,6 +1,6 @@
 ﻿namespace PowerString
 {
-    partial class TypingTestScreen
+    partial class TypingTestForm
     {
         /// <summary>
         /// Required designer variable.
@@ -50,7 +50,7 @@
             // 
             this.PresentTestSkipBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.PresentTestSkipBtn.Font = new System.Drawing.Font("Gulim", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PresentTestSkipBtn.Location = new System.Drawing.Point(598, 13);
+            this.PresentTestSkipBtn.Location = new System.Drawing.Point(628, 13);
             this.PresentTestSkipBtn.Name = "PresentTestSkipBtn";
             this.PresentTestSkipBtn.Size = new System.Drawing.Size(190, 40);
             this.PresentTestSkipBtn.TabIndex = 1;
@@ -61,7 +61,7 @@
             // 
             this.GoToNextTextBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.GoToNextTextBtn.Font = new System.Drawing.Font("Gulim", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GoToNextTextBtn.Location = new System.Drawing.Point(651, 401);
+            this.GoToNextTextBtn.Location = new System.Drawing.Point(681, 404);
             this.GoToNextTextBtn.Name = "GoToNextTextBtn";
             this.GoToNextTextBtn.Size = new System.Drawing.Size(137, 37);
             this.GoToNextTextBtn.TabIndex = 2;
@@ -79,7 +79,7 @@
             this.TestCodeViewTxetBox.Name = "TestCodeViewTxetBox";
             this.TestCodeViewTxetBox.ReadOnly = true;
             this.TestCodeViewTxetBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.TestCodeViewTxetBox.Size = new System.Drawing.Size(388, 256);
+            this.TestCodeViewTxetBox.Size = new System.Drawing.Size(418, 259);
             this.TestCodeViewTxetBox.TabIndex = 3;
             // 
             // TestCodeInputTextBox
@@ -92,20 +92,20 @@
             this.TestCodeInputTextBox.Multiline = true;
             this.TestCodeInputTextBox.Name = "TestCodeInputTextBox";
             this.TestCodeInputTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.TestCodeInputTextBox.Size = new System.Drawing.Size(383, 256);
+            this.TestCodeInputTextBox.Size = new System.Drawing.Size(413, 259);
             this.TestCodeInputTextBox.TabIndex = 4;
             // 
-            // TypingTestScreen
+            // TypingTestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(802, 450);
+            this.ClientSize = new System.Drawing.Size(832, 453);
             this.Controls.Add(this.TestCodeInputTextBox);
             this.Controls.Add(this.TestCodeViewTxetBox);
             this.Controls.Add(this.GoToNextTextBtn);
             this.Controls.Add(this.PresentTestSkipBtn);
             this.Controls.Add(this.BackToSelectionSelectionBtn);
-            this.Name = "TypingTestScreen";
+            this.Name = "TypingTestForm";
             this.Text = "TypingTestScreen";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.TypingTestScreen_FormClosed);
             this.ResumeLayout(false);

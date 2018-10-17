@@ -1,6 +1,6 @@
 ﻿namespace PowerString
 {
-    partial class TestSelection
+    partial class MainMenuForm
     {
         /// <summary>
         /// Required designer variable.

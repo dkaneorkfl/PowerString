@@ -16,7 +16,7 @@ namespace PowerString
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainTitle());
+            Application.Run(new StartForm());
         }
     }
 }

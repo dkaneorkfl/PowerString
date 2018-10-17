@@ -1,6 +1,6 @@
 ﻿namespace PowerString
 {
-    partial class UserInfo
+    partial class UserInfoForm
     {
         /// <summary>
         /// Required designer variable.
@@ -46,7 +46,7 @@
             // 
             this.CloseBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.CloseBtn.Font = new System.Drawing.Font("Gulim", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CloseBtn.Location = new System.Drawing.Point(679, 412);
+            this.CloseBtn.Location = new System.Drawing.Point(711, 414);
             this.CloseBtn.Name = "CloseBtn";
             this.CloseBtn.Size = new System.Drawing.Size(109, 27);
             this.CloseBtn.TabIndex = 0;
@@ -74,7 +74,7 @@
             // textBox2
             // 
             this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBox2.Location = new System.Drawing.Point(11, 210);
+            this.textBox2.Location = new System.Drawing.Point(11, 212);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -100,7 +100,7 @@
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("Gulim", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(180, 13);
+            this.groupBox1.Location = new System.Drawing.Point(212, 13);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -143,25 +143,25 @@
             // 
             this.UserDeleteBtn.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.UserDeleteBtn.Font = new System.Drawing.Font("Gulim", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserDeleteBtn.Location = new System.Drawing.Point(11, 125);
+            this.UserDeleteBtn.Location = new System.Drawing.Point(11, 126);
             this.UserDeleteBtn.Name = "UserDeleteBtn";
             this.UserDeleteBtn.Size = new System.Drawing.Size(163, 29);
             this.UserDeleteBtn.TabIndex = 6;
             this.UserDeleteBtn.Text = "사용자 계정 삭제";
             this.UserDeleteBtn.UseVisualStyleBackColor = true;
             // 
-            // UserInfo
+            // UserInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 451);
+            this.ClientSize = new System.Drawing.Size(832, 453);
             this.Controls.Add(this.UserDeleteBtn);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.CloseBtn);
-            this.Name = "UserInfo";
+            this.Name = "UserInfoForm";
             this.Text = "UserInfo";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

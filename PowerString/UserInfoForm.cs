@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace PowerString
 {
-    public partial class UserInfo : Form
+    public partial class UserInfoForm : Form
     {
-        public UserInfo()
+        public UserInfoForm()
         {
             InitializeComponent();
         }
 
         private void CloseBtn_Click(object sender, EventArgs e)
         {
-            UserInfo userInfo = new UserInfo();
+            UserInfoForm userInfo = new UserInfoForm();
             userInfo.Close();
             Close();
         }

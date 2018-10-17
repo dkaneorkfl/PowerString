@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace PowerString
 {
-    public partial class TypingTestScreen : Form
+    public partial class TypingTestForm : Form
     {
-        private TestSelection _ts;
+        private MainMenuForm _ts;
 
-        public TypingTestScreen(TestSelection testForm)
+        public TypingTestForm(MainMenuForm testForm)
         {
             _ts = testForm;
             InitializeComponent();

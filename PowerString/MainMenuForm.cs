@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace PowerString
 {
-    public partial class TestSelection : Form
+    public partial class MainMenuForm : Form
     {
-        private MainTitle _mt;
+        private StartForm _mt;
         private ComboBox comboBox;
 
 
-        public TestSelection(MainTitle mainForm)
+        public MainMenuForm(StartForm mainForm)
         {
             _mt = mainForm;
             InitializeComponent();
@@ -36,14 +36,14 @@ namespace PowerString
 
         private void SingleGameBtn_Click(object sender, EventArgs e)
         {
-            TypingTestScreen tts = new TypingTestScreen(this);
+            TypingTestForm tts = new TypingTestForm(this);
             tts.Show();
             this.Hide();
         }
 
         private void MultiGameBtn_Click(object sender, EventArgs e)
         {
-            TypingTestScreen tts = new TypingTestScreen(this);
+            TypingTestForm tts = new TypingTestForm(this);
             tts.Show();
             //_mt.Show();
             this.Hide();
@@ -51,7 +51,7 @@ namespace PowerString
 
         private void UserInfoBtn_Click(object sender, EventArgs e)
         {
-            UserInfo userInfo = new UserInfo();
+            UserInfoForm userInfo = new UserInfoForm();
             userInfo.Show();
         }
 
@@ -66,7 +66,6 @@ namespace PowerString
 
         private void TestSelection_Load(object sender, EventArgs e)
         {
-            
             
         }
 

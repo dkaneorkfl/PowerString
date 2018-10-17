@@ -1,6 +1,6 @@
 ﻿namespace PowerString
 {
-    partial class NewAccountCreate
+    partial class SignUpForm
     {
         /// <summary>
         /// Required designer variable.
@@ -45,7 +45,7 @@
             this.NewAccountCreateLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.NewAccountCreateLabel.AutoSize = true;
             this.NewAccountCreateLabel.Font = new System.Drawing.Font("Gulim", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.NewAccountCreateLabel.Location = new System.Drawing.Point(214, 85);
+            this.NewAccountCreateLabel.Location = new System.Drawing.Point(172, 54);
             this.NewAccountCreateLabel.Name = "NewAccountCreateLabel";
             this.NewAccountCreateLabel.Size = new System.Drawing.Size(436, 48);
             this.NewAccountCreateLabel.TabIndex = 2;
@@ -61,7 +61,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(222, 157);
+            this.groupBox1.Location = new System.Drawing.Point(180, 136);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(428, 203);
             this.groupBox1.TabIndex = 3;
@@ -125,7 +125,7 @@
             // 
             this.NewAccountCreateBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.NewAccountCreateBtn.Font = new System.Drawing.Font("Gulim", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NewAccountCreateBtn.Location = new System.Drawing.Point(232, 385);
+            this.NewAccountCreateBtn.Location = new System.Drawing.Point(190, 363);
             this.NewAccountCreateBtn.Name = "NewAccountCreateBtn";
             this.NewAccountCreateBtn.Size = new System.Drawing.Size(412, 41);
             this.NewAccountCreateBtn.TabIndex = 4;
@@ -133,15 +133,15 @@
             this.NewAccountCreateBtn.UseVisualStyleBackColor = true;
             this.NewAccountCreateBtn.Click += new System.EventHandler(this.NewAccountCreateBtn_Click);
             // 
-            // NewAccountCreate
+            // SignUpForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(917, 595);
+            this.ClientSize = new System.Drawing.Size(832, 453);
             this.Controls.Add(this.NewAccountCreateBtn);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.NewAccountCreateLabel);
-            this.Name = "NewAccountCreate";
+            this.Name = "SignUpForm";
             this.Text = "NewAccountCreate";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

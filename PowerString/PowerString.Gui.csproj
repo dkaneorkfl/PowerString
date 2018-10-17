@@ -48,46 +48,55 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="NewAccountCreate.cs">
+    <Compile Include="SignUpForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NewAccountCreate.Designer.cs">
-      <DependentUpon>NewAccountCreate.cs</DependentUpon>
+    <Compile Include="SignUpForm.Designer.cs">
+      <DependentUpon>SignUpForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="TypingTestScreen.cs">
+    <Compile Include="ResultForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TypingTestScreen.Designer.cs">
-      <DependentUpon>TypingTestScreen.cs</DependentUpon>
+    <Compile Include="ResultForm.Designer.cs">
+      <DependentUpon>ResultForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainTitle.cs">
+    <Compile Include="TypingTestForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainTitle.Designer.cs">
-      <DependentUpon>MainTitle.cs</DependentUpon>
+    <Compile Include="TypingTestForm.Designer.cs">
+      <DependentUpon>TypingTestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StartForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartForm.Designer.cs">
+      <DependentUpon>StartForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestSelection.cs">
+    <Compile Include="MainMenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TestSelection.Designer.cs">
-      <DependentUpon>TestSelection.cs</DependentUpon>
+    <Compile Include="MainMenuForm.Designer.cs">
+      <DependentUpon>MainMenuForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserInfo.cs">
+    <Compile Include="UserInfoForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserInfo.Designer.cs">
-      <DependentUpon>UserInfo.cs</DependentUpon>
+    <Compile Include="UserInfoForm.Designer.cs">
+      <DependentUpon>UserInfoForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="NewAccountCreate.resx">
-      <DependentUpon>NewAccountCreate.cs</DependentUpon>
+    <EmbeddedResource Include="ResultForm.resx">
+      <DependentUpon>ResultForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TypingTestScreen.resx">
-      <DependentUpon>TypingTestScreen.cs</DependentUpon>
+    <EmbeddedResource Include="SignUpForm.resx">
+      <DependentUpon>SignUpForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainTitle.resx">
-      <DependentUpon>MainTitle.cs</DependentUpon>
+    <EmbeddedResource Include="TypingTestForm.resx">
+      <DependentUpon>TypingTestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartForm.resx">
+      <DependentUpon>StartForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -98,11 +107,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="TestSelection.resx">
-      <DependentUpon>TestSelection.cs</DependentUpon>
+    <EmbeddedResource Include="MainMenuForm.resx">
+      <DependentUpon>MainMenuForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserInfo.resx">
-      <DependentUpon>UserInfo.cs</DependentUpon>
+    <EmbeddedResource Include="UserInfoForm.resx">
+      <DependentUpon>UserInfoForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

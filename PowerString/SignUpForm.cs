@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace PowerString
 {
-    public partial class NewAccountCreate : Form
+    public partial class SignUpForm : Form
     {
-        private MainTitle _mt;
+        private StartForm _mt;
 
-        public NewAccountCreate(MainTitle mainForm)
+        public SignUpForm(StartForm mainForm)
         {
             _mt = mainForm;
             InitializeComponent();

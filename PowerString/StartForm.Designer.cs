@@ -1,6 +1,6 @@
 ﻿namespace PowerString
 {
-    partial class MainTitle
+    partial class StartForm
     {
         /// <summary>
         /// 필수 디자이너 변수입니다.
@@ -44,7 +44,7 @@
             this.MainTitleLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.MainTitleLabel.AutoSize = true;
             this.MainTitleLabel.Font = new System.Drawing.Font("Gulim", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.MainTitleLabel.Location = new System.Drawing.Point(249, 110);
+            this.MainTitleLabel.Location = new System.Drawing.Point(207, 42);
             this.MainTitleLabel.Name = "MainTitleLabel";
             this.MainTitleLabel.Size = new System.Drawing.Size(340, 144);
             this.MainTitleLabel.TabIndex = 1;
@@ -81,7 +81,7 @@
             // 
             this.GoToNewAccountCreateBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.GoToNewAccountCreateBtn.Font = new System.Drawing.Font("Gulim", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.GoToNewAccountCreateBtn.Location = new System.Drawing.Point(257, 433);
+            this.GoToNewAccountCreateBtn.Location = new System.Drawing.Point(215, 362);
             this.GoToNewAccountCreateBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.GoToNewAccountCreateBtn.Name = "GoToNewAccountCreateBtn";
             this.GoToNewAccountCreateBtn.Size = new System.Drawing.Size(332, 41);
@@ -95,7 +95,7 @@
             this.VersionLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.VersionLabel.AutoSize = true;
             this.VersionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.VersionLabel.Location = new System.Drawing.Point(12, 568);
+            this.VersionLabel.Location = new System.Drawing.Point(12, 426);
             this.VersionLabel.Name = "VersionLabel";
             this.VersionLabel.Size = new System.Drawing.Size(82, 18);
             this.VersionLabel.TabIndex = 10;
@@ -107,11 +107,11 @@
             this.DeveloperLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.DeveloperLabel.AutoSize = true;
             this.DeveloperLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeveloperLabel.Location = new System.Drawing.Point(597, 568);
+            this.DeveloperLabel.Location = new System.Drawing.Point(512, 426);
             this.DeveloperLabel.Name = "DeveloperLabel";
-            this.DeveloperLabel.Size = new System.Drawing.Size(288, 18);
+            this.DeveloperLabel.Size = new System.Drawing.Size(285, 18);
             this.DeveloperLabel.TabIndex = 11;
-            this.DeveloperLabel.Text = "Developed by EJY, SHK, MUK, DSK, SKO";
+            this.DeveloperLabel.Text = "Developed by EJY, SHK, MJK, DSK, SKO";
             this.DeveloperLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // LogOnInfoGBox
@@ -121,7 +121,7 @@
             this.LogOnInfoGBox.Controls.Add(this.IdInputBox);
             this.LogOnInfoGBox.Controls.Add(this.LogInBtn);
             this.LogOnInfoGBox.Font = new System.Drawing.Font("Gulim", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LogOnInfoGBox.Location = new System.Drawing.Point(257, 294);
+            this.LogOnInfoGBox.Location = new System.Drawing.Point(215, 223);
             this.LogOnInfoGBox.Name = "LogOnInfoGBox";
             this.LogOnInfoGBox.Size = new System.Drawing.Size(332, 121);
             this.LogOnInfoGBox.TabIndex = 12;
@@ -141,18 +141,18 @@
             this.PwInputBox.Enter += new System.EventHandler(this.PwInputBox_Enter);
             this.PwInputBox.Leave += new System.EventHandler(this.PwInputBox_Leave);
             // 
-            // MainTitle
+            // StartForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(917, 595);
+            this.ClientSize = new System.Drawing.Size(832, 453);
             this.Controls.Add(this.LogOnInfoGBox);
             this.Controls.Add(this.DeveloperLabel);
             this.Controls.Add(this.VersionLabel);
             this.Controls.Add(this.GoToNewAccountCreateBtn);
             this.Controls.Add(this.MainTitleLabel);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "MainTitle";
+            this.Name = "StartForm";
             this.Text = "MainTitle";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.LogOnInfoGBox.ResumeLayout(false);
