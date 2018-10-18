@@ -62,7 +62,7 @@
             this.SignInBtn.Name = "SignInBtn";
             this.SignInBtn.Size = new System.Drawing.Size(129, 65);
             this.SignInBtn.TabIndex = 2;
-            this.SignInBtn.Text = "확인(&Enter)";
+            this.SignInBtn.Text = "확인(&Enter&)";
             this.SignInBtn.UseVisualStyleBackColor = true;
             this.SignInBtn.Click += new System.EventHandler(this.SignInBtn_Click);
             // 
@@ -74,7 +74,7 @@
             this.IdInputBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.IdInputBox.Name = "IdInputBox";
             this.IdInputBox.Size = new System.Drawing.Size(119, 25);
-            this.IdInputBox.TabIndex = 3;
+            this.IdInputBox.TabIndex = 0;
             this.IdInputBox.Text = "사용자명";
             this.IdInputBox.Enter += new System.EventHandler(this.IdInputBox_Enter);
             this.IdInputBox.Leave += new System.EventHandler(this.IdInputBox_Leave);
@@ -87,8 +87,8 @@
             this.SignUpBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SignUpBtn.Name = "SignUpBtn";
             this.SignUpBtn.Size = new System.Drawing.Size(340, 38);
-            this.SignUpBtn.TabIndex = 7;
-            this.SignUpBtn.Text = "새로운 사용자 등록";
+            this.SignUpBtn.TabIndex = 3;
+            this.SignUpBtn.Text = "새로운 사용자 등록(&N)";
             this.SignUpBtn.UseVisualStyleBackColor = true;
             this.SignUpBtn.Click += new System.EventHandler(this.SignUpBtn_Click);
             // 
@@ -158,9 +158,10 @@
             this.PwInputBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PwInputBox.Name = "PwInputBox";
             this.PwInputBox.Size = new System.Drawing.Size(119, 25);
-            this.PwInputBox.TabIndex = 13;
+            this.PwInputBox.TabIndex = 1;
             this.PwInputBox.Text = "비밀번호";
             this.PwInputBox.Enter += new System.EventHandler(this.PwInputBox_Enter);
+            this.PwInputBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PwInputBox_KeyDown);
             this.PwInputBox.Leave += new System.EventHandler(this.PwInputBox_Leave);
             // 
             // StartForm

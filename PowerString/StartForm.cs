@@ -135,5 +135,11 @@ namespace PowerString
             _isExit = false;
             this.Close();
         }
+
+        private void PwInputBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                SignInBtn_Click(sender, e);
+        }
     }
 }

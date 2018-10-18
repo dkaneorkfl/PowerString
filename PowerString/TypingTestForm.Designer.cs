@@ -48,7 +48,7 @@
             this.btnBackToMainMenu.Location = new System.Drawing.Point(12, 12);
             this.btnBackToMainMenu.Name = "btnBackToMainMenu";
             this.btnBackToMainMenu.Size = new System.Drawing.Size(205, 38);
-            this.btnBackToMainMenu.TabIndex = 0;
+            this.btnBackToMainMenu.TabIndex = 4;
             this.btnBackToMainMenu.Text = "메인메뉴로(&B)";
             this.btnBackToMainMenu.UseVisualStyleBackColor = true;
             this.btnBackToMainMenu.Click += new System.EventHandler(this.btnBackToMainMenu_Click);
@@ -105,7 +105,7 @@
             this.tbxUserInput.Name = "tbxUserInput";
             this.tbxUserInput.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.tbxUserInput.Size = new System.Drawing.Size(390, 282);
-            this.tbxUserInput.TabIndex = 4;
+            this.tbxUserInput.TabIndex = 0;
             // 
             // pgbTimer
             // 
@@ -143,7 +143,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 288F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(806, 288);
             this.tableLayoutPanel1.TabIndex = 7;
             // 

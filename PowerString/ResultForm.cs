@@ -17,14 +17,15 @@ namespace PowerString
             InitializeComponent();
         }
 
-        private void TimeProgress_Click(object sender, EventArgs e)
+        // 메인메뉴로 돌아가기 버튼
+        private void MoveToMainMenu_Click(object sender, EventArgs e)
         {
-
+            MoveEvent.MoveToForm(new MainMenuForm());
         }
 
-        private void ClearImg_Click(object sender, EventArgs e)
+        private void Close_Click(object sender, EventArgs e)
         {
-
+            Close();
         }
     }
 }

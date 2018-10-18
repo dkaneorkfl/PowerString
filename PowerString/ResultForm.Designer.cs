@@ -51,6 +51,7 @@
             this.MoveToMainMenu.TabIndex = 0;
             this.MoveToMainMenu.Text = "메인메뉴로 (&M)";
             this.MoveToMainMenu.UseVisualStyleBackColor = true;
+            this.MoveToMainMenu.Click += new System.EventHandler(this.MoveToMainMenu_Click);
             // 
             // Close
             // 
@@ -108,7 +109,6 @@
             this.ClearImg.Size = new System.Drawing.Size(110, 106);
             this.ClearImg.TabIndex = 6;
             this.ClearImg.TabStop = false;
-            this.ClearImg.Click += new System.EventHandler(this.ClearImg_Click);
             // 
             // ResultForm
             // 
