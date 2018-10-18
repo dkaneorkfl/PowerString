@@ -12,13 +12,13 @@ namespace PowerString
 {
     public partial class MainMenuForm : Form
     {
-        private StartForm _mt;
+        private StartForm _mt= new StartForm();
         private ComboBox comboBox;
 
 
-        public MainMenuForm(StartForm mainForm)
+        public MainMenuForm()
         {
-            _mt = mainForm;
+            //_mt = mainForm;
             InitializeComponent();
         }
 
@@ -36,14 +36,14 @@ namespace PowerString
 
         private void SingleGameBtn_Click(object sender, EventArgs e)
         {
-            TypingTestForm tts = new TypingTestForm(this);
+            TypingTestForm tts = new TypingTestForm();
             tts.Show();
             this.Hide();
         }
 
         private void MultiGameBtn_Click(object sender, EventArgs e)
         {
-            TypingTestForm tts = new TypingTestForm(this);
+            TypingTestForm tts = new TypingTestForm();
             tts.Show();
             //_mt.Show();
             this.Hide();

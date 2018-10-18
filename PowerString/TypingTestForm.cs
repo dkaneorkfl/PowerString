@@ -8,15 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace PowerString
 {
     public partial class TypingTestForm : Form
     {
         private MainMenuForm _ts;
 
-        public TypingTestForm(MainMenuForm testForm)
+        public TypingTestForm()
         {
-            _ts = testForm;
+//            _ts = testForm;
             InitializeComponent();
             TestTime.Start();
         }
@@ -43,6 +44,9 @@ namespace PowerString
             if (TimeProgress.Value == 0)
             {
                 //시험 시간이 끝나면 결과를 출력시킵니다.
+                ResultForm rf = new ResultForm();
+                rf.Show();
+                TestTime.Stop();
             }
         }
     }

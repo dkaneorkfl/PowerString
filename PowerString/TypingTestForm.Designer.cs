@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TypingTestForm));
             this.BackToSelectionSelectionBtn = new System.Windows.Forms.Button();
             this.PresentTestSkipBtn = new System.Windows.Forms.Button();
             this.GoToNextTextBtn = new System.Windows.Forms.Button();
@@ -75,6 +76,7 @@
             // 
             // TestCodeViewTxetBox
             // 
+            this.TestCodeViewTxetBox.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.TestCodeViewTxetBox.Dock = System.Windows.Forms.DockStyle.Left;
             this.TestCodeViewTxetBox.Enabled = false;
             this.TestCodeViewTxetBox.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -116,15 +118,17 @@
             this.TimeProgress.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.TimeProgress.BackColor = System.Drawing.SystemColors.Control;
+            this.TimeProgress.ForeColor = System.Drawing.Color.Magenta;
             this.TimeProgress.Location = new System.Drawing.Point(12, 349);
             this.TimeProgress.MarqueeAnimationSpeed = 1;
-            this.TimeProgress.Maximum = 30000;
+            this.TimeProgress.Maximum = 10;
             this.TimeProgress.Name = "TimeProgress";
             this.TimeProgress.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.TimeProgress.Size = new System.Drawing.Size(808, 23);
             this.TimeProgress.Step = -1;
+            this.TimeProgress.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.TimeProgress.TabIndex = 0;
-            this.TimeProgress.Value = 30000;
+            this.TimeProgress.Value = 10;
             // 
             // TestTime
             // 
@@ -141,6 +145,7 @@
             this.Controls.Add(this.GoToNextTextBtn);
             this.Controls.Add(this.PresentTestSkipBtn);
             this.Controls.Add(this.BackToSelectionSelectionBtn);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TypingTestForm";
             this.Text = "PowerString";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.TypingTestScreen_FormClosed);
