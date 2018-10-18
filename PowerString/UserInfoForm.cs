@@ -12,26 +12,30 @@ namespace PowerString
 {
     public partial class UserInfoForm : Form
     {
-        public UserInfoForm()
+        private MainMenuForm _mainMenuForm = null;
+
+        private UserInfoForm()
         {
             InitializeComponent();
         }
 
+        public UserInfoForm(MainMenuForm mainMenuForm) : this()
+        {
+            _mainMenuForm = mainMenuForm;
+        }
+
+
         private void CloseBtn_Click(object sender, EventArgs e)
         {
-            UserInfoForm userInfo = new UserInfoForm();
-            userInfo.Close();
-            Close();
+            this.Close();
         }
+        
 
-        private void textBox3_TextChanged(object sender, EventArgs e)
+        private void UserDeleteBtn_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
+            MoveEvent.MoveToForm(new StartForm());
+            _mainMenuForm.CloseForm();
+            this.Close();
         }
     }
 }

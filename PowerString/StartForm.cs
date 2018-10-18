@@ -119,8 +119,7 @@ namespace PowerString
             {
                 Tester tester = DataRepository.Tester.SelectByName(userName);
                 MoveEvent.MoveToForm(new MainMenuForm(tester));
-                _isExit = false;
-                this.Close();
+                CloseForm();
             }
              
         }
@@ -129,6 +128,12 @@ namespace PowerString
         {
             if(_isExit)
                 Application.Exit();
+        }
+
+        public void CloseForm()
+        {
+            _isExit = false;
+            this.Close();
         }
     }
 }

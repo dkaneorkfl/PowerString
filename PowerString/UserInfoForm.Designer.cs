@@ -137,7 +137,6 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(175, 28);
             this.comboBox1.TabIndex = 5;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // UserDeleteBtn
             // 
@@ -149,6 +148,7 @@
             this.UserDeleteBtn.TabIndex = 6;
             this.UserDeleteBtn.Text = "사용자 계정 삭제";
             this.UserDeleteBtn.UseVisualStyleBackColor = true;
+            this.UserDeleteBtn.Click += new System.EventHandler(this.UserDeleteBtn_Click);
             // 
             // UserInfoForm
             // 

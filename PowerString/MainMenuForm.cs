@@ -61,8 +61,7 @@ namespace PowerString
         {
             //Start Form으로 이동
             MoveEvent.MoveToForm(new StartForm());
-            _isExit = false;
-            this.Close();
+            CloseForm();
         }
         
 
@@ -78,8 +77,7 @@ namespace PowerString
 
             //싱글버전 테스트 Form으로 이동
             MoveEvent.MoveToForm(new TypingTestForm(TestMode.Single, categoryInfo));
-            _isExit = false;
-            this.Close();
+            CloseForm();
         }
 
         private void MultiGameBtn_Click(object sender, EventArgs e)
@@ -93,14 +91,13 @@ namespace PowerString
 
             //멀티버전 테스트 Form으로 이동
             MoveEvent.MoveToForm(new TypingTestForm(TestMode.Multi, categoryInfo));
-            _isExit = false;
-            this.Close();
+            CloseForm();
         }
 
-
+        
         private void UserInfoBtn_Click(object sender, EventArgs e)
         {
-            MoveEvent.ShowModalForm(new UserInfoForm());
+            MoveEvent.ShowModalForm(new UserInfoForm(this));
             //_isExit = false;
             //this.Close();
         }
@@ -136,6 +133,12 @@ namespace PowerString
 
             var cat = query.First(x => x.CategoryName.Equals(selectedCat));
             return cat;
+        }
+
+        public void CloseForm()
+        {
+            _isExit = false;
+            this.Close();
         }
     }
 }
