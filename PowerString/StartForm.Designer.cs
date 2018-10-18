@@ -35,9 +35,9 @@
             this.VersionLabel = new System.Windows.Forms.Label();
             this.DeveloperLabel = new System.Windows.Forms.Label();
             this.LogOnInfoGBox = new System.Windows.Forms.GroupBox();
-            this.PwInputBox = new System.Windows.Forms.TextBox();
-            this.labelID = new System.Windows.Forms.Label();
             this.labelPW = new System.Windows.Forms.Label();
+            this.labelID = new System.Windows.Forms.Label();
+            this.PwInputBox = new System.Windows.Forms.TextBox();
             this.LogOnInfoGBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -131,6 +131,24 @@
             this.LogOnInfoGBox.TabStop = false;
             this.LogOnInfoGBox.Text = "로그인";
             // 
+            // labelPW
+            // 
+            this.labelPW.Location = new System.Drawing.Point(8, 70);
+            this.labelPW.Name = "labelPW";
+            this.labelPW.Size = new System.Drawing.Size(56, 25);
+            this.labelPW.TabIndex = 15;
+            this.labelPW.Text = " PW";
+            this.labelPW.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelID
+            // 
+            this.labelID.Location = new System.Drawing.Point(8, 29);
+            this.labelID.Name = "labelID";
+            this.labelID.Size = new System.Drawing.Size(56, 25);
+            this.labelID.TabIndex = 14;
+            this.labelID.Text = " ID";
+            this.labelID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // PwInputBox
             // 
             this.PwInputBox.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -143,24 +161,6 @@
             this.PwInputBox.Text = "비밀번호";
             this.PwInputBox.Enter += new System.EventHandler(this.PwInputBox_Enter);
             this.PwInputBox.Leave += new System.EventHandler(this.PwInputBox_Leave);
-            // 
-            // labelID
-            // 
-            this.labelID.Location = new System.Drawing.Point(8, 29);
-            this.labelID.Name = "labelID";
-            this.labelID.Size = new System.Drawing.Size(56, 25);
-            this.labelID.TabIndex = 14;
-            this.labelID.Text = " ID";
-            this.labelID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelPW
-            // 
-            this.labelPW.Location = new System.Drawing.Point(8, 70);
-            this.labelPW.Name = "labelPW";
-            this.labelPW.Size = new System.Drawing.Size(56, 25);
-            this.labelPW.TabIndex = 15;
-            this.labelPW.Text = " PW";
-            this.labelPW.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // StartForm
             // 
@@ -175,6 +175,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "StartForm";
             this.Text = "MainTitle";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.StartForm_FormClosed);
             this.LogOnInfoGBox.ResumeLayout(false);
             this.LogOnInfoGBox.PerformLayout();
             this.ResumeLayout(false);

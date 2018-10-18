@@ -14,9 +14,13 @@ namespace PowerString
 {
     public partial class SignUpForm : Form
     {
+        private bool _isExit = true;
         private Tester _newUser = new Tester();
-        private bool _CloseCheck = false;
-        private StartForm _mt;
+
+        public SignUpForm()
+        {
+            InitializeComponent();
+        }
 
         void CreateUser()
         {
@@ -36,10 +40,14 @@ namespace PowerString
                 else if ((PswInputText == PswInputAgainText) && (PswInputText.Length <= 4) && 30 < IdInputText.Length)
                 {
                     MessageBox.Show("가입을 축하합니다."); //가입을 축하하는 멘트를 보냅니다.
-                    _mt.Visible = true;  //시작화면을 보여주게 됩니다.
-                    _mt.Location = new Point(100, 100); // 시작화면이 보여주는 위치를 지정해 줍니다
-                    this.Visible = false; //현재의 회원가입화면을 숨기게 됩니다.
-                    _CloseCheck = true; //회원가입 폼을 강제종료하게될경우 메인폼이 종료되게끔 실행하는 폼 입니다.
+
+                    MoveEvent.MoveToOtherForm(new StartForm());
+                    _isExit = false;
+                    this.Close();
+                    //_mt.Visible = true;  //시작화면을 보여주게 됩니다.
+                    //_mt.Location = new Point(100, 100); // 시작화면이 보여주는 위치를 지정해 줍니다
+                    //this.Visible = false; //현재의 회원가입화면을 숨기게 됩니다.
+                    //_CloseCheck = true; //회원가입 폼을 강제종료하게될경우 메인폼이 종료되게끔 실행하는 폼 입니다.
 
                     int ScoreClear = 0; // 점수는 0점으로 초기화 시켜줍니다.
                     _newUser.TesterName = IdInputText; // name 을 데이터베이스에 저장하는 코드입니다.
@@ -50,13 +58,6 @@ namespace PowerString
 
             }
         }
-
-        public SignUpForm(StartForm mainForm)
-        {
-            _mt = mainForm;
-            InitializeComponent();
-            this.Location = new Point(100, 100);
-        }
         private void NewAccountCreateBtn_Click(object sender, EventArgs e)
         {
             CreateUser(); // 버튼을 누르게 되면 해당 메소드를 실행하게 됩니다.
@@ -64,9 +65,9 @@ namespace PowerString
 
         private void NewAcountBackBtn_Click(object sender, EventArgs e)
         {
-            _mt.Show();
-            _mt.Location = new Point(100, 100);
-            this.Hide();
+            MoveEvent.MoveToOtherForm(new StartForm());
+            _isExit = false;
+            this.Close();
         }
 
         //textbox의 hint를 담당하는 항목입니다.
@@ -143,8 +144,8 @@ namespace PowerString
 
         private void SignUpForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            _CloseCheck = false;
-            Application.Exit();
+            if(_isExit)
+                Application.Exit();
         }
         #endregion
 

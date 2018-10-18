@@ -14,13 +14,13 @@ namespace PowerString
 {
     public partial class StartForm : Form
     {
+        private bool _isExit = true; 
         private string _idHint = "사용자명";
         private string _pwdHint = "비밀번호";
 
         public StartForm()
         {
             InitializeComponent();
-            this.Location = new Point(100, 100);
         }
 
         // 확인 버튼
@@ -38,10 +38,9 @@ namespace PowerString
         // 새로운 사용자 등록 버튼
         private void SignUpBtn_Click(object sender, EventArgs e)
         {
-            SignUpForm signUpForm = new SignUpForm(this);
-            signUpForm.Show();//model
-            signUpForm.Location = new Point(100, 100);
-            this.Hide();
+            MoveEvent.MoveToOtherForm(new SignUpForm());
+            _isExit = false;
+            this.Close();    
         }
 
         // 커서가 있는 경우 ID 입력 힌트(Watermark) 사라짐
@@ -115,17 +114,23 @@ namespace PowerString
             //  4. ID 없으면 가입하라고 새로운 계정등록 화면으로 넘겨줌. 
             else if (!nameList.Contains(userName) || !pwList.Contains(userPw))
                 MessageBox.Show("아이디가 없거나 비밀번호가 일치하지 않습니다.");
+            
 
             //  5. ID와 PW 일치하면 로그인 후 메인메뉴Form 이동
             if (nameList.Contains(userName) && pwList.Contains(userPw))
             {
-                MainMenuForm mainMenuForm = new MainMenuForm();
-                mainMenuForm.Show();//model
-                mainMenuForm.Location = new Point(100, 100);
-                this.Hide();
+                Tester tester = DataRepository.Tester.SelectByName(userName);
+                MoveEvent.MoveToOtherForm(new MainMenuForm(tester));
+                _isExit = false;
+                this.Close();
             }
              
         }
-        
+
+        private void StartForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if(_isExit)
+                Application.Exit();
+        }
     }
 }

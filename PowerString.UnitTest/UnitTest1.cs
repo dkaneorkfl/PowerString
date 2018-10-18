@@ -21,18 +21,18 @@ namespace PowerString.UnitTest
 
             Assert.AreEqual(tester.TesterName, t2.TesterName);
         }
+*/
 
         [TestMethod]
         public void DeleteTest()
         {
             int count = DataRepository.Tester.Count();
 
-            Tester tester = DataRepository.Tester.SelectById(4);
+            Tester tester = DataRepository.Tester.SelectById(6);
             DataRepository.Tester.Delete(tester);
 
             Assert.AreEqual(count - 1, DataRepository.Tester.Count());
         }
-*/
 
         [TestMethod]
         public void InsertTest()
