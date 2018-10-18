@@ -33,7 +33,6 @@
             this.TesterName = new System.Windows.Forms.Label();
             this.IncorrectPer = new System.Windows.Forms.Label();
             this.Score = new System.Windows.Forms.Label();
-            this.TimeProgress = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
             // 
             // MoveToMainMenu
@@ -85,22 +84,11 @@
             this.Score.TabIndex = 4;
             this.Score.Text = "점수";
             // 
-            // TimeProgress
-            // 
-            this.TimeProgress.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.TimeProgress.Location = new System.Drawing.Point(12, 172);
-            this.TimeProgress.Name = "TimeProgress";
-            this.TimeProgress.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.TimeProgress.Size = new System.Drawing.Size(558, 23);
-            this.TimeProgress.TabIndex = 6;
-            // 
             // ResultForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(582, 284);
-            this.Controls.Add(this.TimeProgress);
             this.Controls.Add(this.Score);
             this.Controls.Add(this.IncorrectPer);
             this.Controls.Add(this.TesterName);
@@ -120,6 +108,5 @@
         private System.Windows.Forms.Label TesterName;
         private System.Windows.Forms.Label IncorrectPer;
         private System.Windows.Forms.Label Score;
-        private System.Windows.Forms.ProgressBar TimeProgress;
     }
 }

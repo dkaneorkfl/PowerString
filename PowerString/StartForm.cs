@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PowerString.Data;
 
 namespace PowerString
 {
@@ -31,7 +32,7 @@ namespace PowerString
             /*Controls.Add(selectionOfQuiz);//유저컨트롤 추가하는부분
             Controls.Remove(selectionOfQuiz);//유저컨트롤 제거하는 부분.*/
 
-            MainMenuForm quizSelection = new MainMenuForm();
+            MainMenuForm quizSelection = new MainMenuForm(new Tester());
             quizSelection.Show();//model
             quizSelection.Location = new Point(100, 100);
             this.Hide();

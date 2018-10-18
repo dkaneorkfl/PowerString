@@ -55,6 +55,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BackForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BackForm.Designer.cs">
+      <DependentUpon>BackForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CategoryInfo.cs" />
+    <Compile Include="MoveEvent.cs" />
     <Compile Include="SignUpForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +101,9 @@
     <Compile Include="UserInfoForm.Designer.cs">
       <DependentUpon>UserInfoForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BackForm.resx">
+      <DependentUpon>BackForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ResultForm.resx">
       <DependentUpon>ResultForm.cs</DependentUpon>
     </EmbeddedResource>

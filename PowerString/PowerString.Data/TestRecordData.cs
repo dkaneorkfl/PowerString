@@ -12,5 +12,14 @@ namespace PowerString.Data
                 return context.TestRecords.First(x => x.TestRecordId == testRecordId);
             }
         }
+
+        public void Insert(TestRecord testRecord)
+        {
+            using (var context = CreateContext())
+            {
+                context.TestRecords.Add(testRecord);
+                context.SaveChanges();
+            }
+        }
     }
 }

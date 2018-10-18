@@ -19,8 +19,14 @@ namespace PowerString.Data
 
         private void BackForm_Load(object sender, EventArgs e)
         {
-            BackForm bf = new BackForm();
-            bf.Show();
+            CategoryInfo info = new CategoryInfo();
+            info.CategoryId = 1;
+            info.CategoryName = "Restriction Operators";
+            info.ExampleCount = 3;
+
+            TypingTestForm form = new TypingTestForm(TestMode.Multi, info);
+            //MainMenuForm form = new MainMenuForm(new Tester());
+            form.Show();
         }
 
         private void BackForm_Shown(object sender, EventArgs e)
