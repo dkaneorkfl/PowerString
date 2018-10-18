@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TypingTestForm));
             this.BackToSelectionSelectionBtn = new System.Windows.Forms.Button();
             this.PresentTestSkipBtn = new System.Windows.Forms.Button();
             this.GoToNextTextBtn = new System.Windows.Forms.Button();
@@ -141,6 +142,7 @@
             this.Controls.Add(this.GoToNextTextBtn);
             this.Controls.Add(this.PresentTestSkipBtn);
             this.Controls.Add(this.BackToSelectionSelectionBtn);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TypingTestForm";
             this.Text = "PowerString";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.TypingTestScreen_FormClosed);

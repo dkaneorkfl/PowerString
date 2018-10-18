@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ResultForm));
             this.MoveToMainMenu = new System.Windows.Forms.Button();
             this.Close = new System.Windows.Forms.Button();
             this.ScoreLabel = new System.Windows.Forms.Label();
@@ -84,7 +85,6 @@
             this.TimeProgress.Size = new System.Drawing.Size(558, 23);
             this.TimeProgress.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.TimeProgress.TabIndex = 6;
-            this.TimeProgress.Click += new System.EventHandler(this.TimeProgress_Click);
             // 
             // ClearQuoteLabel
             // 
@@ -109,9 +109,9 @@
             // 
             this.ResultGroup.Controls.Add(this.TimeLabel);
             this.ResultGroup.Controls.Add(this.ScoreLabel);
-            this.ResultGroup.Location = new System.Drawing.Point(12, 79);
+            this.ResultGroup.Location = new System.Drawing.Point(12, 70);
             this.ResultGroup.Name = "ResultGroup";
-            this.ResultGroup.Size = new System.Drawing.Size(444, 100);
+            this.ResultGroup.Size = new System.Drawing.Size(444, 119);
             this.ResultGroup.TabIndex = 9;
             this.ResultGroup.TabStop = false;
             this.ResultGroup.Text = "OOO님은";
@@ -136,6 +136,7 @@
             this.Controls.Add(this.TimeProgress);
             this.Controls.Add(this.Close);
             this.Controls.Add(this.MoveToMainMenu);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ResultForm";
             this.Text = "결과 발표!";
             this.ResultGroup.ResumeLayout(false);

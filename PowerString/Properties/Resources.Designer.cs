@@ -61,12 +61,12 @@ namespace PowerString.Properties {
         }
         
         /// <summary>
-        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        ///   (아이콘)과(와) 유사한 System.Drawing.Icon 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_keyboard_100 {
+        internal static System.Drawing.Icon icons8_keyboard_50_E7C_icon {
             get {
-                object obj = ResourceManager.GetObject("icons8-keyboard-100", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                object obj = ResourceManager.GetObject("icons8_keyboard_50_E7C_icon", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
             }
         }
         

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignUpForm));
             this.NewAccountCreateLabel = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.PswInputAgainBox = new System.Windows.Forms.TextBox();
@@ -147,6 +148,7 @@
             this.Controls.Add(this.NewAccountCreateBtn);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.NewAccountCreateLabel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SignUpForm";
             this.Text = "NewAccountCreate";
             this.groupBox1.ResumeLayout(false);
