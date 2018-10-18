@@ -11,75 +11,134 @@ using PowerString.Data;
 
 namespace PowerString
 {
+    public enum TestMode
+    {
+        None,
+        Single,
+        Multi,
+    }
+
     public partial class MainMenuForm : Form
     {
-        private StartForm _mt = new StartForm();
-        private ComboBox comboBox;
+        private Tester _tester;
+        private bool _isExit = true;
 
 
-        public MainMenuForm()
+        private MainMenuForm()
         {
-            //_mt = mainForm;
             InitializeComponent();
         }
 
-        
-        private void BackToMainTitleBtn_Click(object sender, EventArgs e)
+        public MainMenuForm(Tester tester) : this()
         {
-            //MainTitle mt = new MainTitle(); //뒤로가기 버튼을 누르게 되면 최초의 화면이 나오게 됨.
-            this.Visible = false;
-            //mt.Visible = true;
-            _mt.Visible = true;
-            _mt.Location = new Point(100, 100);
-            this.Visible = false;
-            
+            _tester = tester;
         }
 
+
+        private void MainMenuForm_Load(object sender, EventArgs e)
+        {
+            var query = (from x in DataRepository.Category.Select()
+                select x.CategoryName).ToList();
+            
+            cbxCategorySelect.DataSource = query;
+        }
+
+
+        private void cbxCategorySelect_SelectedValueChanged(object sender, EventArgs e)
+        {
+            string selectedCat = cbxCategorySelect.SelectedItem as string;
+
+            CategoryInfo cat = GetCategoryInfo();
+
+            if (cat is null)
+                return;
+
+            lblExampleCount.Text = cat.ExampleCount.ToString();
+        }
+        
+
+        private void BackToMainTitleBtn_Click(object sender, EventArgs e)
+        {
+            //Start Form으로 이동
+            MoveEvent.MoveToForm(new StartForm());
+            CloseForm();
+        }
+        
+
+        
         private void SingleGameBtn_Click(object sender, EventArgs e)
         {
-            TypingTestForm tts = new TypingTestForm(this);
-            tts.Show();
-            this.Hide();
+            CategoryInfo categoryInfo = GetCategoryInfo();
+
+            //MessageBox.Show(categoryInfo.ExampleCount.ToString());
+
+            if (categoryInfo is null)
+                return;
+
+            //싱글버전 테스트 Form으로 이동
+            MoveEvent.MoveToForm(new TypingTestForm(TestMode.Single, categoryInfo));
+            CloseForm();
         }
 
         private void MultiGameBtn_Click(object sender, EventArgs e)
         {
-            TypingTestForm tts = new TypingTestForm(this);
-            tts.Show();
-            //_mt.Show();
-            this.Hide();
+            CategoryInfo categoryInfo = GetCategoryInfo();
+
+            //MessageBox.Show(categoryInfo.ExampleCount.ToString());
+
+            if (categoryInfo is null)
+                return;
+
+            //멀티버전 테스트 Form으로 이동
+            MoveEvent.MoveToForm(new TypingTestForm(TestMode.Multi, categoryInfo));
+            CloseForm();
         }
 
+        
         private void UserInfoBtn_Click(object sender, EventArgs e)
         {
-            UserInfoForm userInfo = new UserInfoForm();
-            userInfo.Show();
+            MoveEvent.ShowModalForm(new UserInfoForm(this));
+            //_isExit = false;
+            //this.Close();
         }
 
-        private void SelectCategoryList_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string[] data = {"사과", "포도", "바나나"};
-
-            comboBox.Items.Add("item1");
-            comboBox.Items.AddRange(data);
-
-        }
-
-        private void TestSelection_Load(object sender, EventArgs e)
-        {
-            var query = (from x in DataRepository.Code.Select()
-                select x.CodeExample).ToList();
-
-
-            foreach (string example in query)
-            {
-                SelectCategoryComboBox.Items.Add(example);
-            }
-        }
-
+        
+        //x 버튼을 누르거나 다른 Form으로 이동 시 발생하는 이벤트 함수
         private void TestSelection_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();//다른 폼이 종료하게 되면 그 메인폼도 같이 종료하게됨.
+            if(_isExit)
+                Application.Exit();
+        }
+
+
+        private CategoryInfo GetCategoryInfo()
+        {
+            string selectedCat = cbxCategorySelect.SelectedItem as string;
+
+            if (selectedCat is null)
+            {
+                MessageBox.Show("잘못된 선택입니다.");
+                return null;
+            }
+
+            var query = from x in DataRepository.Code.Select()
+                        group x by x.CategoryId
+                            into g
+                        select new CategoryInfo()
+                        {
+                            CategoryId = g.Key,
+                            CategoryName = (DataRepository.Category.SelectById(g.Key).CategoryName),
+                            ExampleCount = g.Count(),
+                        };
+
+            var cat = query.First(x => x.CategoryName.Equals(selectedCat));
+            return cat;
+        }
+
+        public void CloseForm()
+        {
+            _isExit = false;
+            this.Close();
         }
     }
 }

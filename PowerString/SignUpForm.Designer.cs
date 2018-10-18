@@ -30,6 +30,7 @@
         {
             this.NewAccountCreateLabel = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.DuplicateConfirmationBtn = new System.Windows.Forms.Button();
             this.PswInputAgainBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.PswInputBox = new System.Windows.Forms.TextBox();
@@ -37,6 +38,7 @@
             this.IdInputBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.NewAccountCreateBtn = new System.Windows.Forms.Button();
+            this.NewAcountBackBtn = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,6 +57,7 @@
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox1.Controls.Add(this.DuplicateConfirmationBtn);
             this.groupBox1.Controls.Add(this.PswInputAgainBox);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.PswInputBox);
@@ -62,20 +65,37 @@
             this.groupBox1.Controls.Add(this.IdInputBox);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(207, 128);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(436, 190);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(546, 190);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
+            // 
+            // DuplicateConfirmationBtn
+            // 
+            this.DuplicateConfirmationBtn.Location = new System.Drawing.Point(442, 50);
+            this.DuplicateConfirmationBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.DuplicateConfirmationBtn.Name = "DuplicateConfirmationBtn";
+            this.DuplicateConfirmationBtn.Size = new System.Drawing.Size(86, 29);
+            this.DuplicateConfirmationBtn.TabIndex = 7;
+            this.DuplicateConfirmationBtn.Text = "중복확인";
+            this.DuplicateConfirmationBtn.UseVisualStyleBackColor = true;
+            this.DuplicateConfirmationBtn.Click += new System.EventHandler(this.DuplicateConfirmationBtn_Click);
             // 
             // PswInputAgainBox
             // 
             this.PswInputAgainBox.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PswInputAgainBox.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.PswInputAgainBox.Location = new System.Drawing.Point(215, 128);
+            this.PswInputAgainBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PswInputAgainBox.Name = "PswInputAgainBox";
             this.PswInputAgainBox.Size = new System.Drawing.Size(215, 30);
             this.PswInputAgainBox.TabIndex = 6;
             this.PswInputAgainBox.Text = "비밀번호를 입력하세요";
+            this.PswInputAgainBox.TextChanged += new System.EventHandler(this.PswInputAgainBox_TextChanged);
+            this.PswInputAgainBox.Enter += new System.EventHandler(this.PswInputAgainBox_Enter_1);
+            this.PswInputAgainBox.Leave += new System.EventHandler(this.PswInputAgainBox_Leave_1);
             // 
             // label3
             // 
@@ -92,10 +112,14 @@
             this.PswInputBox.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PswInputBox.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.PswInputBox.Location = new System.Drawing.Point(215, 88);
+            this.PswInputBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PswInputBox.Name = "PswInputBox";
             this.PswInputBox.Size = new System.Drawing.Size(215, 30);
             this.PswInputBox.TabIndex = 5;
             this.PswInputBox.Text = "비밀번호는 4자까지";
+            this.PswInputBox.TextChanged += new System.EventHandler(this.PswInputBox_TextChanged);
+            this.PswInputBox.Enter += new System.EventHandler(this.PswInputBox_Enter_1);
+            this.PswInputBox.Leave += new System.EventHandler(this.PswInputBox_Leave);
             // 
             // label1
             // 
@@ -112,10 +136,13 @@
             this.IdInputBox.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IdInputBox.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.IdInputBox.Location = new System.Drawing.Point(215, 48);
+            this.IdInputBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.IdInputBox.Name = "IdInputBox";
             this.IdInputBox.Size = new System.Drawing.Size(215, 30);
             this.IdInputBox.TabIndex = 4;
             this.IdInputBox.Text = "사용자명은 30자까지";
+            this.IdInputBox.Enter += new System.EventHandler(this.IdInputBox_Enter_1);
+            this.IdInputBox.Leave += new System.EventHandler(this.IdInputBox_Leave_1);
             // 
             // label2
             // 
@@ -132,21 +159,35 @@
             this.NewAccountCreateBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.NewAccountCreateBtn.Font = new System.Drawing.Font("굴림", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NewAccountCreateBtn.Location = new System.Drawing.Point(207, 340);
+            this.NewAccountCreateBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.NewAccountCreateBtn.Name = "NewAccountCreateBtn";
-            this.NewAccountCreateBtn.Size = new System.Drawing.Size(436, 38);
+            this.NewAccountCreateBtn.Size = new System.Drawing.Size(437, 38);
             this.NewAccountCreateBtn.TabIndex = 4;
             this.NewAccountCreateBtn.Text = "새로운 사용자 계정 생성";
             this.NewAccountCreateBtn.UseVisualStyleBackColor = true;
             this.NewAccountCreateBtn.Click += new System.EventHandler(this.NewAccountCreateBtn_Click);
+            // 
+            // NewAcountBackBtn
+            // 
+            this.NewAcountBackBtn.Location = new System.Drawing.Point(733, 381);
+            this.NewAcountBackBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.NewAcountBackBtn.Name = "NewAcountBackBtn";
+            this.NewAcountBackBtn.Size = new System.Drawing.Size(86, 29);
+            this.NewAcountBackBtn.TabIndex = 5;
+            this.NewAcountBackBtn.Text = "취소(&c)";
+            this.NewAcountBackBtn.UseVisualStyleBackColor = true;
+            this.NewAcountBackBtn.Click += new System.EventHandler(this.NewAcountBackBtn_Click);
             // 
             // SignUpForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(832, 425);
+            this.Controls.Add(this.NewAcountBackBtn);
             this.Controls.Add(this.NewAccountCreateBtn);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.NewAccountCreateLabel);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "SignUpForm";
             this.Text = "NewAccountCreate";
             this.groupBox1.ResumeLayout(false);
@@ -167,5 +208,7 @@
         private System.Windows.Forms.TextBox IdInputBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button NewAccountCreateBtn;
+        private System.Windows.Forms.Button NewAcountBackBtn;
+        private System.Windows.Forms.Button DuplicateConfirmationBtn;
     }
 }

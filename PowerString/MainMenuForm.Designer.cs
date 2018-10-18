@@ -28,117 +28,129 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SingleGameBtn = new System.Windows.Forms.Button();
-            this.BackToMainTitleBtn = new System.Windows.Forms.Button();
-            this.UserInfoBtn = new System.Windows.Forms.Button();
-            this.MultiGameBtn = new System.Windows.Forms.Button();
-            this.SelectCategoryComboBox = new System.Windows.Forms.ComboBox();
-            this.ChooseCodeCategoryLabel = new System.Windows.Forms.Label();
+            this.btnSingleGame = new System.Windows.Forms.Button();
+            this.btnBackToMainTitle = new System.Windows.Forms.Button();
+            this.btnUserInfo = new System.Windows.Forms.Button();
+            this.btnMultiGame = new System.Windows.Forms.Button();
+            this.cbxCategorySelect = new System.Windows.Forms.ComboBox();
+            this.lblChooseCodeCategory = new System.Windows.Forms.Label();
+            this.lblExampleCount = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // SingleGameBtn
+            // btnSingleGame
             // 
-            this.SingleGameBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.SingleGameBtn.Font = new System.Drawing.Font("굴림", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SingleGameBtn.Location = new System.Drawing.Point(188, 350);
-            this.SingleGameBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.SingleGameBtn.Name = "SingleGameBtn";
-            this.SingleGameBtn.Size = new System.Drawing.Size(240, 141);
-            this.SingleGameBtn.TabIndex = 3;
-            this.SingleGameBtn.Text = "싱글게임\r\n(&S)";
-            this.SingleGameBtn.UseVisualStyleBackColor = true;
-            this.SingleGameBtn.Click += new System.EventHandler(this.SingleGameBtn_Click);
+            this.btnSingleGame.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSingleGame.Font = new System.Drawing.Font("굴림", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSingleGame.Location = new System.Drawing.Point(188, 350);
+            this.btnSingleGame.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnSingleGame.Name = "btnSingleGame";
+            this.btnSingleGame.Size = new System.Drawing.Size(240, 141);
+            this.btnSingleGame.TabIndex = 3;
+            this.btnSingleGame.Text = "싱글게임\r\n(&S)";
+            this.btnSingleGame.UseVisualStyleBackColor = true;
+            this.btnSingleGame.Click += new System.EventHandler(this.SingleGameBtn_Click);
             // 
-            // BackToMainTitleBtn
+            // btnBackToMainTitle
             // 
-            this.BackToMainTitleBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.BackToMainTitleBtn.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BackToMainTitleBtn.Location = new System.Drawing.Point(12, 521);
-            this.BackToMainTitleBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.BackToMainTitleBtn.Name = "BackToMainTitleBtn";
-            this.BackToMainTitleBtn.Size = new System.Drawing.Size(110, 29);
-            this.BackToMainTitleBtn.TabIndex = 5;
-            this.BackToMainTitleBtn.Text = "뒤로가기(&B)";
-            this.BackToMainTitleBtn.UseVisualStyleBackColor = true;
-            this.BackToMainTitleBtn.Click += new System.EventHandler(this.BackToMainTitleBtn_Click);
+            this.btnBackToMainTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnBackToMainTitle.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBackToMainTitle.Location = new System.Drawing.Point(12, 521);
+            this.btnBackToMainTitle.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnBackToMainTitle.Name = "btnBackToMainTitle";
+            this.btnBackToMainTitle.Size = new System.Drawing.Size(110, 29);
+            this.btnBackToMainTitle.TabIndex = 5;
+            this.btnBackToMainTitle.Text = "뒤로가기(&B)";
+            this.btnBackToMainTitle.UseVisualStyleBackColor = true;
+            this.btnBackToMainTitle.Click += new System.EventHandler(this.BackToMainTitleBtn_Click);
             // 
-            // UserInfoBtn
+            // btnUserInfo
             // 
-            this.UserInfoBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.UserInfoBtn.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserInfoBtn.Location = new System.Drawing.Point(766, 521);
-            this.UserInfoBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.UserInfoBtn.Name = "UserInfoBtn";
-            this.UserInfoBtn.Size = new System.Drawing.Size(134, 29);
-            this.UserInfoBtn.TabIndex = 0;
-            this.UserInfoBtn.Text = "사용자 정보(&U)";
-            this.UserInfoBtn.UseVisualStyleBackColor = true;
-            this.UserInfoBtn.Click += new System.EventHandler(this.UserInfoBtn_Click);
+            this.btnUserInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnUserInfo.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUserInfo.Location = new System.Drawing.Point(766, 521);
+            this.btnUserInfo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnUserInfo.Name = "btnUserInfo";
+            this.btnUserInfo.Size = new System.Drawing.Size(134, 29);
+            this.btnUserInfo.TabIndex = 0;
+            this.btnUserInfo.Text = "사용자 정보(&U)";
+            this.btnUserInfo.UseVisualStyleBackColor = true;
+            this.btnUserInfo.Click += new System.EventHandler(this.UserInfoBtn_Click);
             // 
-            // MultiGameBtn
+            // btnMultiGame
             // 
-            this.MultiGameBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.MultiGameBtn.Font = new System.Drawing.Font("굴림", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MultiGameBtn.Location = new System.Drawing.Point(461, 350);
-            this.MultiGameBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.MultiGameBtn.Name = "MultiGameBtn";
-            this.MultiGameBtn.Size = new System.Drawing.Size(240, 141);
-            this.MultiGameBtn.TabIndex = 4;
-            this.MultiGameBtn.Text = "멀티게임\r\n(&M)";
-            this.MultiGameBtn.UseVisualStyleBackColor = true;
-            this.MultiGameBtn.Click += new System.EventHandler(this.MultiGameBtn_Click);
+            this.btnMultiGame.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnMultiGame.Font = new System.Drawing.Font("굴림", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMultiGame.Location = new System.Drawing.Point(461, 350);
+            this.btnMultiGame.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnMultiGame.Name = "btnMultiGame";
+            this.btnMultiGame.Size = new System.Drawing.Size(240, 141);
+            this.btnMultiGame.TabIndex = 4;
+            this.btnMultiGame.Text = "멀티게임\r\n(&M)";
+            this.btnMultiGame.UseVisualStyleBackColor = true;
+            this.btnMultiGame.Click += new System.EventHandler(this.MultiGameBtn_Click);
             // 
-            // SelectCategoryComboBox
+            // cbxCategorySelect
             // 
-            this.SelectCategoryComboBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.SelectCategoryComboBox.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.SelectCategoryComboBox.FormattingEnabled = true;
-            this.SelectCategoryComboBox.Location = new System.Drawing.Point(188, 128);
-            this.SelectCategoryComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.SelectCategoryComboBox.Name = "SelectCategoryComboBox";
-            this.SelectCategoryComboBox.Size = new System.Drawing.Size(513, 32);
-            this.SelectCategoryComboBox.TabIndex = 6;
-            this.SelectCategoryComboBox.SelectedIndexChanged += new System.EventHandler(this.SelectCategoryList_SelectedIndexChanged);
+            this.cbxCategorySelect.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbxCategorySelect.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cbxCategorySelect.FormattingEnabled = true;
+            this.cbxCategorySelect.Location = new System.Drawing.Point(188, 128);
+            this.cbxCategorySelect.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cbxCategorySelect.Name = "cbxCategorySelect";
+            this.cbxCategorySelect.Size = new System.Drawing.Size(513, 32);
+            this.cbxCategorySelect.TabIndex = 6;
+            this.cbxCategorySelect.SelectedValueChanged += new System.EventHandler(this.cbxCategorySelect_SelectedValueChanged);
             // 
-            // ChooseCodeCategoryLabel
+            // lblChooseCodeCategory
             // 
-            this.ChooseCodeCategoryLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.ChooseCodeCategoryLabel.AutoSize = true;
-            this.ChooseCodeCategoryLabel.Font = new System.Drawing.Font("굴림", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.ChooseCodeCategoryLabel.Location = new System.Drawing.Point(215, 56);
-            this.ChooseCodeCategoryLabel.Name = "ChooseCodeCategoryLabel";
-            this.ChooseCodeCategoryLabel.Size = new System.Drawing.Size(436, 48);
-            this.ChooseCodeCategoryLabel.TabIndex = 7;
-            this.ChooseCodeCategoryLabel.Text = "코드 카테고리 선택";
-            this.ChooseCodeCategoryLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblChooseCodeCategory.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblChooseCodeCategory.AutoSize = true;
+            this.lblChooseCodeCategory.Font = new System.Drawing.Font("굴림", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblChooseCodeCategory.Location = new System.Drawing.Point(215, 56);
+            this.lblChooseCodeCategory.Name = "lblChooseCodeCategory";
+            this.lblChooseCodeCategory.Size = new System.Drawing.Size(436, 48);
+            this.lblChooseCodeCategory.TabIndex = 7;
+            this.lblChooseCodeCategory.Text = "코드 카테고리 선택";
+            this.lblChooseCodeCategory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblExampleCount
+            // 
+            this.lblExampleCount.AutoSize = true;
+            this.lblExampleCount.Location = new System.Drawing.Point(47, 139);
+            this.lblExampleCount.Name = "lblExampleCount";
+            this.lblExampleCount.Size = new System.Drawing.Size(45, 15);
+            this.lblExampleCount.TabIndex = 8;
+            this.lblExampleCount.Text = "label1";
             // 
             // MainMenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(914, 562);
-            this.Controls.Add(this.ChooseCodeCategoryLabel);
-            this.Controls.Add(this.SelectCategoryComboBox);
-            this.Controls.Add(this.BackToMainTitleBtn);
-            this.Controls.Add(this.MultiGameBtn);
-            this.Controls.Add(this.SingleGameBtn);
-            this.Controls.Add(this.UserInfoBtn);
+            this.Controls.Add(this.lblExampleCount);
+            this.Controls.Add(this.lblChooseCodeCategory);
+            this.Controls.Add(this.cbxCategorySelect);
+            this.Controls.Add(this.btnBackToMainTitle);
+            this.Controls.Add(this.btnMultiGame);
+            this.Controls.Add(this.btnSingleGame);
+            this.Controls.Add(this.btnUserInfo);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "MainMenuForm";
             this.Text = "TestSelection";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.TestSelection_FormClosed);
-            this.Load += new System.EventHandler(this.TestSelection_Load);
+            this.Load += new System.EventHandler(this.MainMenuForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Button SingleGameBtn;
-        private System.Windows.Forms.Button BackToMainTitleBtn;
-        private System.Windows.Forms.Button UserInfoBtn;
-        private System.Windows.Forms.Button MultiGameBtn;
-        private System.Windows.Forms.ComboBox SelectCategoryComboBox;
-        private System.Windows.Forms.Label ChooseCodeCategoryLabel;
+        private System.Windows.Forms.Button btnSingleGame;
+        private System.Windows.Forms.Button btnBackToMainTitle;
+        private System.Windows.Forms.Button btnUserInfo;
+        private System.Windows.Forms.Button btnMultiGame;
+        private System.Windows.Forms.ComboBox cbxCategorySelect;
+        private System.Windows.Forms.Label lblChooseCodeCategory;
+        private System.Windows.Forms.Label lblExampleCount;
     }
 }

@@ -21,6 +21,14 @@ namespace PowerString.Data
                 return context.Testers.First(x=> x.TesterId == testerId);
             }
         }
+
+        public Tester SelectByName(string name)
+        {
+            using (var context = CreateContext())
+            {
+                return context.Testers.First(x => x.TesterName == name);
+            }
+        }
         
         public void Update(Tester tester)
         {

@@ -16,5 +16,10 @@ namespace PowerString
         {
             InitializeComponent();
         }
+
+        private void TimeProgress_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
