@@ -93,5 +93,10 @@ namespace PowerString
             dcf = new DeleteCheckForm(new Tester());
             dcf.ShowDialog();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
