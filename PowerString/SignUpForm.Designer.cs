@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignUpForm));
             this.NewAccountCreateLabel = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.DuplicateConfirmationBtn = new System.Windows.Forms.Button();
@@ -64,7 +65,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.IdInputBox);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(207, 128);
+            this.groupBox1.Location = new System.Drawing.Point(152, 128);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -74,10 +75,10 @@
             // 
             // DuplicateConfirmationBtn
             // 
-            this.DuplicateConfirmationBtn.Location = new System.Drawing.Point(442, 50);
+            this.DuplicateConfirmationBtn.Location = new System.Drawing.Point(445, 48);
             this.DuplicateConfirmationBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DuplicateConfirmationBtn.Name = "DuplicateConfirmationBtn";
-            this.DuplicateConfirmationBtn.Size = new System.Drawing.Size(86, 29);
+            this.DuplicateConfirmationBtn.Size = new System.Drawing.Size(86, 30);
             this.DuplicateConfirmationBtn.TabIndex = 7;
             this.DuplicateConfirmationBtn.Text = "중복확인";
             this.DuplicateConfirmationBtn.UseVisualStyleBackColor = true;
@@ -158,10 +159,10 @@
             // 
             this.NewAccountCreateBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.NewAccountCreateBtn.Font = new System.Drawing.Font("굴림", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NewAccountCreateBtn.Location = new System.Drawing.Point(207, 340);
+            this.NewAccountCreateBtn.Location = new System.Drawing.Point(205, 340);
             this.NewAccountCreateBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.NewAccountCreateBtn.Name = "NewAccountCreateBtn";
-            this.NewAccountCreateBtn.Size = new System.Drawing.Size(437, 38);
+            this.NewAccountCreateBtn.Size = new System.Drawing.Size(440, 38);
             this.NewAccountCreateBtn.TabIndex = 4;
             this.NewAccountCreateBtn.Text = "새로운 사용자 계정 생성";
             this.NewAccountCreateBtn.UseVisualStyleBackColor = true;
@@ -187,9 +188,10 @@
             this.Controls.Add(this.NewAccountCreateBtn);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.NewAccountCreateLabel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "SignUpForm";
-            this.Text = "NewAccountCreate";
+            this.Text = "PowerText";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

@@ -21,5 +21,10 @@ namespace PowerString
         {
 
         }
+
+        private void ClearImg_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

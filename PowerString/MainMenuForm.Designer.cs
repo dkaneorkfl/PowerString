@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenuForm));
             this.btnSingleGame = new System.Windows.Forms.Button();
             this.btnBackToMainTitle = new System.Windows.Forms.Button();
             this.btnUserInfo = new System.Windows.Forms.Button();
@@ -41,10 +42,10 @@
             // 
             this.btnSingleGame.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSingleGame.Font = new System.Drawing.Font("굴림", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSingleGame.Location = new System.Drawing.Point(188, 350);
+            this.btnSingleGame.Location = new System.Drawing.Point(162, 229);
             this.btnSingleGame.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSingleGame.Name = "btnSingleGame";
-            this.btnSingleGame.Size = new System.Drawing.Size(240, 141);
+            this.btnSingleGame.Size = new System.Drawing.Size(240, 105);
             this.btnSingleGame.TabIndex = 3;
             this.btnSingleGame.Text = "싱글게임\r\n(&S)";
             this.btnSingleGame.UseVisualStyleBackColor = true;
@@ -54,10 +55,10 @@
             // 
             this.btnBackToMainTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnBackToMainTitle.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBackToMainTitle.Location = new System.Drawing.Point(12, 521);
+            this.btnBackToMainTitle.Location = new System.Drawing.Point(12, 373);
             this.btnBackToMainTitle.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnBackToMainTitle.Name = "btnBackToMainTitle";
-            this.btnBackToMainTitle.Size = new System.Drawing.Size(110, 29);
+            this.btnBackToMainTitle.Size = new System.Drawing.Size(140, 39);
             this.btnBackToMainTitle.TabIndex = 5;
             this.btnBackToMainTitle.Text = "뒤로가기(&B)";
             this.btnBackToMainTitle.UseVisualStyleBackColor = true;
@@ -67,10 +68,10 @@
             // 
             this.btnUserInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnUserInfo.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUserInfo.Location = new System.Drawing.Point(766, 521);
+            this.btnUserInfo.Location = new System.Drawing.Point(680, 373);
             this.btnUserInfo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnUserInfo.Name = "btnUserInfo";
-            this.btnUserInfo.Size = new System.Drawing.Size(134, 29);
+            this.btnUserInfo.Size = new System.Drawing.Size(140, 39);
             this.btnUserInfo.TabIndex = 0;
             this.btnUserInfo.Text = "사용자 정보(&U)";
             this.btnUserInfo.UseVisualStyleBackColor = true;
@@ -80,10 +81,10 @@
             // 
             this.btnMultiGame.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnMultiGame.Font = new System.Drawing.Font("굴림", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMultiGame.Location = new System.Drawing.Point(461, 350);
+            this.btnMultiGame.Location = new System.Drawing.Point(435, 229);
             this.btnMultiGame.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnMultiGame.Name = "btnMultiGame";
-            this.btnMultiGame.Size = new System.Drawing.Size(240, 141);
+            this.btnMultiGame.Size = new System.Drawing.Size(240, 105);
             this.btnMultiGame.TabIndex = 4;
             this.btnMultiGame.Text = "멀티게임\r\n(&M)";
             this.btnMultiGame.UseVisualStyleBackColor = true;
@@ -94,10 +95,10 @@
             this.cbxCategorySelect.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbxCategorySelect.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.cbxCategorySelect.FormattingEnabled = true;
-            this.cbxCategorySelect.Location = new System.Drawing.Point(188, 128);
+            this.cbxCategorySelect.Location = new System.Drawing.Point(165, 122);
             this.cbxCategorySelect.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbxCategorySelect.Name = "cbxCategorySelect";
-            this.cbxCategorySelect.Size = new System.Drawing.Size(513, 32);
+            this.cbxCategorySelect.Size = new System.Drawing.Size(510, 32);
             this.cbxCategorySelect.TabIndex = 6;
             this.cbxCategorySelect.SelectedValueChanged += new System.EventHandler(this.cbxCategorySelect_SelectedValueChanged);
             // 
@@ -106,7 +107,7 @@
             this.lblChooseCodeCategory.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblChooseCodeCategory.AutoSize = true;
             this.lblChooseCodeCategory.Font = new System.Drawing.Font("굴림", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lblChooseCodeCategory.Location = new System.Drawing.Point(215, 56);
+            this.lblChooseCodeCategory.Location = new System.Drawing.Point(208, 39);
             this.lblChooseCodeCategory.Name = "lblChooseCodeCategory";
             this.lblChooseCodeCategory.Size = new System.Drawing.Size(436, 48);
             this.lblChooseCodeCategory.TabIndex = 7;
@@ -116,7 +117,7 @@
             // lblExampleCount
             // 
             this.lblExampleCount.AutoSize = true;
-            this.lblExampleCount.Location = new System.Drawing.Point(47, 139);
+            this.lblExampleCount.Location = new System.Drawing.Point(47, 133);
             this.lblExampleCount.Name = "lblExampleCount";
             this.lblExampleCount.Size = new System.Drawing.Size(45, 15);
             this.lblExampleCount.TabIndex = 8;
@@ -126,7 +127,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(914, 562);
+            this.ClientSize = new System.Drawing.Size(832, 425);
             this.Controls.Add(this.lblExampleCount);
             this.Controls.Add(this.lblChooseCodeCategory);
             this.Controls.Add(this.cbxCategorySelect);
@@ -134,9 +135,10 @@
             this.Controls.Add(this.btnMultiGame);
             this.Controls.Add(this.btnSingleGame);
             this.Controls.Add(this.btnUserInfo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "MainMenuForm";
-            this.Text = "TestSelection";
+            this.Text = "PowerText";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.TestSelection_FormClosed);
             this.Load += new System.EventHandler(this.MainMenuForm_Load);
             this.ResumeLayout(false);

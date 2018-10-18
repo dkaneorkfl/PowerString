@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartForm));
             this.MainTitleLabel = new System.Windows.Forms.Label();
             this.SignInBtn = new System.Windows.Forms.Button();
             this.IdInputBox = new System.Windows.Forms.TextBox();
@@ -172,9 +173,10 @@
             this.Controls.Add(this.VersionLabel);
             this.Controls.Add(this.SignUpBtn);
             this.Controls.Add(this.MainTitleLabel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "StartForm";
-            this.Text = "MainTitle";
+            this.Text = "PowerText";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.StartForm_FormClosed);
             this.LogOnInfoGBox.ResumeLayout(false);
             this.LogOnInfoGBox.PerformLayout();

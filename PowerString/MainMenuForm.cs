@@ -97,7 +97,7 @@ namespace PowerString
         
         private void UserInfoBtn_Click(object sender, EventArgs e)
         {
-            MoveEvent.ShowModalForm(new UserInfoForm(this));
+            MoveEvent.ShowModalForm(new UserInfoForm());
             //_isExit = false;
             //this.Close();
         }

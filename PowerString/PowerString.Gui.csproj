@@ -130,6 +130,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="MainMenuForm.resx">
       <DependentUpon>MainMenuForm.cs</DependentUpon>
@@ -156,6 +157,15 @@
       <Project>{74751951-1d2b-471c-971f-cd523c247c48}</Project>
       <Name>PowerString.Data</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\more.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\welldone.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_keyboard_50_E7C_icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
