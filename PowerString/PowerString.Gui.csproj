@@ -131,16 +131,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\welldone.jpg" />
+    <None Include="Resources\icons8-keyboard-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_keyboard_50_E7C_icon.ico" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\more.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-keyboard-100.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_keyboard_50_E7C_icon.ico" />
+    <None Include="Resources\welldone.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -118,7 +118,7 @@
             // 
             // ClearImg
             // 
-            this.ClearImg.Image = global::PowerString.Properties.Resources.welldone;
+            this.ClearImg.Image = global::PowerString.Properties.Resources.welldone1;
             this.ClearImg.Location = new System.Drawing.Point(462, 79);
             this.ClearImg.Name = "ClearImg";
             this.ClearImg.Size = new System.Drawing.Size(110, 110);
