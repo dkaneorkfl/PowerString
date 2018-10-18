@@ -44,6 +44,7 @@ namespace PowerString
             if (_testMode == TestMode.Single || _categoryInfo.ExampleCount == 1)
             {
                 btnSkip.Enabled = false;
+                btnResult.Click += new EventHandler(GoToResultEvent);
             }
 
             //SelectExample
@@ -59,7 +60,7 @@ namespace PowerString
         private void btnBackToMainMenu_Click(object sender, EventArgs e)
         {
             //메인메뉴로 이동
-            MoveEvent.MoveToOtherForm(new MainMenuForm(new Tester()));
+            MoveEvent.MoveToForm(new MainMenuForm(new Tester()));
             _isExit = false;
             this.Close();
         }
@@ -97,6 +98,8 @@ namespace PowerString
 
             //DataRepository.TestRecord.Insert(testRecord);
             
+
+
             GoToNextExample();
         }
 
@@ -127,7 +130,7 @@ namespace PowerString
         private void GoToResultEvent(object sender, EventArgs e)
         {
             //결과제공창으로 감
-            MoveEvent.MoveToOtherForm(new ResultForm());
+            MoveEvent.MoveToForm(new ResultForm());
             _isExit = false;
             this.Close();
         }

@@ -10,11 +10,20 @@ namespace PowerString
 {
     public class MoveEvent
     {
-        public static void MoveToOtherForm(Form form)
+        public static void MoveToForm(Form form)
         {
             Form f = form;
+            f.StartPosition = FormStartPosition.Manual;
             f.Location = new Point(100, 100);
             f.Show();
+        }
+
+        public static void ShowModalForm(Form form)
+        {
+            Form f = form;
+            f.StartPosition = FormStartPosition.Manual;
+            f.Location = new Point(100, 100);
+            f.ShowDialog();
         }
     }
 }

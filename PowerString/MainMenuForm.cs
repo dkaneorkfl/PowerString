@@ -60,7 +60,7 @@ namespace PowerString
         private void BackToMainTitleBtn_Click(object sender, EventArgs e)
         {
             //Start Form으로 이동
-            MoveEvent.MoveToOtherForm(new StartForm());
+            MoveEvent.MoveToForm(new StartForm());
             _isExit = false;
             this.Close();
         }
@@ -77,7 +77,7 @@ namespace PowerString
                 return;
 
             //싱글버전 테스트 Form으로 이동
-            MoveEvent.MoveToOtherForm(new TypingTestForm(TestMode.Single, categoryInfo));
+            MoveEvent.MoveToForm(new TypingTestForm(TestMode.Single, categoryInfo));
             _isExit = false;
             this.Close();
         }
@@ -92,7 +92,7 @@ namespace PowerString
                 return;
 
             //멀티버전 테스트 Form으로 이동
-            MoveEvent.MoveToOtherForm(new TypingTestForm(TestMode.Multi, categoryInfo));
+            MoveEvent.MoveToForm(new TypingTestForm(TestMode.Multi, categoryInfo));
             _isExit = false;
             this.Close();
         }
@@ -100,9 +100,9 @@ namespace PowerString
 
         private void UserInfoBtn_Click(object sender, EventArgs e)
         {
-            MoveEvent.MoveToOtherForm(new UserInfoForm());
-            _isExit = false;
-            this.Close();
+            MoveEvent.ShowModalForm(new UserInfoForm());
+            //_isExit = false;
+            //this.Close();
         }
 
         

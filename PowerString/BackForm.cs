@@ -24,9 +24,8 @@ namespace PowerString.Data
             info.CategoryName = "Restriction Operators";
             info.ExampleCount = 3;
 
-            TypingTestForm form = new TypingTestForm(TestMode.Multi, info);
-            //MainMenuForm form = new MainMenuForm(new Tester());
-            form.Show();
+            //TypingTestForm form = new TypingTestForm(TestMode.Single, info);
+            MoveEvent.MoveToForm(new StartForm());
         }
 
         private void BackForm_Shown(object sender, EventArgs e)

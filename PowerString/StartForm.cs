@@ -38,9 +38,7 @@ namespace PowerString
         // 새로운 사용자 등록 버튼
         private void SignUpBtn_Click(object sender, EventArgs e)
         {
-            MoveEvent.MoveToOtherForm(new SignUpForm());
-            _isExit = false;
-            this.Close();    
+            MoveEvent.ShowModalForm(new SignUpForm());
         }
 
         // 커서가 있는 경우 ID 입력 힌트(Watermark) 사라짐
@@ -120,7 +118,7 @@ namespace PowerString
             if (nameList.Contains(userName) && pwList.Contains(userPw))
             {
                 Tester tester = DataRepository.Tester.SelectByName(userName);
-                MoveEvent.MoveToOtherForm(new MainMenuForm(tester));
+                MoveEvent.MoveToForm(new MainMenuForm(tester));
                 _isExit = false;
                 this.Close();
             }

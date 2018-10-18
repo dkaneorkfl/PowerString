@@ -14,7 +14,7 @@ namespace PowerString
 {
     public partial class SignUpForm : Form
     {
-        private bool _isExit = true;
+        private bool _isDoubleChecked = false;
         private Tester _newUser = new Tester();
 
         public SignUpForm()
@@ -24,38 +24,39 @@ namespace PowerString
 
         void CreateUser()
         {
-            string IdInputText = IdInputBox.Text; //아이디,name을 저장하는 부분입니다.
-            string PswInputText = PswInputBox.Text; //비밀번호를 저장하는 부분입니다.
-            string PswInputAgainText = PswInputAgainBox.Text; //비밀번호가 앞의 번호와 맞는지 확인하는 부분입니다.
-            if (PswInputText != PswInputAgainText) //입력햇던 번호와 다시 입력햇던 번호가 같은지 다른지 확인합니다. 
+            if (_isDoubleChecked)
             {
-                //비밀번호가 다르다면 아래의 멘트가 나오게 됩니다.
-                MessageBox.Show("비밀번호가 틀렷습니다. 다시 입력해주세요");
-            }
-            else
-            {//비밀번호가 4자보다 크다면 아래의 메시지박스가 실행됩니다.
-                if (4 < PswInputText.Length) { MessageBox.Show("글자수는 4개 이하로 해주세요"); }
-                else if (30 < IdInputText.Length) { MessageBox.Show("이름은 30자 이하로 써주세요"); }
-                //글자수가 4자이하이고 비밀번호와 비밀번호확인이 같다면 아래의 코드가 실행됩니다.
-                else if ((PswInputText == PswInputAgainText) && (PswInputText.Length <= 4) && 30 < IdInputText.Length)
+                string IdInputText = IdInputBox.Text; //아이디,name을 저장하는 부분입니다.
+                string PswInputText = PswInputBox.Text; //비밀번호를 저장하는 부분입니다.
+                string PswInputAgainText = PswInputAgainBox.Text; //비밀번호가 앞의 번호와 맞는지 확인하는 부분입니다.
+                if (PswInputText != PswInputAgainText) //입력햇던 번호와 다시 입력햇던 번호가 같은지 다른지 확인합니다. 
                 {
-                    MessageBox.Show("가입을 축하합니다."); //가입을 축하하는 멘트를 보냅니다.
-
-                    MoveEvent.MoveToOtherForm(new StartForm());
-                    _isExit = false;
-                    this.Close();
-                    //_mt.Visible = true;  //시작화면을 보여주게 됩니다.
-                    //_mt.Location = new Point(100, 100); // 시작화면이 보여주는 위치를 지정해 줍니다
-                    //this.Visible = false; //현재의 회원가입화면을 숨기게 됩니다.
-                    //_CloseCheck = true; //회원가입 폼을 강제종료하게될경우 메인폼이 종료되게끔 실행하는 폼 입니다.
-
-                    int ScoreClear = 0; // 점수는 0점으로 초기화 시켜줍니다.
-                    _newUser.TesterName = IdInputText; // name 을 데이터베이스에 저장하는 코드입니다.
-                    _newUser.TesterPassword = PswInputText; //비밀번호를 데이터베이스에 저장하는 코드입니다.
-                    _newUser.TesterScore = ScoreClear; //최초의 점수 0 점을 저장하는 코드입니다.
-                    DataRepository.Tester.Insert(_newUser); // 이름과 비밀번호 점수를 저장하도록 실행시켜주는 코드입니다.
+                    //비밀번호가 다르다면 아래의 멘트가 나오게 됩니다.
+                    MessageBox.Show("비밀번호가 틀렷습니다. 다시 입력해주세요");
                 }
+                else
+                {//비밀번호가 4자보다 크다면 아래의 메시지박스가 실행됩니다.
+                    if (4 < PswInputText.Length) { MessageBox.Show("글자수는 4개 이하로 해주세요"); }
+                    else if (30 < IdInputText.Length) { MessageBox.Show("이름은 30자 이하로 써주세요"); }
+                    //글자수가 4자이하이고 비밀번호와 비밀번호확인이 같다면 아래의 코드가 실행됩니다.
+                    else if ((PswInputText == PswInputAgainText) && (PswInputText.Length <= 4) && (30 > IdInputText.Length))
+                    {
+                        MessageBox.Show("가입을 축하합니다."); //가입을 축하하는 멘트를 보냅니다.
+                        
+                        int ScoreClear = 0; // 점수는 0점으로 초기화 시켜줍니다.
+                        _newUser.TesterName = IdInputText; // name 을 데이터베이스에 저장하는 코드입니다.
+                        _newUser.TesterPassword = PswInputText; //비밀번호를 데이터베이스에 저장하는 코드입니다.
+                        _newUser.TesterScore = ScoreClear; //최초의 점수 0 점을 저장하는 코드입니다.
+                        DataRepository.Tester.Insert(_newUser); // 이름과 비밀번호 점수를 저장하도록 실행시켜주는 코드입니다.
 
+                        this.Close();
+                        //_mt.Visible = true;  //시작화면을 보여주게 됩니다.
+                        //_mt.Location = new Point(100, 100); // 시작화면이 보여주는 위치를 지정해 줍니다
+                        //this.Visible = false; //현재의 회원가입화면을 숨기게 됩니다.
+                        //_CloseCheck = true; //회원가입 폼을 강제종료하게될경우 메인폼이 종료되게끔 실행하는 폼 입니다.
+                    }
+
+                } 
             }
         }
         private void NewAccountCreateBtn_Click(object sender, EventArgs e)
@@ -65,8 +66,6 @@ namespace PowerString
 
         private void NewAcountBackBtn_Click(object sender, EventArgs e)
         {
-            MoveEvent.MoveToOtherForm(new StartForm());
-            _isExit = false;
             this.Close();
         }
         //아이디가 중복인지 아닌지 체크하는 메소드
@@ -78,8 +77,11 @@ namespace PowerString
             //데이터베이스에서 불러온 name과 텍스트박스에 입력된 name를 서로 비교합니다.
             if (SameName.Contains(IdInputText)) { MessageBox.Show("같은 아이디가 존재합니다."); } 
             else if (30 < IdInputText.Length) { MessageBox.Show("이름은 30자 이하로 써주세요"); }
-
-            else { MessageBox.Show("가능한 아이디 입니다."); }
+            else
+            {
+                _isDoubleChecked = true;
+                MessageBox.Show("가능한 아이디 입니다.");
+            }
         } //두 name 이 다르면
 
         //textbox의 hint를 담당하는 항목입니다.
@@ -153,14 +155,6 @@ namespace PowerString
         {
             PswInputAgainBox.PasswordChar = '*';
         }
-
-        private void SignUpForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            if (_isExit)
-                Application.Exit();
-        }
-
         #endregion
-
     }
 }
