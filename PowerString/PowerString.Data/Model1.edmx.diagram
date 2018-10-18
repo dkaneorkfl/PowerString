@@ -5,11 +5,9 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="5c29f72afa2b4cdda0684aa0d39dda6f" Name="Diagram1">
-        <EntityTypeShape EntityType="PowerStringModel.Category" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
         <EntityTypeShape EntityType="PowerStringModel.Code" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
         <EntityTypeShape EntityType="PowerStringModel.Tester" Width="1.5" PointX="3" PointY="5.25" IsExpanded="true" />
         <EntityTypeShape EntityType="PowerStringModel.TestRecord" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
-        <AssociationConnector Association="PowerStringModel.FK__Code__CategoryId__48CFD27E" ManuallyRouted="false" />
         <AssociationConnector Association="PowerStringModel.FK__TestRecor__CodeI__1F98B2C1" ManuallyRouted="false" />
         <AssociationConnector Association="PowerStringModel.FK__TestRecor__Teste__1EA48E88" ManuallyRouted="false" />
       </Diagram>

@@ -39,13 +39,14 @@ namespace PowerString.UnitTest
             int count = DataRepository.Tester.Count();
 
             Tester tester = new Tester();
-            tester.TesterId = 4;
+            tester.TesterId = 4; // Auto Increment라서 번호 입력해도 지정되지 않음.
             tester.TesterName = "And";
             tester.TesterPassword = "and";
             DataRepository.Tester.Insert(tester);
 
             Assert.AreEqual(count + 1, DataRepository.Tester.Count());
         }
+        // prop Nullable<int> TesterScore
 
     }
 }
