@@ -30,7 +30,6 @@
         {
             this.MoveToMainMenu = new System.Windows.Forms.Button();
             this.Close = new System.Windows.Forms.Button();
-            this.IncorrectPercentLabel = new System.Windows.Forms.Label();
             this.ScoreLabel = new System.Windows.Forms.Label();
             this.TimeProgress = new System.Windows.Forms.ProgressBar();
             this.ClearQuoteLabel = new System.Windows.Forms.Label();
@@ -63,16 +62,6 @@
             this.Close.Text = "닫기 (&C)";
             this.Close.UseVisualStyleBackColor = true;
             // 
-            // IncorrectPercentLabel
-            // 
-            this.IncorrectPercentLabel.AutoSize = true;
-            this.IncorrectPercentLabel.Location = new System.Drawing.Point(193, 34);
-            this.IncorrectPercentLabel.Name = "IncorrectPercentLabel";
-            this.IncorrectPercentLabel.Size = new System.Drawing.Size(171, 15);
-            this.IncorrectPercentLabel.TabIndex = 3;
-            this.IncorrectPercentLabel.Text = "XX%의 오타를 냈습니다.";
-            this.IncorrectPercentLabel.Click += new System.EventHandler(this.IncorrectPercentLabel_Click);
-            // 
             // ScoreLabel
             // 
             this.ScoreLabel.AutoSize = true;
@@ -93,7 +82,9 @@
             this.TimeProgress.Name = "TimeProgress";
             this.TimeProgress.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.TimeProgress.Size = new System.Drawing.Size(558, 23);
+            this.TimeProgress.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.TimeProgress.TabIndex = 6;
+            this.TimeProgress.Click += new System.EventHandler(this.TimeProgress_Click);
             // 
             // ClearQuoteLabel
             // 
@@ -110,13 +101,12 @@
             this.TimeLabel.AutoSize = true;
             this.TimeLabel.Location = new System.Drawing.Point(6, 34);
             this.TimeLabel.Name = "TimeLabel";
-            this.TimeLabel.Size = new System.Drawing.Size(184, 15);
+            this.TimeLabel.Size = new System.Drawing.Size(353, 15);
             this.TimeLabel.TabIndex = 8;
-            this.TimeLabel.Text = "XXX초 동안 코드를 작성해";
+            this.TimeLabel.Text = "XXX초 동안 코드를 작성해 XX%의 오타를 냈습니다.";
             // 
             // ResultGroup
             // 
-            this.ResultGroup.Controls.Add(this.IncorrectPercentLabel);
             this.ResultGroup.Controls.Add(this.TimeLabel);
             this.ResultGroup.Controls.Add(this.ScoreLabel);
             this.ResultGroup.Location = new System.Drawing.Point(12, 79);
@@ -147,7 +137,7 @@
             this.Controls.Add(this.Close);
             this.Controls.Add(this.MoveToMainMenu);
             this.Name = "ResultForm";
-            this.Text = "ResultForm";
+            this.Text = "결과 발표!";
             this.ResultGroup.ResumeLayout(false);
             this.ResultGroup.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ClearImg)).EndInit();
@@ -160,7 +150,6 @@
 
         private System.Windows.Forms.Button MoveToMainMenu;
         private new System.Windows.Forms.Button Close;
-        private System.Windows.Forms.Label IncorrectPercentLabel;
         private System.Windows.Forms.Label ScoreLabel;
         private System.Windows.Forms.ProgressBar TimeProgress;
         private System.Windows.Forms.Label ClearQuoteLabel;

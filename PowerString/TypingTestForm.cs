@@ -18,6 +18,7 @@ namespace PowerString
         {
             _ts = testForm;
             InitializeComponent();
+            TestTime.Start();
         }
 
         private void BackToSelectionSelectionBtn_Click(object sender, EventArgs e)
@@ -31,7 +32,18 @@ namespace PowerString
 
         private void TypingTestScreen_FormClosed(object sender, FormClosedEventArgs e)
         {
+            
             Application.Exit();//다른 폼이 종료하게 되면 그 메인폼도 같이 종료하게됨.
+        }
+
+        private void TestTime_Tick(object sender, EventArgs e)
+        {
+
+            this.TimeProgress.PerformStep();
+            if (TimeProgress.Value == 0)
+            {
+                //시험 시간이 끝나면 결과를 출력시킵니다.
+            }
         }
     }
 }

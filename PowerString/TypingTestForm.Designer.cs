@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.BackToSelectionSelectionBtn = new System.Windows.Forms.Button();
             this.PresentTestSkipBtn = new System.Windows.Forms.Button();
             this.GoToNextTextBtn = new System.Windows.Forms.Button();
@@ -35,6 +36,7 @@
             this.TestCodeInputTextBox = new System.Windows.Forms.TextBox();
             this.ExampleBox = new System.Windows.Forms.GroupBox();
             this.TimeProgress = new System.Windows.Forms.ProgressBar();
+            this.TestTime = new System.Windows.Forms.Timer(this.components);
             this.ExampleBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,6 +76,7 @@
             // TestCodeViewTxetBox
             // 
             this.TestCodeViewTxetBox.Dock = System.Windows.Forms.DockStyle.Left;
+            this.TestCodeViewTxetBox.Enabled = false;
             this.TestCodeViewTxetBox.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TestCodeViewTxetBox.Location = new System.Drawing.Point(3, 21);
             this.TestCodeViewTxetBox.Multiline = true;
@@ -112,10 +115,21 @@
             // 
             this.TimeProgress.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.TimeProgress.BackColor = System.Drawing.SystemColors.Control;
             this.TimeProgress.Location = new System.Drawing.Point(12, 349);
+            this.TimeProgress.MarqueeAnimationSpeed = 1;
+            this.TimeProgress.Maximum = 30000;
             this.TimeProgress.Name = "TimeProgress";
+            this.TimeProgress.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.TimeProgress.Size = new System.Drawing.Size(808, 23);
+            this.TimeProgress.Step = -1;
             this.TimeProgress.TabIndex = 0;
+            this.TimeProgress.Value = 30000;
+            // 
+            // TestTime
+            // 
+            this.TestTime.Interval = 1;
+            this.TestTime.Tick += new System.EventHandler(this.TestTime_Tick);
             // 
             // TypingTestForm
             // 
@@ -145,5 +159,6 @@
         private System.Windows.Forms.TextBox TestCodeInputTextBox;
         private System.Windows.Forms.GroupBox ExampleBox;
         private System.Windows.Forms.ProgressBar TimeProgress;
+        private System.Windows.Forms.Timer TestTime;
     }
 }
