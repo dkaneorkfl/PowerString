@@ -37,10 +37,10 @@
             // 
             // BackToSelectionSelectionBtn
             // 
-            this.BackToSelectionSelectionBtn.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BackToSelectionSelectionBtn.Location = new System.Drawing.Point(13, 12);
+            this.BackToSelectionSelectionBtn.Font = new System.Drawing.Font("Gulim", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BackToSelectionSelectionBtn.Location = new System.Drawing.Point(13, 13);
             this.BackToSelectionSelectionBtn.Name = "BackToSelectionSelectionBtn";
-            this.BackToSelectionSelectionBtn.Size = new System.Drawing.Size(205, 38);
+            this.BackToSelectionSelectionBtn.Size = new System.Drawing.Size(205, 41);
             this.BackToSelectionSelectionBtn.TabIndex = 0;
             this.BackToSelectionSelectionBtn.Text = "선택창으로 돌아가기(&B)";
             this.BackToSelectionSelectionBtn.UseVisualStyleBackColor = true;
@@ -49,10 +49,10 @@
             // PresentTestSkipBtn
             // 
             this.PresentTestSkipBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.PresentTestSkipBtn.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PresentTestSkipBtn.Location = new System.Drawing.Point(613, 12);
+            this.PresentTestSkipBtn.Font = new System.Drawing.Font("Gulim", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PresentTestSkipBtn.Location = new System.Drawing.Point(613, 13);
             this.PresentTestSkipBtn.Name = "PresentTestSkipBtn";
-            this.PresentTestSkipBtn.Size = new System.Drawing.Size(205, 38);
+            this.PresentTestSkipBtn.Size = new System.Drawing.Size(205, 41);
             this.PresentTestSkipBtn.TabIndex = 1;
             this.PresentTestSkipBtn.Text = "현재 문제 건너뛰기(&S)";
             this.PresentTestSkipBtn.UseVisualStyleBackColor = true;
@@ -60,10 +60,10 @@
             // GoToNextTextBtn
             // 
             this.GoToNextTextBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.GoToNextTextBtn.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GoToNextTextBtn.Location = new System.Drawing.Point(681, 379);
+            this.GoToNextTextBtn.Font = new System.Drawing.Font("Gulim", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GoToNextTextBtn.Location = new System.Drawing.Point(681, 404);
             this.GoToNextTextBtn.Name = "GoToNextTextBtn";
-            this.GoToNextTextBtn.Size = new System.Drawing.Size(137, 35);
+            this.GoToNextTextBtn.Size = new System.Drawing.Size(137, 37);
             this.GoToNextTextBtn.TabIndex = 2;
             this.GoToNextTextBtn.Text = "다음 문제로(&N)";
             this.GoToNextTextBtn.UseVisualStyleBackColor = true;
@@ -73,13 +73,14 @@
             this.TestCodeViewTxetBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.TestCodeViewTxetBox.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TestCodeViewTxetBox.Location = new System.Drawing.Point(13, 55);
+            this.TestCodeViewTxetBox.Enabled = false;
+            this.TestCodeViewTxetBox.Font = new System.Drawing.Font("Gulim", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TestCodeViewTxetBox.Location = new System.Drawing.Point(13, 59);
             this.TestCodeViewTxetBox.Multiline = true;
             this.TestCodeViewTxetBox.Name = "TestCodeViewTxetBox";
             this.TestCodeViewTxetBox.ReadOnly = true;
             this.TestCodeViewTxetBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.TestCodeViewTxetBox.Size = new System.Drawing.Size(395, 243);
+            this.TestCodeViewTxetBox.Size = new System.Drawing.Size(395, 259);
             this.TestCodeViewTxetBox.TabIndex = 3;
             // 
             // TestCodeInputTextBox
@@ -87,19 +88,19 @@
             this.TestCodeInputTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.TestCodeInputTextBox.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TestCodeInputTextBox.Location = new System.Drawing.Point(425, 56);
+            this.TestCodeInputTextBox.Font = new System.Drawing.Font("Gulim", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TestCodeInputTextBox.Location = new System.Drawing.Point(425, 60);
             this.TestCodeInputTextBox.Multiline = true;
             this.TestCodeInputTextBox.Name = "TestCodeInputTextBox";
             this.TestCodeInputTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.TestCodeInputTextBox.Size = new System.Drawing.Size(395, 243);
+            this.TestCodeInputTextBox.Size = new System.Drawing.Size(395, 259);
             this.TestCodeInputTextBox.TabIndex = 4;
             // 
             // TypingTestForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(832, 425);
+            this.ClientSize = new System.Drawing.Size(832, 453);
             this.Controls.Add(this.TestCodeInputTextBox);
             this.Controls.Add(this.TestCodeViewTxetBox);
             this.Controls.Add(this.GoToNextTextBtn);

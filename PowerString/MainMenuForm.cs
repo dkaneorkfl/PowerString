@@ -13,7 +13,7 @@ namespace PowerString
 {
     public partial class MainMenuForm : Form
     {
-        private StartForm _mt;
+        private StartForm _mt = new StartForm();
         private ComboBox comboBox;
 
 

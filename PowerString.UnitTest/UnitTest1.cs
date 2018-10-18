@@ -27,7 +27,7 @@ namespace PowerString.UnitTest
         {
             int count = DataRepository.Tester.Count();
 
-            Tester tester = DataRepository.Tester.SelectById(4);
+            Tester tester = DataRepository.Tester.SelectById(13);
             DataRepository.Tester.Delete(tester);
 
             Assert.AreEqual(count - 1, DataRepository.Tester.Count());
