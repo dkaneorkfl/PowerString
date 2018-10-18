@@ -89,9 +89,9 @@ namespace PowerString
         private void UserDeleteBtn_Click(object sender, EventArgs e)
         {
             // 내 계정 삭제 버튼 클릭시 발생할 이벤트
-            DeleteCheckForm dcf = new DeleteCheckForm();
-            dcf = new DeleteCheckForm(new Tester());
-            dcf.ShowDialog();
+            //MoveEvent.MoveToForm(new DeleteCheckForm());
+            //DataRepository.Tester.Delete(tester);
+
         }
 
         private void label2_Click(object sender, EventArgs e)
