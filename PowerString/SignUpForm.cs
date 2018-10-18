@@ -29,13 +29,11 @@ namespace PowerString
                 MessageBox.Show("비밀번호가 틀렷습니다. 다시 입력해주세요");
             }
             else
-            {
-                if (4 < PswInputText.Length)//비밀번호가 4자보다 크다면 아래의 메시지박스가 실행됩니다.
-                {
-                    MessageBox.Show("글자수는 4개 이하로 해주세요");
-                }
+            {//비밀번호가 4자보다 크다면 아래의 메시지박스가 실행됩니다.
+                if (4 < PswInputText.Length) { MessageBox.Show("글자수는 4개 이하로 해주세요"); }
+                else if (30 < IdInputText.Length) { MessageBox.Show("이름은 30자 이하로 써주세요"); }
                 //글자수가 4자이하이고 비밀번호와 비밀번호확인이 같다면 아래의 코드가 실행됩니다.
-                else if ((PswInputText == PswInputAgainText) && (PswInputText.Length <= 4))
+                else if ((PswInputText == PswInputAgainText) && (PswInputText.Length <= 4) && 30 < IdInputText.Length)
                 {
                     MessageBox.Show("가입을 축하합니다."); //가입을 축하하는 멘트를 보냅니다.
                     _mt.Visible = true;  //시작화면을 보여주게 됩니다.
@@ -59,16 +57,16 @@ namespace PowerString
             InitializeComponent();
             this.Location = new Point(100, 100);
         }
-
         private void NewAccountCreateBtn_Click(object sender, EventArgs e)
         {
             CreateUser(); // 버튼을 누르게 되면 해당 메소드를 실행하게 됩니다.
         }
 
-
-        private void IdInputBox_TextChanged(object sender, EventArgs e)
+        private void NewAcountBackBtn_Click(object sender, EventArgs e)
         {
-
+            _mt.Show();
+            _mt.Location = new Point(100, 100);
+            this.Hide();
         }
 
         //textbox의 hint를 담당하는 항목입니다.
@@ -148,6 +146,8 @@ namespace PowerString
             _CloseCheck = false;
             Application.Exit();
         }
-        #endregion 
+        #endregion
+
+
     }
 }

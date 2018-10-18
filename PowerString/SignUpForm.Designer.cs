@@ -37,6 +37,7 @@
             this.IdInputBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.NewAccountCreateBtn = new System.Windows.Forms.Button();
+            this.NewAcountBackBtn = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -127,7 +128,7 @@
             this.IdInputBox.Size = new System.Drawing.Size(189, 26);
             this.IdInputBox.TabIndex = 4;
             this.IdInputBox.Text = "사용자명은 30자까지";
-            this.IdInputBox.TextChanged += new System.EventHandler(this.IdInputBox_TextChanged);
+            //this.IdInputBox.TextChanged += new System.EventHandler(this.IdInputBox_TextChanged);
             this.IdInputBox.Enter += new System.EventHandler(this.IdInputBox_Enter_1);
             this.IdInputBox.Leave += new System.EventHandler(this.IdInputBox_Leave_1);
             // 
@@ -154,11 +155,22 @@
             this.NewAccountCreateBtn.UseVisualStyleBackColor = true;
             this.NewAccountCreateBtn.Click += new System.EventHandler(this.NewAccountCreateBtn_Click);
             // 
+            // NewAcountBackBtn
+            // 
+            this.NewAcountBackBtn.Location = new System.Drawing.Point(641, 305);
+            this.NewAcountBackBtn.Name = "NewAcountBackBtn";
+            this.NewAcountBackBtn.Size = new System.Drawing.Size(75, 23);
+            this.NewAcountBackBtn.TabIndex = 5;
+            this.NewAcountBackBtn.Text = "취소(&c)";
+            this.NewAcountBackBtn.UseVisualStyleBackColor = true;
+            this.NewAcountBackBtn.Click += new System.EventHandler(this.NewAcountBackBtn_Click);
+            // 
             // SignUpForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(728, 340);
+            this.Controls.Add(this.NewAcountBackBtn);
             this.Controls.Add(this.NewAccountCreateBtn);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.NewAccountCreateLabel);
@@ -166,6 +178,7 @@
             this.Name = "SignUpForm";
             this.Text = "NewAccountCreate";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SignUpForm_FormClosed);
+            //this.Load += new System.EventHandler(this.SignUpForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -184,5 +197,6 @@
         private System.Windows.Forms.TextBox IdInputBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button NewAccountCreateBtn;
+        private System.Windows.Forms.Button NewAcountBackBtn;
     }
 }
