@@ -69,6 +69,18 @@ namespace PowerString
             _isExit = false;
             this.Close();
         }
+        //아이디가 중복인지 아닌지 체크하는 메소드
+        private void DuplicateConfirmationBtn_Click(object sender, EventArgs e)
+        {
+            string IdInputText = IdInputBox.Text; //텍스트박스에 입력된 name을 불러옵니다.
+            var SameName = (from x in DataRepository.Tester.Select() //데이터베이스에서 name에 해당하는 부분을 불러옵니다.
+                            select x.TesterName).ToList();
+            //데이터베이스에서 불러온 name과 텍스트박스에 입력된 name를 서로 비교합니다.
+            if (SameName.Contains(IdInputText)) { MessageBox.Show("같은 아이디가 존재합니다."); } 
+            else if (30 < IdInputText.Length) { MessageBox.Show("이름은 30자 이하로 써주세요"); }
+
+            else { MessageBox.Show("가능한 아이디 입니다."); }
+        } //두 name 이 다르면
 
         //textbox의 hint를 담당하는 항목입니다.
         #region HintMessage 
@@ -144,11 +156,11 @@ namespace PowerString
 
         private void SignUpForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if(_isExit)
+            if (_isExit)
                 Application.Exit();
         }
-        #endregion
 
+        #endregion
 
     }
 }

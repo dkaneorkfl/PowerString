@@ -38,6 +38,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.NewAccountCreateBtn = new System.Windows.Forms.Button();
             this.NewAcountBackBtn = new System.Windows.Forms.Button();
+            this.DuplicateConfirmationBtn = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,6 +57,7 @@
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox1.Controls.Add(this.DuplicateConfirmationBtn);
             this.groupBox1.Controls.Add(this.PswInputAgainBox);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.PswInputBox);
@@ -66,7 +68,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(382, 152);
+            this.groupBox1.Size = new System.Drawing.Size(478, 152);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             // 
@@ -128,7 +130,6 @@
             this.IdInputBox.Size = new System.Drawing.Size(189, 26);
             this.IdInputBox.TabIndex = 4;
             this.IdInputBox.Text = "사용자명은 30자까지";
-            //this.IdInputBox.TextChanged += new System.EventHandler(this.IdInputBox_TextChanged);
             this.IdInputBox.Enter += new System.EventHandler(this.IdInputBox_Enter_1);
             this.IdInputBox.Leave += new System.EventHandler(this.IdInputBox_Leave_1);
             // 
@@ -165,6 +166,16 @@
             this.NewAcountBackBtn.UseVisualStyleBackColor = true;
             this.NewAcountBackBtn.Click += new System.EventHandler(this.NewAcountBackBtn_Click);
             // 
+            // DuplicateConfirmationBtn
+            // 
+            this.DuplicateConfirmationBtn.Location = new System.Drawing.Point(387, 40);
+            this.DuplicateConfirmationBtn.Name = "DuplicateConfirmationBtn";
+            this.DuplicateConfirmationBtn.Size = new System.Drawing.Size(75, 23);
+            this.DuplicateConfirmationBtn.TabIndex = 7;
+            this.DuplicateConfirmationBtn.Text = "중복확인";
+            this.DuplicateConfirmationBtn.UseVisualStyleBackColor = true;
+            this.DuplicateConfirmationBtn.Click += new System.EventHandler(this.DuplicateConfirmationBtn_Click);
+            // 
             // SignUpForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -178,7 +189,6 @@
             this.Name = "SignUpForm";
             this.Text = "NewAccountCreate";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SignUpForm_FormClosed);
-            //this.Load += new System.EventHandler(this.SignUpForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -198,5 +208,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button NewAccountCreateBtn;
         private System.Windows.Forms.Button NewAcountBackBtn;
+        private System.Windows.Forms.Button DuplicateConfirmationBtn;
     }
 }
