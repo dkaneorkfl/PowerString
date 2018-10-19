@@ -15,14 +15,20 @@ namespace PowerString
     {
         Tester _tester;
         
-        public UserInfoForm()
+        private UserInfoForm()
         {
             InitializeComponent();
         }
+
+        public UserInfoForm(Tester tester) : this()
+        {
+            _tester = tester;
+        }
+
         //아이디: System.Linq.Enumerable+WhereSelectEnumerableIterator`2[System.Char,System.String] 
         //점수: System.Linq.Enumerable+WhereSelectEnumerableIterator`2[System.Char, System.String]
         
-        public string UserInfos(Tester tester)
+        public string GetUserInfoToText(Tester tester)
         {
             //            var u1 = (from x in tester.TesterName select x).ToString();
             //
@@ -42,8 +48,8 @@ namespace PowerString
 
 
             // 로그인한 아이디와 테스터의 이름을 비교해서 정보 출력해야함
-            _tester = DataRepository.Tester.SelectById(14);
-            MyInfo.Text = UserInfos(_tester);
+            //_tester = DataRepository.Tester.SelectById(14);
+            MyInfo.Text = GetUserInfoToText(_tester);
 
             var q1 = (from x in DataRepository.Tester.Select()
                 //    where x.TesterName == name
@@ -72,7 +78,7 @@ namespace PowerString
             var q5 = (from x in DataRepository.TestRecord.Select()
                 select x.TestRecordTime).ToList();
             var q3435 = (from x in DataRepository.TestRecord.Select()
-                         where x.TesterId == 2
+                         where x.TesterId == _tester.TesterId
                          group x by String.Format("{0:yyyy/M/d}", x.TestRecordDate) into g
                 select g.Key).ToList();
             

@@ -12,17 +12,17 @@ namespace PowerString
     {
         public static void MoveToForm(Form form)
         {
-            Form f = CallForm(form);
+            Form f = MakeNewForm(form);
             f.Show();
         }
 
         public static void ShowModalForm(Form form)
         {
-            Form f = CallForm(form);
+            Form f = MakeNewForm(form);
             f.ShowDialog();
         }
 
-        private static Form CallForm(Form form)
+        private static Form MakeNewForm(Form form)
         {
             Form f = form;
             f.StartPosition = FormStartPosition.Manual;
