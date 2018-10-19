@@ -62,7 +62,7 @@
             this.SignInBtn.Name = "SignInBtn";
             this.SignInBtn.Size = new System.Drawing.Size(129, 65);
             this.SignInBtn.TabIndex = 2;
-            this.SignInBtn.Text = "확인(&Enter&)";
+            this.SignInBtn.Text = "확인(&Enter)";
             this.SignInBtn.UseVisualStyleBackColor = true;
             this.SignInBtn.Click += new System.EventHandler(this.SignInBtn_Click);
             // 
