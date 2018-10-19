@@ -87,6 +87,7 @@
     <Compile Include="ResultForm.Designer.cs">
       <DependentUpon>ResultForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="TestRecordSource.cs" />
     <Compile Include="TypingTestForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +149,8 @@
       <DependentUpon>UserInfoForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\PowerString.Data.TestRecord.datasource" />
+    <None Include="Properties\DataSources\TestRecordSource.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
