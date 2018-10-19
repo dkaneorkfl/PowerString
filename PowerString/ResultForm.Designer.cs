@@ -63,6 +63,7 @@
             this.Close.TabIndex = 1;
             this.Close.Text = "닫기 (&C)";
             this.Close.UseVisualStyleBackColor = true;
+            this.Close.Click += new System.EventHandler(this.Close_Click);
             // 
             // TesterName
             // 

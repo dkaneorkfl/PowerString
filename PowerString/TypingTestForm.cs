@@ -11,24 +11,36 @@ using PowerString.Data;
 
 namespace PowerString
 {
+    public enum TestResult
+    {
+        Success,
+        Fail
+    }
+
     public partial class TypingTestForm : Form
     {
-        private const int MAX_TIME = 2 * 60;
+        //private const int MAX_TIME = 2 * 60;
+        private const int MAX_TIME = 30;
         private int count = 0;
 
-        private bool _isExit = true;
+        private Tester _tester;
         private TestMode _testMode = TestMode.None;
         private CategoryInfo _categoryInfo;
+
+        private bool _isExit = true;
+        private bool _isStop = false;
         private int _idx = 0;
         private List<string> _exampleList;
+
 
         private TypingTestForm()
         {
             InitializeComponent();
         }
 
-        public TypingTestForm(TestMode testMode, CategoryInfo categoryInfo) : this()
+        public TypingTestForm(Tester tester, TestMode testMode, CategoryInfo categoryInfo) : this()
         {
+            _tester = tester;
             _testMode = testMode;
             _categoryInfo = categoryInfo;
         }
@@ -76,38 +88,48 @@ namespace PowerString
             string exampleCode = tbxTestExample.Text;
             string answer = tbxUserInput.Text;
 
+            
+            if (exampleCode.Equals(answer))
+            {
+                //InsertTestRecord(TestResult.Success);
+                MessageBox.Show("정답!");
+            }
+            else
+            {
+                //InsertTestRecord(TestResult.Fail);
+                MessageBox.Show("오답..ㅠㅠ");
+            }
+            
+            GoToNextExample();
+        }
 
+        private void InsertTestRecord(TestResult testResult)
+        {
             TestRecord testRecord = new TestRecord();
             //testRecord.TestRecordId = 1;
-            testRecord.TesterId = 1;
-            testRecord.CodeId = 0;
+            testRecord.TesterId = _tester.TesterId;
+            Code curCode = DataRepository.Code.Select().First(x => x.CodeExample == tbxTestExample.Text);
+            testRecord.CodeId = curCode.CodeId;
             testRecord.TestRecordDate = DateTime.Now;
 
-            if (exampleCode.Equals(answer))
+            if (testResult == TestResult.Success)
             {
                 testRecord.TestRecordIsCorrect = true;
                 testRecord.TestRecordTime = (decimal)(pgbTimer.Maximum - pgbTimer.Value) / 2;
-                MessageBox.Show(testRecord.TestRecordTime.ToString());
-                //MessageBox.Show("정답!");
             }
             else
             {
                 testRecord.TestRecordIsCorrect = false;
-                MessageBox.Show("오답..ㅠㅠ");
             }
 
-            //DataRepository.TestRecord.Insert(testRecord);
-            
-
-
-            GoToNextExample();
+            DataRepository.TestRecord.Insert(testRecord);
         }
 
 
         private void GoToNextExample()
         {
             pgbTimer.Value = pgbTimer.Maximum;
-
+            _isStop = false;
             tbxUserInput.Text = "";
             if (_idx != _exampleList.Count)
                 tbxTestExample.Text = _exampleList[_idx++];
@@ -129,10 +151,9 @@ namespace PowerString
 
         private void GoToResultEvent(object sender, EventArgs e)
         {
+            _isStop = true;
             //결과제공창으로 감
-            MoveEvent.MoveToForm(new ResultForm());
-            _isExit = false;
-            this.Close();
+            MoveEvent.ShowModalForm(new ResultForm(this, _tester));
         }
         
 
@@ -142,23 +163,33 @@ namespace PowerString
                 Application.Exit();//다른 폼이 종료하게 되면 그 메인폼도 같이 종료하게됨.
         }
 
-
-        //500ms마다 한 번 Tick이 발생
-        private void timer_Tick(object sender, EventArgs e)
+        public void CloseForm()
         {
-            if (pgbTimer.Value == 0)
-            {
-                return;
-            }
-
-            pgbTimer.Value -= 1;
-            count++;
-            lbl.Text = count.ToString();
-
-            //클립보드 금지
+            _isExit = false;
+            this.Close();
         }
 
-        //타이머 측정을 같은 스레드에서 하면서 delay가 발생
+        //500ms마다 한 번 Tick이 발생
+        //타이머 측정을 같은 스레드에서 하면서 delay가 발생하므로 interval 간격 조정
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            if (!_isStop)
+            {
+                pgbTimer.Value -= 1;
+                count++;
+                lbl.Text = count.ToString();
 
+                if (pgbTimer.Value == 0)
+                {
+                    _isStop = true;
+
+                    //실패 판정
+                    //InsertTestRecord(TestResult.Fail);
+                    MessageBox.Show("시간초과입니다ㅠㅠ");
+                    GoToNextExample();
+                }
+            }
+            //클립보드 금지
+        }
     }
 }

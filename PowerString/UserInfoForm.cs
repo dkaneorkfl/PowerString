@@ -13,11 +13,18 @@ namespace PowerString
 {
     public partial class UserInfoForm : Form
     {
-        
-        public UserInfoForm()
+        private Tester _tester;
+
+        private UserInfoForm()
         {
             InitializeComponent();
         }
+
+        public UserInfoForm(Tester tester) : this()
+        {
+            _tester = tester;
+        }
+
 
         private void UserInfoForm_Load(object sender, EventArgs e)
         {

@@ -76,7 +76,7 @@ namespace PowerString
                 return;
 
             //싱글버전 테스트 Form으로 이동
-            MoveEvent.MoveToForm(new TypingTestForm(TestMode.Single, categoryInfo));
+            MoveEvent.MoveToForm(new TypingTestForm(_tester, TestMode.Single, categoryInfo));
             CloseForm();
         }
 
@@ -90,16 +90,14 @@ namespace PowerString
                 return;
 
             //멀티버전 테스트 Form으로 이동
-            MoveEvent.MoveToForm(new TypingTestForm(TestMode.Multi, categoryInfo));
+            MoveEvent.MoveToForm(new TypingTestForm(_tester, TestMode.Multi, categoryInfo));
             CloseForm();
         }
 
         
         private void UserInfoBtn_Click(object sender, EventArgs e)
         {
-            MoveEvent.ShowModalForm(new UserInfoForm());
-            //_isExit = false;
-            //this.Close();
+            MoveEvent.ShowModalForm(new UserInfoForm(_tester));
         }
 
         
