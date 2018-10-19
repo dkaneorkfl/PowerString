@@ -38,7 +38,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.IdInputBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.NewAccountCreateBtn = new System.Windows.Forms.Button();
+            this.SignUpBtn = new System.Windows.Forms.Button();
             this.NewAcountBackBtn = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -94,7 +94,6 @@
             this.PswInputAgainBox.Size = new System.Drawing.Size(215, 30);
             this.PswInputAgainBox.TabIndex = 6;
             this.PswInputAgainBox.Text = "비밀번호를 입력하세요";
-            this.PswInputAgainBox.TextChanged += new System.EventHandler(this.PswInputAgainBox_TextChanged);
             this.PswInputAgainBox.Enter += new System.EventHandler(this.PswInputAgainBox_Enter_1);
             this.PswInputAgainBox.Leave += new System.EventHandler(this.PswInputAgainBox_Leave_1);
             // 
@@ -118,7 +117,6 @@
             this.PswInputBox.Size = new System.Drawing.Size(215, 30);
             this.PswInputBox.TabIndex = 5;
             this.PswInputBox.Text = "비밀번호는 4자까지";
-            this.PswInputBox.TextChanged += new System.EventHandler(this.PswInputBox_TextChanged);
             this.PswInputBox.Enter += new System.EventHandler(this.PswInputBox_Enter_1);
             this.PswInputBox.Leave += new System.EventHandler(this.PswInputBox_Leave);
             // 
@@ -155,18 +153,18 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "비밀번호 입력";
             // 
-            // NewAccountCreateBtn
+            // SignUpBtn
             // 
-            this.NewAccountCreateBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.NewAccountCreateBtn.Font = new System.Drawing.Font("굴림", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NewAccountCreateBtn.Location = new System.Drawing.Point(205, 340);
-            this.NewAccountCreateBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.NewAccountCreateBtn.Name = "NewAccountCreateBtn";
-            this.NewAccountCreateBtn.Size = new System.Drawing.Size(440, 38);
-            this.NewAccountCreateBtn.TabIndex = 4;
-            this.NewAccountCreateBtn.Text = "새로운 사용자 계정 생성";
-            this.NewAccountCreateBtn.UseVisualStyleBackColor = true;
-            this.NewAccountCreateBtn.Click += new System.EventHandler(this.NewAccountCreateBtn_Click);
+            this.SignUpBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.SignUpBtn.Font = new System.Drawing.Font("굴림", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SignUpBtn.Location = new System.Drawing.Point(205, 340);
+            this.SignUpBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.SignUpBtn.Name = "SignUpBtn";
+            this.SignUpBtn.Size = new System.Drawing.Size(440, 38);
+            this.SignUpBtn.TabIndex = 4;
+            this.SignUpBtn.Text = "새로운 사용자 계정 생성";
+            this.SignUpBtn.UseVisualStyleBackColor = true;
+            this.SignUpBtn.Click += new System.EventHandler(this.NewAccountCreateBtn_Click);
             // 
             // NewAcountBackBtn
             // 
@@ -185,13 +183,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(832, 425);
             this.Controls.Add(this.NewAcountBackBtn);
-            this.Controls.Add(this.NewAccountCreateBtn);
+            this.Controls.Add(this.SignUpBtn);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.NewAccountCreateLabel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "SignUpForm";
             this.Text = "PowerText";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SignUpForm_KeyDown);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -209,7 +208,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox IdInputBox;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button NewAccountCreateBtn;
+        private System.Windows.Forms.Button SignUpBtn;
         private System.Windows.Forms.Button NewAcountBackBtn;
         private System.Windows.Forms.Button DuplicateConfirmationBtn;
     }

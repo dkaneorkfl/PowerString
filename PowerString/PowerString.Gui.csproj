@@ -81,6 +81,7 @@
     <Compile Include="ResultForm.Designer.cs">
       <DependentUpon>ResultForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="TextController.cs" />
     <Compile Include="TypingTestForm.cs">
       <SubType>Form</SubType>
     </Compile>
