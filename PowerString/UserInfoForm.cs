@@ -14,6 +14,7 @@ namespace PowerString
 {
     public partial class UserInfoForm : Form
     {
+        private MainMenuForm _mainMenuForm;
         private Tester _tester;
         private Tester _selectedTester;
 
@@ -23,8 +24,9 @@ namespace PowerString
             InitializeComponent();
         }
 
-        public UserInfoForm(Tester tester) : this()
+        public UserInfoForm(MainMenuForm mainMenuForm, Tester tester) : this()
         {
+            _mainMenuForm = mainMenuForm;
             _tester = tester;
             _selectedTester = _tester;
         }
@@ -55,9 +57,7 @@ namespace PowerString
         //계정 삭제 버튼 클릭
         private void UserDeleteBtn_Click(object sender, EventArgs e)
         {
-            // 내 계정 삭제 버튼 클릭시 발생할 이벤트
-            //MoveEvent.MoveToForm(new DeleteCheckForm());
-            //DataRepository.Tester.Delete(tester);
+            MoveEvent.ShowModalForm(new DeleteCheckForm(_mainMenuForm, this, _tester));
         }
 
 
@@ -174,7 +174,7 @@ namespace PowerString
         //대분류 종류를 combobox에 표시
         private void MakeBigCat()
         {
-            string[] ItemsOfBigCat = { "날짜", "내가 푼 문제", "오타율", "점수" };
+            string[] ItemsOfBigCat = { "날짜", "내가 푼 문제" };
             SelectByBigCat.DataSource = ItemsOfBigCat;
         }
 
