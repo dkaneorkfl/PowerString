@@ -13,24 +13,37 @@ namespace PowerString
 {
     public partial class UserInfoForm : Form
     {
-        private Tester _tester;
-
-        private UserInfoForm()
+        Tester _tester;
+        
+        public UserInfoForm()
         {
             InitializeComponent();
         }
-
-        public UserInfoForm(Tester tester) : this()
+        //아이디: System.Linq.Enumerable+WhereSelectEnumerableIterator`2[System.Char,System.String] 
+        //점수: System.Linq.Enumerable+WhereSelectEnumerableIterator`2[System.Char, System.String]
+        
+        public string UserInfos(Tester tester)
         {
-            _tester = tester;
+            //            var u1 = (from x in tester.TesterName select x).ToString();
+            //
+            //            string userScore = tester.TesterScore.ToString();
+            //            var u2 = (from x in userScore select x).ToString();
+            
+            string tName = tester.TesterName;
+            string tScore =  $"{tester.TesterScore}";
+            
+                return $"아이디: {tName} {Environment.NewLine}점수: {tScore}";
         }
 
-
-        private void UserInfoForm_Load(object sender, EventArgs e)
+        public void UserInfoForm_Load(object sender, EventArgs e)
         {
             string[] ItemsOfBigCat = {  "날짜", "오타율", "점수", "걸린시간" };
             SelectByBigCat.DataSource = ItemsOfBigCat;
 
+
+            // 로그인한 아이디와 테스터의 이름을 비교해서 정보 출력해야함
+            _tester = DataRepository.Tester.SelectById(14);
+            MyInfo.Text = UserInfos(_tester);
 
             var q1 = (from x in DataRepository.Tester.Select()
                 //    where x.TesterName == name
@@ -58,14 +71,18 @@ namespace PowerString
 
             var q5 = (from x in DataRepository.TestRecord.Select()
                 select x.TestRecordTime).ToList();
-
+            var q3435 = (from x in DataRepository.TestRecord.Select()
+                         where x.TesterId == 2
+                         group x by String.Format("{0:yyyy/M/d}", x.TestRecordDate) into g
+                select g.Key).ToList();
+            
 
             switch (SelectByBigCat.SelectedItem as string)
             {
 
                 case "날짜":
 //                    SelectBySmallCat.Items.Clear();
-                    SelectBySmallCat.DataSource = q2;
+                    SelectBySmallCat.DataSource = q3435;
                     //SelectBySmallCat.Items.Add(q2);
                     SelectBySmallCat.Visible = true;
                     break;
