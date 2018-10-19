@@ -32,14 +32,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ResultForm));
             this.MoveToMainMenu = new System.Windows.Forms.Button();
             this.Close = new System.Windows.Forms.Button();
-            this.ClearQuote = new System.Windows.Forms.Label();
+            this.ResultLine = new System.Windows.Forms.Label();
             this.Score = new System.Windows.Forms.Label();
             this.TextGroup = new System.Windows.Forms.GroupBox();
-            this.ClearImg = new System.Windows.Forms.PictureBox();
+            this.ResultImg = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.ClearImgList = new System.Windows.Forms.ImageList(this.components);
             this.TextGroup.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ClearImg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ResultImg)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,14 +67,14 @@
             this.Close.UseVisualStyleBackColor = true;
             this.Close.Click += new System.EventHandler(this.Close_Click);
             // 
-            // ClearQuote
+            // ResultLine
             // 
-            this.ClearQuote.AutoSize = true;
-            this.ClearQuote.Location = new System.Drawing.Point(6, 35);
-            this.ClearQuote.Name = "ClearQuote";
-            this.ClearQuote.Size = new System.Drawing.Size(107, 15);
-            this.ClearQuote.TabIndex = 2;
-            this.ClearQuote.Text = "어쩌구 저쩌구!";
+            this.ResultLine.AutoSize = true;
+            this.ResultLine.Location = new System.Drawing.Point(6, 35);
+            this.ResultLine.Name = "ResultLine";
+            this.ResultLine.Size = new System.Drawing.Size(107, 15);
+            this.ResultLine.TabIndex = 2;
+            this.ResultLine.Text = "어쩌구 저쩌구!";
             // 
             // Score
             // 
@@ -88,7 +88,7 @@
             // 
             // TextGroup
             // 
-            this.TextGroup.Controls.Add(this.ClearQuote);
+            this.TextGroup.Controls.Add(this.ResultLine);
             this.TextGroup.Location = new System.Drawing.Point(25, 89);
             this.TextGroup.Name = "TextGroup";
             this.TextGroup.Size = new System.Drawing.Size(415, 130);
@@ -96,21 +96,21 @@
             this.TextGroup.TabStop = false;
             this.TextGroup.Text = "ooo님";
             // 
-            // ClearImg
+            // ResultImg
             // 
-            this.ClearImg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClearImg.Image = global::PowerString.Properties.Resources.verymore;
-            this.ClearImg.Location = new System.Drawing.Point(3, 3);
-            this.ClearImg.Name = "ClearImg";
-            this.ClearImg.Size = new System.Drawing.Size(110, 108);
-            this.ClearImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ClearImg.TabIndex = 6;
-            this.ClearImg.TabStop = false;
+            this.ResultImg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ResultImg.Image = global::PowerString.Properties.Resources.verymore;
+            this.ResultImg.Location = new System.Drawing.Point(3, 3);
+            this.ResultImg.Name = "ResultImg";
+            this.ResultImg.Size = new System.Drawing.Size(110, 108);
+            this.ResultImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ResultImg.TabIndex = 6;
+            this.ResultImg.TabStop = false;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.panel1.Controls.Add(this.ClearImg);
+            this.panel1.Controls.Add(this.ResultImg);
             this.panel1.Location = new System.Drawing.Point(446, 102);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(116, 114);
@@ -140,7 +140,7 @@
             this.Load += new System.EventHandler(this.ResultForm_Load);
             this.TextGroup.ResumeLayout(false);
             this.TextGroup.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ClearImg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ResultImg)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -151,10 +151,10 @@
 
         private System.Windows.Forms.Button MoveToMainMenu;
         private System.Windows.Forms.Button Close;
-        private System.Windows.Forms.Label ClearQuote;
+        private System.Windows.Forms.Label ResultLine;
         private System.Windows.Forms.Label Score;
         private System.Windows.Forms.GroupBox TextGroup;
-        private System.Windows.Forms.PictureBox ClearImg;
+        private System.Windows.Forms.PictureBox ResultImg;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ImageList ClearImgList;
     }
