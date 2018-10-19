@@ -28,53 +28,52 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.DeleteCheckOK = new System.Windows.Forms.Button();
+            this.DeleteOK = new System.Windows.Forms.Button();
             this.DeleteCheckLB = new System.Windows.Forms.Label();
-            this.DeleteCheckNO = new System.Windows.Forms.Button();
+            this.DeleteNO = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // DeleteCheckOK
+            // DeleteOK
             // 
-            this.DeleteCheckOK.Location = new System.Drawing.Point(43, 101);
-            this.DeleteCheckOK.Name = "DeleteCheckOK";
-            this.DeleteCheckOK.Size = new System.Drawing.Size(100, 40);
-            this.DeleteCheckOK.TabIndex = 0;
-            this.DeleteCheckOK.Text = "OK";
-            this.DeleteCheckOK.UseVisualStyleBackColor = true;
-            this.DeleteCheckOK.Click += new System.EventHandler(this.DeleteCheckOK_Click);
+            this.DeleteOK.Location = new System.Drawing.Point(18, 191);
+            this.DeleteOK.Name = "DeleteOK";
+            this.DeleteOK.Size = new System.Drawing.Size(150, 50);
+            this.DeleteOK.TabIndex = 0;
+            this.DeleteOK.Text = "OK(&O)";
+            this.DeleteOK.UseVisualStyleBackColor = true;
+            this.DeleteOK.Click += new System.EventHandler(this.DeleteOK_Click);
             // 
             // DeleteCheckLB
             // 
-            this.DeleteCheckLB.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.DeleteCheckLB.AutoSize = true;
-            this.DeleteCheckLB.Font = new System.Drawing.Font("Gulim", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeleteCheckLB.Location = new System.Drawing.Point(38, 47);
+            this.DeleteCheckLB.Font = new System.Drawing.Font("Gulim", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteCheckLB.Location = new System.Drawing.Point(12, 62);
             this.DeleteCheckLB.Name = "DeleteCheckLB";
-            this.DeleteCheckLB.Size = new System.Drawing.Size(316, 28);
-            this.DeleteCheckLB.TabIndex = 1;
-            this.DeleteCheckLB.Text = "정말 삭제하시겠습니까?";
+            this.DeleteCheckLB.Size = new System.Drawing.Size(350, 34);
+            this.DeleteCheckLB.TabIndex = 2;
+            this.DeleteCheckLB.Text = "정말 삭제하시렵니까?";
             // 
-            // DeleteCheckNO
+            // DeleteNO
             // 
-            this.DeleteCheckNO.Location = new System.Drawing.Point(245, 101);
-            this.DeleteCheckNO.Name = "DeleteCheckNO";
-            this.DeleteCheckNO.Size = new System.Drawing.Size(100, 40);
-            this.DeleteCheckNO.TabIndex = 2;
-            this.DeleteCheckNO.Text = "No";
-            this.DeleteCheckNO.UseVisualStyleBackColor = true;
-            this.DeleteCheckNO.Click += new System.EventHandler(this.DeleteCheckNO_Click);
+            this.DeleteNO.Location = new System.Drawing.Point(212, 191);
+            this.DeleteNO.Name = "DeleteNO";
+            this.DeleteNO.Size = new System.Drawing.Size(150, 50);
+            this.DeleteNO.TabIndex = 3;
+            this.DeleteNO.Text = "NO(&N)";
+            this.DeleteNO.UseVisualStyleBackColor = true;
+            this.DeleteNO.Click += new System.EventHandler(this.DeleteNO_Click);
+            this.DeleteNO.KeyDown += new System.Windows.Forms.KeyEventHandler(this.DeleteNO_KeyDown);
             // 
             // DeleteCheckForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(405, 186);
-            this.Controls.Add(this.DeleteCheckNO);
+            this.ClientSize = new System.Drawing.Size(382, 253);
+            this.Controls.Add(this.DeleteNO);
             this.Controls.Add(this.DeleteCheckLB);
-            this.Controls.Add(this.DeleteCheckOK);
+            this.Controls.Add(this.DeleteOK);
             this.Name = "DeleteCheckForm";
-            this.Text = "계정 삭제 확인";
+            this.Text = "DeleteCheckForm";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -82,8 +81,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Button DeleteCheckOK;
+        private System.Windows.Forms.Button DeleteOK;
         private System.Windows.Forms.Label DeleteCheckLB;
-        private System.Windows.Forms.Button DeleteCheckNO;
+        private System.Windows.Forms.Button DeleteNO;
     }
 }

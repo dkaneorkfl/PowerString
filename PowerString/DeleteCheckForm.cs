@@ -7,37 +7,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using PowerString.Data;
 
 namespace PowerString
 {
     public partial class DeleteCheckForm : Form
     {
-        private Tester tester;
-
         public DeleteCheckForm()
         {
             InitializeComponent();
-            this.Location = new Point(950, 500);
         }
 
-        public DeleteCheckForm(Tester tester)
+        private void DeleteOK_Click(object sender, EventArgs e)
         {
-            this.tester = tester;
+
         }
 
-
-
-        private void DeleteCheckOK_Click(object sender, EventArgs e)
+        private void DeleteNO_Click(object sender, EventArgs e)
         {
-            // 계정 정보 삭제.
-
-            DataRepository.Tester.Delete(this.tester);
+            Close();
         }
 
-        private void DeleteCheckNO_Click(object sender, EventArgs e)
+        private void DeleteNO_KeyDown(object sender, KeyEventArgs e)
         {
-            this.Close();
+            if (e.KeyCode == Keys.Escape) ;
         }
     }
 }
