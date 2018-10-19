@@ -35,10 +35,12 @@
             this.TesterName = new System.Windows.Forms.Label();
             this.Score = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.ClearImgList = new System.Windows.Forms.ImageList(this.components);
             this.ClearImg = new System.Windows.Forms.PictureBox();
+            this.ClearImgList = new System.Windows.Forms.ImageList(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ClearImg)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // MoveToMainMenu
@@ -86,7 +88,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.ClearImg);
             this.groupBox1.Controls.Add(this.TesterName);
             this.groupBox1.Location = new System.Drawing.Point(25, 89);
             this.groupBox1.Name = "groupBox1";
@@ -95,6 +96,17 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "ooo님";
             // 
+            // ClearImg
+            // 
+            this.ClearImg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClearImg.Image = global::PowerString.Properties.Resources.more;
+            this.ClearImg.Location = new System.Drawing.Point(3, 1);
+            this.ClearImg.Name = "ClearImg";
+            this.ClearImg.Size = new System.Drawing.Size(110, 108);
+            this.ClearImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ClearImg.TabIndex = 6;
+            this.ClearImg.TabStop = false;
+            // 
             // ClearImgList
             // 
             this.ClearImgList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ClearImgList.ImageStream")));
@@ -102,21 +114,21 @@
             this.ClearImgList.Images.SetKeyName(0, "more.jpg");
             this.ClearImgList.Images.SetKeyName(1, "welldone.jpg");
             // 
-            // ClearImg
+            // panel1
             // 
-            this.ClearImg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClearImg.Image = global::PowerString.Properties.Resources.more;
-            this.ClearImg.Location = new System.Drawing.Point(206, -66);
-            this.ClearImg.Name = "ClearImg";
-            this.ClearImg.Size = new System.Drawing.Size(351, 180);
-            this.ClearImg.TabIndex = 6;
-            this.ClearImg.TabStop = false;
+            this.panel1.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.panel1.Controls.Add(this.ClearImg);
+            this.panel1.Location = new System.Drawing.Point(446, 93);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(116, 110);
+            this.panel1.TabIndex = 6;
             // 
             // ResultForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(582, 284);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.Score);
             this.Controls.Add(this.Close);
@@ -127,6 +139,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ClearImg)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -141,5 +154,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ImageList ClearImgList;
         private System.Windows.Forms.PictureBox ClearImg;
+        private System.Windows.Forms.Panel panel1;
     }
 }
