@@ -22,6 +22,7 @@ namespace PowerString
         //private const int MAX_TIME = 2 * 60;
         private const int MAX_TIME = 30;
         private int count = 0;
+        private int TimeSum = 0;
 
         private Tester _tester;
         private TestMode _testMode = TestMode.None;
@@ -80,6 +81,7 @@ namespace PowerString
 
         private void btnSkip_Click(object sender, EventArgs e)
         {
+
             GoToNextExample();
         }
 
@@ -128,6 +130,7 @@ namespace PowerString
 
         private void GoToNextExample()
         {
+            TimeSum = TimeSum + (pgbTimer.Maximum - pgbTimer.Value);
             pgbTimer.Value = pgbTimer.Maximum;
             _isStop = false;
             tbxUserInput.Text = "";
@@ -153,7 +156,7 @@ namespace PowerString
         {
             _isStop = true;
             //결과제공창으로 감
-            MoveEvent.ShowModalForm(new ResultForm(this, _tester));
+            MoveEvent.ShowModalForm(new ResultForm(this, _tester, TimeSum));
         }
         
 

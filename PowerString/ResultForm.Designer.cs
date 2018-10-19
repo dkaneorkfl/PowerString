@@ -32,13 +32,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ResultForm));
             this.MoveToMainMenu = new System.Windows.Forms.Button();
             this.Close = new System.Windows.Forms.Button();
-            this.TesterName = new System.Windows.Forms.Label();
+            this.ClearQuote = new System.Windows.Forms.Label();
             this.Score = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.TextGroup = new System.Windows.Forms.GroupBox();
             this.ClearImg = new System.Windows.Forms.PictureBox();
             this.ClearImgList = new System.Windows.Forms.ImageList(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.groupBox1.SuspendLayout();
+            this.TextGroup.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ClearImg)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -67,14 +67,14 @@
             this.Close.UseVisualStyleBackColor = true;
             this.Close.Click += new System.EventHandler(this.Close_Click);
             // 
-            // TesterName
+            // ClearQuote
             // 
-            this.TesterName.AutoSize = true;
-            this.TesterName.Location = new System.Drawing.Point(6, 35);
-            this.TesterName.Name = "TesterName";
-            this.TesterName.Size = new System.Drawing.Size(107, 15);
-            this.TesterName.TabIndex = 2;
-            this.TesterName.Text = "어쩌구 저쩌구!";
+            this.ClearQuote.AutoSize = true;
+            this.ClearQuote.Location = new System.Drawing.Point(6, 35);
+            this.ClearQuote.Name = "ClearQuote";
+            this.ClearQuote.Size = new System.Drawing.Size(107, 15);
+            this.ClearQuote.TabIndex = 2;
+            this.ClearQuote.Text = "어쩌구 저쩌구!";
             // 
             // Score
             // 
@@ -86,15 +86,15 @@
             this.Score.TabIndex = 4;
             this.Score.Text = "코드 작성을 완료했습니다!";
             // 
-            // groupBox1
+            // TextGroup
             // 
-            this.groupBox1.Controls.Add(this.TesterName);
-            this.groupBox1.Location = new System.Drawing.Point(25, 89);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(415, 114);
-            this.groupBox1.TabIndex = 5;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "ooo님";
+            this.TextGroup.Controls.Add(this.ClearQuote);
+            this.TextGroup.Location = new System.Drawing.Point(25, 89);
+            this.TextGroup.Name = "TextGroup";
+            this.TextGroup.Size = new System.Drawing.Size(415, 114);
+            this.TextGroup.TabIndex = 5;
+            this.TextGroup.TabStop = false;
+            this.TextGroup.Text = "ooo님";
             // 
             // ClearImg
             // 
@@ -129,15 +129,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(582, 284);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.TextGroup);
             this.Controls.Add(this.Score);
             this.Controls.Add(this.Close);
             this.Controls.Add(this.MoveToMainMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ResultForm";
             this.Text = "ResultForm";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.Load += new System.EventHandler(this.ResultForm_Load);
+            this.TextGroup.ResumeLayout(false);
+            this.TextGroup.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ClearImg)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -149,9 +150,9 @@
 
         private System.Windows.Forms.Button MoveToMainMenu;
         private System.Windows.Forms.Button Close;
-        private System.Windows.Forms.Label TesterName;
+        private System.Windows.Forms.Label ClearQuote;
         private System.Windows.Forms.Label Score;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox TextGroup;
         private System.Windows.Forms.ImageList ClearImgList;
         private System.Windows.Forms.PictureBox ClearImg;
         private System.Windows.Forms.Panel panel1;

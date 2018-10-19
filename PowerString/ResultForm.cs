@@ -15,16 +15,19 @@ namespace PowerString
     {
         private TypingTestForm _typingTestForm;
         private Tester _tester;
+        private int _time;
+        
 
         private ResultForm()
         {
             InitializeComponent();
         }
 
-        public ResultForm(TypingTestForm typingTestform, Tester tester) : this()
+        public ResultForm(TypingTestForm typingTestform, Tester tester, int time) : this()
         {
             _typingTestForm = typingTestform;
             _tester = tester;
+            _time = time/2;
         }
 
 
@@ -40,6 +43,13 @@ namespace PowerString
         {
             this.Close();
             
+        }
+
+        private void ResultForm_Load(object sender, EventArgs e)
+        {
+            String tName = _tester.TesterName;
+            TextGroup.Text = $"{tName}님은";
+            ClearQuote.Text = $"{_time}초 동안 코드를 작성하셨습니다.";
         }
     }
 }
