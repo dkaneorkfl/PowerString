@@ -86,6 +86,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.ClearImg);
             this.groupBox1.Controls.Add(this.TesterName);
             this.groupBox1.Location = new System.Drawing.Point(25, 89);
             this.groupBox1.Name = "groupBox1";
@@ -105,9 +106,9 @@
             // 
             this.ClearImg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClearImg.Image = global::PowerString.Properties.Resources.more;
-            this.ClearImg.Location = new System.Drawing.Point(449, 97);
+            this.ClearImg.Location = new System.Drawing.Point(206, -66);
             this.ClearImg.Name = "ClearImg";
-            this.ClearImg.Size = new System.Drawing.Size(110, 106);
+            this.ClearImg.Size = new System.Drawing.Size(351, 180);
             this.ClearImg.TabIndex = 6;
             this.ClearImg.TabStop = false;
             // 
@@ -116,7 +117,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(582, 284);
-            this.Controls.Add(this.ClearImg);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.Score);
             this.Controls.Add(this.Close);
