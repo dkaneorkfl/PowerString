@@ -167,5 +167,8 @@
   <ItemGroup>
     <None Include="Resources\icons8_keyboard_50_E7C_icon.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\verymore.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

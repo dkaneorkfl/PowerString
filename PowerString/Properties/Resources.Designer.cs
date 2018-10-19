@@ -83,6 +83,16 @@ namespace PowerString.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
+        internal static System.Drawing.Bitmap verymore {
+            get {
+                object obj = ResourceManager.GetObject("verymore", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
         internal static System.Drawing.Bitmap welldone {
             get {
                 object obj = ResourceManager.GetObject("welldone", resourceCulture);
