@@ -12,18 +12,18 @@ using PowerString.Data;
 
 namespace PowerString
 {
-    public partial class DeleteCheckForm : Form
+    public partial class DeleteConfirmForm : Form
     {
         private MainMenuForm _mainMenuForm;
         private UserInfoForm _userInfoForm;
         private Tester _tester;
 
-        private DeleteCheckForm()
+        private DeleteConfirmForm()
         {
             InitializeComponent();
         }
 
-        public DeleteCheckForm(MainMenuForm mainMenuForm, UserInfoForm userInfoForm, Tester tester) : this()
+        public DeleteConfirmForm(MainMenuForm mainMenuForm, UserInfoForm userInfoForm, Tester tester) : this()
         {
             _mainMenuForm = mainMenuForm;
             _userInfoForm = userInfoForm;
@@ -48,7 +48,10 @@ namespace PowerString
 
         private void DeleteNO_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Escape) ;
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Close();
+            }
         }
     }
 }

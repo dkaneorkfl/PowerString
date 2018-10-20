@@ -84,7 +84,7 @@ namespace PowerString
         // 로그인창에서 입력받은 아이디 패스워드 확인
         public void CheckSignIn()
         {
-            string userName = IdInputBox.Text;
+            string userName = IdInputBox.Text;      // IdInputBox에서 Text를 가져와서 userName에 넣어라.
             string userPw = PwInputBox.Text;
 
             #region First, OrDefault

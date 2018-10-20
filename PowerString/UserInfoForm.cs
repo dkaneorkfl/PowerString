@@ -45,9 +45,8 @@ namespace PowerString
         }
 
 
-        
-
         //닫기 버튼 클릭
+
         private void CloseBtn_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -55,22 +54,33 @@ namespace PowerString
 
 
         //계정 삭제 버튼 클릭
+
         private void UserDeleteBtn_Click(object sender, EventArgs e)
         {
-            MoveEvent.ShowModalForm(new DeleteCheckForm(_mainMenuForm, this, _tester));
+            MoveEvent.ShowModalForm(new DeleteConfirmForm(_mainMenuForm, this, _tester));
+        }
+
+
+        // 계정 삭제 버튼은 ESC로 동작
+        private void UserDeleteBtn_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                CloseBtn_Click(sender, e);
+            }
         }
 
 
         //계정 리스트에서 다른 계정 선택
+
         private void UserListLB_SelectedIndexChanged(object sender, EventArgs e)
         {
             ChangeSelectedTester();
         }
 
 
-        
-
         //대분류 선택 시
+
         private void SelectByBigCat_SelectedIndexChanged(object sender, EventArgs e)
         {
             //var q2 = (from x in DataRepository.TestRecord.Select()
@@ -111,6 +121,7 @@ namespace PowerString
 
 
         //소분류 선택 시
+
         private void SelectBySmallCat_SelectedIndexChanged(object sender, EventArgs e)
         {
             List<TestRecord> testRecords = new List<TestRecord>();
@@ -146,11 +157,14 @@ namespace PowerString
 
             InputDataToGridView(testRecords);
         }
+
         #endregion
 
 
         #region 기타메소드
+
         //UserInfo class를 Text로 표현
+
         public string GetUserInfoToText(Tester tester)
         {
             string tName = tester.TesterName;
@@ -161,6 +175,7 @@ namespace PowerString
 
 
         //UserList에 모든 Tester를 표시
+
         private void MakeUserList()
         {
             List<string> testers = (from x in DataRepository.Tester.Select()
@@ -172,6 +187,7 @@ namespace PowerString
 
 
         //대분류 종류를 combobox에 표시
+
         private void MakeBigCat()
         {
             string[] ItemsOfBigCat = { "날짜", "내가 푼 문제" };
@@ -180,6 +196,7 @@ namespace PowerString
 
 
         //기록을 보여줄 계정을 변경
+
         private void ChangeSelectedTester()
         {
             string selectedTesterName = UserListLB.SelectedItem.ToString();
@@ -188,6 +205,7 @@ namespace PowerString
 
 
         //날짜 대분류의 소분류 표시
+
         private List<string> GetDateSmallCat()
         {
             return (from x in DataRepository.TestRecord.Select()
@@ -198,6 +216,7 @@ namespace PowerString
 
 
         //내가 푼 문제 대분류의 소분류 표시
+
         private List<string> GetCategorySmallCat()
         {
             var q1 = (from x in DataRepository.TestRecord.Select()
@@ -262,7 +281,14 @@ namespace PowerString
             }
 
             dataView.DataSource = list;
-        } 
+        }
+
         #endregion
+
+        private void UserListLB_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+                    CloseBtn_Click(sender, e); 
+        }
     }
 }

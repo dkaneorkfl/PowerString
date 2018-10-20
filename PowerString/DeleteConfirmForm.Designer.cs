@@ -1,6 +1,6 @@
 ﻿namespace PowerString
 {
-    partial class DeleteCheckForm
+    partial class DeleteConfirmForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeleteConfirmForm));
             this.DeleteOK = new System.Windows.Forms.Button();
             this.DeleteCheckLB = new System.Windows.Forms.Label();
             this.DeleteNO = new System.Windows.Forms.Button();
@@ -38,7 +39,7 @@
             this.DeleteOK.Location = new System.Drawing.Point(18, 191);
             this.DeleteOK.Name = "DeleteOK";
             this.DeleteOK.Size = new System.Drawing.Size(150, 50);
-            this.DeleteOK.TabIndex = 0;
+            this.DeleteOK.TabIndex = 1;
             this.DeleteOK.Text = "OK(&O)";
             this.DeleteOK.UseVisualStyleBackColor = true;
             this.DeleteOK.Click += new System.EventHandler(this.DeleteOK_Click);
@@ -49,7 +50,7 @@
             this.DeleteCheckLB.Font = new System.Drawing.Font("Gulim", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DeleteCheckLB.Location = new System.Drawing.Point(12, 62);
             this.DeleteCheckLB.Name = "DeleteCheckLB";
-            this.DeleteCheckLB.Size = new System.Drawing.Size(350, 34);
+            this.DeleteCheckLB.Size = new System.Drawing.Size(341, 33);
             this.DeleteCheckLB.TabIndex = 2;
             this.DeleteCheckLB.Text = "정말 삭제하시렵니까?";
             // 
@@ -58,7 +59,7 @@
             this.DeleteNO.Location = new System.Drawing.Point(212, 191);
             this.DeleteNO.Name = "DeleteNO";
             this.DeleteNO.Size = new System.Drawing.Size(150, 50);
-            this.DeleteNO.TabIndex = 3;
+            this.DeleteNO.TabIndex = 0;
             this.DeleteNO.Text = "NO(&N)";
             this.DeleteNO.UseVisualStyleBackColor = true;
             this.DeleteNO.Click += new System.EventHandler(this.DeleteNO_Click);
@@ -72,6 +73,7 @@
             this.Controls.Add(this.DeleteNO);
             this.Controls.Add(this.DeleteCheckLB);
             this.Controls.Add(this.DeleteOK);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DeleteCheckForm";
             this.Text = "DeleteCheckForm";
             this.ResumeLayout(false);

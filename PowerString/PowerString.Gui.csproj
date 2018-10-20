@@ -68,11 +68,11 @@
       <DependentUpon>BackForm.cs</DependentUpon>
     </Compile>
     <Compile Include="CategoryInfo.cs" />
-    <Compile Include="DeleteCheckForm.cs">
+    <Compile Include="DeleteConfirmForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DeleteCheckForm.Designer.cs">
-      <DependentUpon>DeleteCheckForm.cs</DependentUpon>
+    <Compile Include="DeleteConfirmForm.Designer.cs">
+      <DependentUpon>DeleteConfirmForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MoveEvent.cs" />
     <Compile Include="SignUpForm.cs">
@@ -117,8 +117,8 @@
     <EmbeddedResource Include="BackForm.resx">
       <DependentUpon>BackForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DeleteCheckForm.resx">
-      <DependentUpon>DeleteCheckForm.cs</DependentUpon>
+    <EmbeddedResource Include="DeleteConfirmForm.resx">
+      <DependentUpon>DeleteConfirmForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ResultForm.resx">
       <DependentUpon>ResultForm.cs</DependentUpon>
