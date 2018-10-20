@@ -61,7 +61,7 @@ namespace PowerString
         }
 
 
-        // 계정 삭제 버튼은 ESC로 동작
+        // 계정 삭제 버튼에 포커스가 있을 때 ESC로 UserInfoForm 닫기 동작
         private void UserDeleteBtn_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Escape)
@@ -76,6 +76,15 @@ namespace PowerString
         private void UserListLB_SelectedIndexChanged(object sender, EventArgs e)
         {
             ChangeSelectedTester();
+        }
+
+
+        // 계정 리스트에서 ESC키로 뒤로 가기 가능.
+
+        private void UserListLB_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+                CloseBtn_Click(sender, e);
         }
 
 
@@ -285,10 +294,6 @@ namespace PowerString
 
         #endregion
 
-        private void UserListLB_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Escape)
-                    CloseBtn_Click(sender, e); 
-        }
+        
     }
 }
