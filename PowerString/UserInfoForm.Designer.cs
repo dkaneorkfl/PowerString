@@ -38,15 +38,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataView = new System.Windows.Forms.DataGridView();
+            this.codeIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.testRecordIsCorrectDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.TimerTaken = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.testRecordDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.testRecordSourceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.SelectBySmallCat = new System.Windows.Forms.ComboBox();
             this.SelectByBigCat = new System.Windows.Forms.ComboBox();
             this.UserDeleteBtn = new System.Windows.Forms.Button();
             this.UserListLB = new System.Windows.Forms.ListBox();
-            this.codeIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.testRecordIsCorrectDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.testRecordDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.testRecordSourceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.testRecordSourceBindingSource)).BeginInit();
@@ -127,11 +127,37 @@
             this.dataView.Size = new System.Drawing.Size(624, 315);
             this.dataView.TabIndex = 7;
             // 
+            // codeIdDataGridViewTextBoxColumn
+            // 
+            this.codeIdDataGridViewTextBoxColumn.DataPropertyName = "CodeId";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.codeIdDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
+            this.codeIdDataGridViewTextBoxColumn.HeaderText = "코드번호";
+            this.codeIdDataGridViewTextBoxColumn.Name = "codeIdDataGridViewTextBoxColumn";
+            // 
+            // testRecordIsCorrectDataGridViewCheckBoxColumn
+            // 
+            this.testRecordIsCorrectDataGridViewCheckBoxColumn.DataPropertyName = "TestRecordIsCorrect";
+            this.testRecordIsCorrectDataGridViewCheckBoxColumn.HeaderText = "정답 여부";
+            this.testRecordIsCorrectDataGridViewCheckBoxColumn.Name = "testRecordIsCorrectDataGridViewCheckBoxColumn";
+            // 
             // TimerTaken
             // 
             this.TimerTaken.DataPropertyName = "TimerTaken";
             this.TimerTaken.HeaderText = "걸린시간";
             this.TimerTaken.Name = "TimerTaken";
+            // 
+            // testRecordDateDataGridViewTextBoxColumn
+            // 
+            this.testRecordDateDataGridViewTextBoxColumn.DataPropertyName = "TestRecordDate";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.testRecordDateDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
+            this.testRecordDateDataGridViewTextBoxColumn.HeaderText = "연습시각";
+            this.testRecordDateDataGridViewTextBoxColumn.Name = "testRecordDateDataGridViewTextBoxColumn";
+            // 
+            // testRecordSourceBindingSource
+            // 
+            this.testRecordSourceBindingSource.DataSource = typeof(PowerString.TestRecordSource);
             // 
             // SelectBySmallCat
             // 
@@ -173,35 +199,9 @@
             this.UserListLB.Location = new System.Drawing.Point(11, 175);
             this.UserListLB.Name = "UserListLB";
             this.UserListLB.Size = new System.Drawing.Size(163, 228);
-            this.UserListLB.TabIndex = 7;
+            this.UserListLB.TabIndex = 0;
             this.UserListLB.SelectedIndexChanged += new System.EventHandler(this.UserListLB_SelectedIndexChanged);
             this.UserListLB.KeyDown += new System.Windows.Forms.KeyEventHandler(this.UserListLB_KeyDown);
-            // 
-            // codeIdDataGridViewTextBoxColumn
-            // 
-            this.codeIdDataGridViewTextBoxColumn.DataPropertyName = "CodeId";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.codeIdDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
-            this.codeIdDataGridViewTextBoxColumn.HeaderText = "코드번호";
-            this.codeIdDataGridViewTextBoxColumn.Name = "codeIdDataGridViewTextBoxColumn";
-            // 
-            // testRecordIsCorrectDataGridViewCheckBoxColumn
-            // 
-            this.testRecordIsCorrectDataGridViewCheckBoxColumn.DataPropertyName = "TestRecordIsCorrect";
-            this.testRecordIsCorrectDataGridViewCheckBoxColumn.HeaderText = "정답 여부";
-            this.testRecordIsCorrectDataGridViewCheckBoxColumn.Name = "testRecordIsCorrectDataGridViewCheckBoxColumn";
-            // 
-            // testRecordDateDataGridViewTextBoxColumn
-            // 
-            this.testRecordDateDataGridViewTextBoxColumn.DataPropertyName = "TestRecordDate";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.testRecordDateDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
-            this.testRecordDateDataGridViewTextBoxColumn.HeaderText = "연습시각";
-            this.testRecordDateDataGridViewTextBoxColumn.Name = "testRecordDateDataGridViewTextBoxColumn";
-            // 
-            // testRecordSourceBindingSource
-            // 
-            this.testRecordSourceBindingSource.DataSource = typeof(PowerString.TestRecordSource);
             // 
             // UserInfoForm
             // 
