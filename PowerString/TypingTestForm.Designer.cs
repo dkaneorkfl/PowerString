@@ -110,6 +110,7 @@
             // pgbTimer
             // 
             this.pgbTimer.Location = new System.Drawing.Point(76, 350);
+            this.pgbTimer.Maximum = 600;
             this.pgbTimer.Name = "pgbTimer";
             this.pgbTimer.Size = new System.Drawing.Size(742, 23);
             this.pgbTimer.TabIndex = 5;

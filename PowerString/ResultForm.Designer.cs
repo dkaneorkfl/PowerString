@@ -32,13 +32,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ResultForm));
             this.MoveToMainMenu = new System.Windows.Forms.Button();
             this.Close = new System.Windows.Forms.Button();
-            this.TesterName = new System.Windows.Forms.Label();
+            this.ResultLine = new System.Windows.Forms.Label();
             this.Score = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.TextGroup = new System.Windows.Forms.GroupBox();
+            this.ResultImg = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.ClearImgList = new System.Windows.Forms.ImageList(this.components);
-            this.ClearImg = new System.Windows.Forms.PictureBox();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ClearImg)).BeginInit();
+            this.TextGroup.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ResultImg)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // MoveToMainMenu
@@ -65,14 +67,14 @@
             this.Close.UseVisualStyleBackColor = true;
             this.Close.Click += new System.EventHandler(this.Close_Click);
             // 
-            // TesterName
+            // ResultLine
             // 
-            this.TesterName.AutoSize = true;
-            this.TesterName.Location = new System.Drawing.Point(6, 35);
-            this.TesterName.Name = "TesterName";
-            this.TesterName.Size = new System.Drawing.Size(107, 15);
-            this.TesterName.TabIndex = 2;
-            this.TesterName.Text = "어쩌구 저쩌구!";
+            this.ResultLine.AutoSize = true;
+            this.ResultLine.Location = new System.Drawing.Point(6, 35);
+            this.ResultLine.Name = "ResultLine";
+            this.ResultLine.Size = new System.Drawing.Size(107, 15);
+            this.ResultLine.TabIndex = 2;
+            this.ResultLine.Text = "어쩌구 저쩌구!";
             // 
             // Score
             // 
@@ -84,49 +86,62 @@
             this.Score.TabIndex = 4;
             this.Score.Text = "코드 작성을 완료했습니다!";
             // 
-            // groupBox1
+            // TextGroup
             // 
-            this.groupBox1.Controls.Add(this.ClearImg);
-            this.groupBox1.Controls.Add(this.TesterName);
-            this.groupBox1.Location = new System.Drawing.Point(25, 89);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(415, 114);
-            this.groupBox1.TabIndex = 5;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "ooo님";
+            this.TextGroup.Controls.Add(this.ResultLine);
+            this.TextGroup.Location = new System.Drawing.Point(25, 89);
+            this.TextGroup.Name = "TextGroup";
+            this.TextGroup.Size = new System.Drawing.Size(415, 130);
+            this.TextGroup.TabIndex = 5;
+            this.TextGroup.TabStop = false;
+            this.TextGroup.Text = "ooo님";
+            // 
+            // ResultImg
+            // 
+            this.ResultImg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ResultImg.Image = global::PowerString.Properties.Resources.verymore;
+            this.ResultImg.Location = new System.Drawing.Point(3, 3);
+            this.ResultImg.Name = "ResultImg";
+            this.ResultImg.Size = new System.Drawing.Size(110, 108);
+            this.ResultImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ResultImg.TabIndex = 6;
+            this.ResultImg.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.panel1.Controls.Add(this.ResultImg);
+            this.panel1.Location = new System.Drawing.Point(446, 102);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(116, 114);
+            this.panel1.TabIndex = 6;
             // 
             // ClearImgList
             // 
             this.ClearImgList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ClearImgList.ImageStream")));
-            this.ClearImgList.TransparentColor = System.Drawing.Color.Turquoise;
+            this.ClearImgList.TransparentColor = System.Drawing.Color.Transparent;
             this.ClearImgList.Images.SetKeyName(0, "more.jpg");
-            this.ClearImgList.Images.SetKeyName(1, "welldone.jpg");
-            // 
-            // ClearImg
-            // 
-            this.ClearImg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClearImg.Image = global::PowerString.Properties.Resources.more;
-            this.ClearImg.Location = new System.Drawing.Point(206, -66);
-            this.ClearImg.Name = "ClearImg";
-            this.ClearImg.Size = new System.Drawing.Size(351, 180);
-            this.ClearImg.TabIndex = 6;
-            this.ClearImg.TabStop = false;
+            this.ClearImgList.Images.SetKeyName(1, "verymore.jpg");
+            this.ClearImgList.Images.SetKeyName(2, "welldone.jpg");
             // 
             // ResultForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(582, 284);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.TextGroup);
             this.Controls.Add(this.Score);
             this.Controls.Add(this.Close);
             this.Controls.Add(this.MoveToMainMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ResultForm";
             this.Text = "ResultForm";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ClearImg)).EndInit();
+            this.Load += new System.EventHandler(this.ResultForm_Load);
+            this.TextGroup.ResumeLayout(false);
+            this.TextGroup.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ResultImg)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -136,10 +151,11 @@
 
         private System.Windows.Forms.Button MoveToMainMenu;
         private System.Windows.Forms.Button Close;
-        private System.Windows.Forms.Label TesterName;
+        private System.Windows.Forms.Label ResultLine;
         private System.Windows.Forms.Label Score;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox TextGroup;
+        private System.Windows.Forms.PictureBox ResultImg;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ImageList ClearImgList;
-        private System.Windows.Forms.PictureBox ClearImg;
     }
 }
