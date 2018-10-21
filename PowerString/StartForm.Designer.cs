@@ -177,7 +177,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "StartForm";
-            this.Text = "PowerText";
+            this.Text = "PowerString";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.StartForm_FormClosed);
             this.LogOnInfoGBox.ResumeLayout(false);
             this.LogOnInfoGBox.PerformLayout();

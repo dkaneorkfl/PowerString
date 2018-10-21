@@ -44,10 +44,10 @@
             // 
             // btnBackToMainMenu
             // 
-            this.btnBackToMainMenu.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBackToMainMenu.Location = new System.Drawing.Point(12, 12);
+            this.btnBackToMainMenu.Font = new System.Drawing.Font("Gulim", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBackToMainMenu.Location = new System.Drawing.Point(12, 13);
             this.btnBackToMainMenu.Name = "btnBackToMainMenu";
-            this.btnBackToMainMenu.Size = new System.Drawing.Size(205, 38);
+            this.btnBackToMainMenu.Size = new System.Drawing.Size(205, 41);
             this.btnBackToMainMenu.TabIndex = 4;
             this.btnBackToMainMenu.Text = "메인메뉴로(&B)";
             this.btnBackToMainMenu.UseVisualStyleBackColor = true;
@@ -56,10 +56,10 @@
             // btnSkip
             // 
             this.btnSkip.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSkip.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSkip.Location = new System.Drawing.Point(613, 12);
+            this.btnSkip.Font = new System.Drawing.Font("Gulim", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSkip.Location = new System.Drawing.Point(613, 13);
             this.btnSkip.Name = "btnSkip";
-            this.btnSkip.Size = new System.Drawing.Size(205, 38);
+            this.btnSkip.Size = new System.Drawing.Size(205, 41);
             this.btnSkip.TabIndex = 1;
             this.btnSkip.Text = "현재 문제 건너뛰기(&S)";
             this.btnSkip.UseVisualStyleBackColor = true;
@@ -69,10 +69,10 @@
             // btnResult
             // 
             this.btnResult.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnResult.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnResult.Location = new System.Drawing.Point(678, 379);
+            this.btnResult.Font = new System.Drawing.Font("Gulim", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnResult.Location = new System.Drawing.Point(678, 404);
             this.btnResult.Name = "btnResult";
-            this.btnResult.Size = new System.Drawing.Size(140, 39);
+            this.btnResult.Size = new System.Drawing.Size(140, 42);
             this.btnResult.TabIndex = 2;
             this.btnResult.Text = "결과 확인(&N)";
             this.btnResult.UseVisualStyleBackColor = true;
@@ -83,14 +83,14 @@
             this.tbxTestExample.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbxTestExample.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxTestExample.Font = new System.Drawing.Font("Gulim", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxTestExample.Location = new System.Drawing.Point(3, 3);
             this.tbxTestExample.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
             this.tbxTestExample.Multiline = true;
             this.tbxTestExample.Name = "tbxTestExample";
             this.tbxTestExample.ReadOnly = true;
             this.tbxTestExample.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tbxTestExample.Size = new System.Drawing.Size(390, 282);
+            this.tbxTestExample.Size = new System.Drawing.Size(390, 301);
             this.tbxTestExample.TabIndex = 3;
             // 
             // tbxUserInput
@@ -98,21 +98,21 @@
             this.tbxUserInput.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbxUserInput.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxUserInput.Font = new System.Drawing.Font("Gulim", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxUserInput.Location = new System.Drawing.Point(413, 3);
             this.tbxUserInput.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.tbxUserInput.Multiline = true;
             this.tbxUserInput.Name = "tbxUserInput";
             this.tbxUserInput.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tbxUserInput.Size = new System.Drawing.Size(390, 282);
+            this.tbxUserInput.Size = new System.Drawing.Size(390, 301);
             this.tbxUserInput.TabIndex = 0;
             // 
             // pgbTimer
             // 
-            this.pgbTimer.Location = new System.Drawing.Point(76, 350);
-            this.pgbTimer.Maximum = 600;
+            this.pgbTimer.Location = new System.Drawing.Point(76, 373);
+            this.pgbTimer.Maximum = 6000;
             this.pgbTimer.Name = "pgbTimer";
-            this.pgbTimer.Size = new System.Drawing.Size(742, 23);
+            this.pgbTimer.Size = new System.Drawing.Size(742, 25);
             this.pgbTimer.TabIndex = 5;
             // 
             // timer
@@ -124,9 +124,9 @@
             // lbl
             // 
             this.lbl.AutoSize = true;
-            this.lbl.Location = new System.Drawing.Point(20, 353);
+            this.lbl.Location = new System.Drawing.Point(20, 377);
             this.lbl.Name = "lbl";
-            this.lbl.Size = new System.Drawing.Size(45, 15);
+            this.lbl.Size = new System.Drawing.Size(46, 17);
             this.lbl.TabIndex = 6;
             this.lbl.Text = "label1";
             // 
@@ -140,19 +140,19 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.tbxTestExample, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tbxUserInput, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 56);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 60);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 288F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(806, 288);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 307F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(806, 307);
             this.tableLayoutPanel1.TabIndex = 7;
             // 
             // TypingTestForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(832, 425);
+            this.ClientSize = new System.Drawing.Size(832, 453);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.lbl);
             this.Controls.Add(this.pgbTimer);

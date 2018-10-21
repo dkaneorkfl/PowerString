@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Schema;
 using PowerString.Data;
 
 namespace PowerString
@@ -20,13 +21,14 @@ namespace PowerString
     public partial class TypingTestForm : Form
     {
         //private const int MAX_TIME = 2 * 60;
-        private const int MAX_TIME = 30;
+        private const int MAX_TIME = 120;
         private int count = 0;
         private decimal timeLeft = 0;//남은 시간 계산을 위한 decimal
         private decimal timeSum = 0;//시간 총합을 위한 decimal. Result에서 진행시간을 표기하기 위해 사용.
         private int correctCount = 0;//정답 갯수를 측정하기 위한 int
         private bool perfect = true;//모두 정답이면 true
         private decimal score = 0;//점수값. 현재는 progressbar의 value값을 그대로 누적시켜 사용함.
+        private int exampleCountByMod = 3;//모드에 따른 문제 갯수. 멀티 기준으로 기본 3개.
 
         private Tester _tester;
         private TestMode _testMode = TestMode.None;
@@ -62,6 +64,7 @@ namespace PowerString
             {
                 btnSkip.Enabled = false;
                 btnResult.Click += new EventHandler(GoToResultEvent);
+                exampleCountByMod= 1;//싱글모드면 1개
             }
 
             //SelectExample
@@ -97,19 +100,24 @@ namespace PowerString
             
             if (exampleCode.Equals(answer))
             {
-                //InsertTestRecord(TestResult.Success);
+                _isStop = true;
+                InsertTestRecord(TestResult.Success);
                 MessageBox.Show("정답!");
                 correctCount++;//정답 값 증가.
                 score = score + pgbTimer.Value;
+                _isStop = false;
             }
             else
             {
+                _isStop = true;
                 //InsertTestRecord(TestResult.Fail);
                 MessageBox.Show("오답..ㅠㅠ");
                 //정답값, 점수 증가가 없음.
+                _isStop = false;
             }
             
             GoToNextExample();
+           
         }
 
         private void InsertTestRecord(TestResult testResult)
@@ -126,6 +134,7 @@ namespace PowerString
                 testRecord.TestRecordIsCorrect = true;
                 timeLeft = (decimal)(pgbTimer.Maximum - pgbTimer.Value) / 2;
                 timeSum += timeLeft;
+
             }
             else
             {
@@ -163,7 +172,7 @@ namespace PowerString
         private void GoToResultEvent(object sender, EventArgs e)
         {
             _isStop = true;
-            if (correctCount / _categoryInfo.ExampleCount != 1)//정답갯수/문제갯수가 1이 아니면
+            if (correctCount / exampleCountByMod != 1)//정답갯수/문제갯수가 1이 아니면
                 perfect = false;//퍼펙트가 아니다.
             //결과제공창으로 감
             MoveEvent.ShowModalForm(new ResultForm(this, _tester, timeSum, perfect, score));
