@@ -24,7 +24,7 @@ namespace PowerString
         private bool _isExit = true;
 
 
-        public MainMenuForm()
+        private MainMenuForm()
         {
             InitializeComponent();
         }

@@ -177,9 +177,10 @@ namespace PowerString
         public string GetUserInfoToText(Tester tester)
         {
             string tName = tester.TesterName;
-            string tScore = $"{tester.TesterScore}";
+            return $"아이디: {tName}";
 
-            return $"아이디: {tName} {Environment.NewLine}점수: {tScore}";
+            //string tScore = $"{tester.TesterScore}";
+            //{ Environment.NewLine} 점수: { tScore}
         }
 
 
@@ -240,7 +241,6 @@ namespace PowerString
                     where q2.Contains(x.CategoryId)
                     select x.CategoryName).ToList();
         }
-
 
         /// <summary>
         /// 날짜 대분류에서 선택한 소분류에 따라 DB에서 데이터를 가져옴

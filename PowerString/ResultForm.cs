@@ -38,7 +38,7 @@ namespace PowerString
         // 메인메뉴로 돌아가기 버튼
         private void MoveToMainMenu_Click(object sender, EventArgs e)
         {
-            MoveEvent.MoveToForm(new MainMenuForm());
+            MoveEvent.MoveToForm(new MainMenuForm(_tester));
             this.Close();
             _typingTestForm.CloseForm();
         }

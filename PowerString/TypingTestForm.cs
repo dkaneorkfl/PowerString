@@ -38,8 +38,7 @@ namespace PowerString
         private bool _isStop = false;
         private int _idx = 0;
         private List<string> _exampleList;
-
-
+        
         private TypingTestForm()
         {
             InitializeComponent();
@@ -80,7 +79,7 @@ namespace PowerString
         private void btnBackToMainMenu_Click(object sender, EventArgs e)
         {
             //메인메뉴로 이동
-            MoveEvent.MoveToForm(new MainMenuForm(new Tester()));
+            MoveEvent.MoveToForm(new MainMenuForm(_tester));
             _isExit = false;
             this.Close();
         }
@@ -135,6 +134,8 @@ namespace PowerString
                 timeLeft = (decimal)(pgbTimer.Maximum - pgbTimer.Value) / 2;
                 timeSum += timeLeft;
 
+                _tester.TesterScore += (int?)score;
+                DataRepository.Tester.Update(_tester);
             }
             else
             {
@@ -147,7 +148,7 @@ namespace PowerString
 
         private void GoToNextExample()
         {
-            timeSum = timeSum + (pgbTimer.Maximum - pgbTimer.Value);
+            //timeSum = timeSum + (pgbTimer.Maximum - pgbTimer.Value);
             pgbTimer.Value = pgbTimer.Maximum;
             _isStop = false;
             tbxUserInput.Text = "";

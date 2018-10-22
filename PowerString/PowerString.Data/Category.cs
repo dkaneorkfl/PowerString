@@ -25,10 +25,5 @@ namespace PowerString.Data
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Code> Codes { get; set; }
-
-        public override string ToString()
-        {
-            return "a";
-        }
     }
 }
