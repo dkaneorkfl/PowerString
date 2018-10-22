@@ -65,7 +65,7 @@
             this.DeleteNO.Click += new System.EventHandler(this.DeleteNO_Click);
             this.DeleteNO.KeyDown += new System.Windows.Forms.KeyEventHandler(this.DeleteNO_KeyDown);
             // 
-            // DeleteCheckForm
+            // DeleteConfirmForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -74,8 +74,8 @@
             this.Controls.Add(this.DeleteCheckLB);
             this.Controls.Add(this.DeleteOK);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "DeleteCheckForm";
-            this.Text = "DeleteCheckForm";
+            this.Name = "DeleteConfirmForm";
+            this.Text = "DeleteConfirmForm";
             this.ResumeLayout(false);
             this.PerformLayout();
 

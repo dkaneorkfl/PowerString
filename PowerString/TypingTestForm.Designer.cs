@@ -105,7 +105,7 @@
             this.tbxUserInput.Name = "tbxUserInput";
             this.tbxUserInput.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.tbxUserInput.Size = new System.Drawing.Size(390, 301);
-            this.tbxUserInput.TabIndex = 0;
+            this.tbxUserInput.TabIndex = 1;
             // 
             // pgbTimer
             // 
@@ -146,7 +146,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 307F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(806, 307);
-            this.tableLayoutPanel1.TabIndex = 7;
+            this.tableLayoutPanel1.TabIndex = 0;
             // 
             // TypingTestForm
             // 
@@ -161,7 +161,7 @@
             this.Controls.Add(this.btnBackToMainMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TypingTestForm";
-            this.Text = "PowerText";
+            this.Text = "PowerString";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.TypingTestForm_FormClosed);
             this.Load += new System.EventHandler(this.TypingTestForm_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
